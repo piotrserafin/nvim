@@ -40,13 +40,14 @@ set colorcolumn=120
 
 " Theme
 try | colorscheme gruvbox | catch | endtry
+set background=dark
 
 " Search
 set showmatch
 set nohlsearch
-set incsearch
-set ignorecase
-set smartcase
+set incsearch             "show dynamic matching pattern
+set ignorecase            "ignore case when searching ... unless smartcase - see below 
+set smartcase             "when use uppercase then it will match on case
 
 " Edit
 set nobackup
@@ -79,6 +80,7 @@ let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
 
 let g:calendar_diary='~/Documents/vimwiki/diary'
 let g:vimwiki_global_ext=0
+let g:vimwiki_folding=''
 
 " FZF
 nmap <C-P> :Files<cr>
@@ -86,10 +88,6 @@ nmap <C-P> :Files<cr>
 
 " UNDOTREE
 nnoremap <Leader>u :UndotreeToggle<cr>
-
-" AIRLINE
-let g:airline_theme= 'gruvbox'
-let g:airline_powerline_fonts = 1
 
 """"""""""""""""""""""""""""
 "  Advanced Configuration  "
@@ -100,3 +98,9 @@ for key in ['<Up>', '<Down>', '<Left>', '<Right>']
   exec 'inoremap' key '<Nop>'
   exec 'cnoremap' key '<Nop>'
 endfor
+
+" Add empty line in normal mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+nmap <Leader><F12> :Glow<cr>

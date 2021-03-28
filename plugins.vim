@@ -8,15 +8,23 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+
+" Statusbar
+Plug 'itchyny/lightline.vim'
+
+" Visual mode
+Plug 'junegunn/goyo.vim'
 
 " Vimwiki & Taskworrior
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'tools-life/taskwiki'
 Plug 'mattn/calendar-vim'
 
-" Tmux
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
+
+" Tmux syntax highlight
 Plug 'tmux-plugins/vim-tmux'
 
 " TPope essentials
@@ -26,8 +34,6 @@ Plug 'tpope/vim-fugitive'
 " FZF stuff
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-Plug 'mbbill/undotree'
 
 call plug#end()
 
