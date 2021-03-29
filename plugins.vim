@@ -27,6 +27,9 @@ Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
 " Tmux syntax highlight
 Plug 'tmux-plugins/vim-tmux'
 
+" Color name highlighter
+Plug 'ap/vim-css-color'
+
 " TPope essentials
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'

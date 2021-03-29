@@ -8,62 +8,7 @@
 "  Imports  "
 """""""""""""
 source $HOME/.config/nvim/plugins.vim
-
-"""""""""""""""""""""""""
-"  Basic Configuration  "
-"""""""""""""""""""""""""
-" Basic
-syntax on                 "turn on syntax highlight
-
-set nocompatible          "won't be compatible with Vi
-set noshowmode              "message on status line to show current mode
-set showcmd               "show (partial) command in status line
-set mouse=a               "enable the use of mouse clicks for all modes
-set encoding=utf-8        "encoding to be used for printing
-
-" Identation
-filetype indent on        "switch on file type detection, with automatic indenting and settings
-set autoindent            "take indent for new line from previous line
-set tabstop=4             "number of spaces that <Tab> in file uses
-set shiftwidth=4          "number of spaces to use for (auto)indent step
-set expandtab             "use spaces when <Tab> is inserted
-set softtabstop=4         "number of spaces that <Tab> uses while editing
-
-" Appearance
-set number                "print the line number in front of each line
-set relativenumber        "show relative line number in front of each line
-set textwidth=120         "maximum width of text that is being inserted
-set nowrap                "long lines nowrap
-set ruler
-set termguicolors
-set colorcolumn=120
-
-" Theme
-try | colorscheme gruvbox | catch | endtry
-set background=dark
-
-" Search
-set showmatch
-set nohlsearch
-set incsearch             "show dynamic matching pattern
-set ignorecase            "ignore case when searching ... unless smartcase - see below 
-set smartcase             "when use uppercase then it will match on case
-
-" Edit
-set nobackup
-set noswapfile
-set undodir=~/.local/share/nvim/undo
-set undofile
-
-set history=1000
-set wildmenu
-set wildmode=longest:list,full
-
-set hidden
-set noerrorbells
-
-" Leader
-let mapleader=" "
+source $HOME/.config/nvim/general/settings.vim
 
 " Basic mappings
 nnoremap <Leader>ev :vs $MYVIMRC<cr>
@@ -86,9 +31,6 @@ let g:vimwiki_folding=''
 nmap <C-P> :Files<cr>
 """""""""""""
 
-" UNDOTREE
-nnoremap <Leader>u :UndotreeToggle<cr>
-
 """"""""""""""""""""""""""""
 "  Advanced Configuration  "
 """"""""""""""""""""""""""""
@@ -103,4 +45,5 @@ endfor
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-nmap <Leader><F12> :Glow<cr>
+nmap <Leader><F12> :Glow<CR>
+nmap <F10> :Goyo<CR>
