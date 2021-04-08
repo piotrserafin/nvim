@@ -35,7 +35,7 @@ set nowrap                "long lines nowrap
 set ruler           	  "show the line and column number of the cursor position
 set colorcolumn=120       "comma separated list of screen columns
 set cursorline
-
+set nofoldenable          "When off, all folds are open
 " True Colors
 set termguicolors         "Enables 24-bit RGB color in the TUI 
 
@@ -63,4 +63,4 @@ set wildmode=longest:list,full
 set hidden
 set noerrorbells
 "set autochdir             "it will change to the directory containing the file which was opened or selected
-set clipboard=unnamedplus "copy pase between nvim and everything else
+set clipboard+=unnamedplus "copy pase between nvim and everything else
