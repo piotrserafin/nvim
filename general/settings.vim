@@ -36,11 +36,12 @@ set ruler           	  "show the line and column number of the cursor position
 set colorcolumn=120       "comma separated list of screen columns
 set cursorline
 set nofoldenable          "When off, all folds are open
+
 " True Colors
 set termguicolors         "Enables 24-bit RGB color in the TUI 
 
 " Theme
-try | colorscheme gruvbox | catch | endtry
+colorscheme gruvbox
 set background=dark
 
 " Search

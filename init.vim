@@ -10,59 +10,80 @@
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 
-" Basic mappings
-nnoremap <Leader>ev :vs $MYVIMRC<cr>
-nnoremap <Leader>sv :so $MYVIMRC<cr>
-
 """""""""""""
 "  Plugins  "
 """""""""""""
 " VIMWIKI
-let g:vimwiki_markdown_link_ext = 1
-
 let personal = {}
 let personal.path = '~/Documents/vimwiki/personal.wiki/'
 let personal.syntax = 'markdown'
 let personal.ext = '.md'
-
+let personal.auto_diary_index = 1 
 
 let work = {}
 let work.path = '~/Documents/vimwiki/work.wiki/'
 let work.syntax = 'markdown'
 let work.ext = '.md'
+let work.auto_diary_index = 1 
 
 let g:vimwiki_list = [personal, work]
+let g:vimwiki_markdown_link_ext = 1
+let g:vimwiki_global_ext = 0
+let g:vimwiki_folding = ''
+let g:vimwiki_dir_link = 'index'
 
-" let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
-                    " \ 'syntax': 'markdown', 'ext': '.md'}]
+" CALENDAR + VIMWIKI
+let g:calendar_diary = '~/Documents/vimwiki/work.wiki/diary'
 
-let g:calendar_diary='~/Documents/vimwiki/diary'
-let g:vimwiki_global_ext=0
-let g:vimwiki_folding=''
-
+" INSTANT MARKDOWN
 let g:instant_markdown_slow = 1
 
 " FZF
 nmap <C-P> :Files<cr>
 
-""""""""""""""""""""""""""""
-"  Advanced Configuration  "
-""""""""""""""""""""""""""""
-" Switch off arrow keys
-for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-  exec 'noremap' key '<Nop>'
-  exec 'inoremap' key '<Nop>'
-  exec 'cnoremap' key '<Nop>'
-endfor
+" UltiSnips
+let g:UltiSnipsExpandTrigger = '<tab>'
+
+"""""""""""""""""
+"  Keymappings  "
+"""""""""""""""""
+" Basic mappings
+nnoremap <Leader>ev :vs $MYVIMRC<cr>
+nnoremap <Leader>sv :so $MYVIMRC<cr>
+
+" Remap jk,kj to Esc
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Remap to avoid hitting shift when entering command mode
+nnoremap ; :
+vnoremap ; :
+
+" Paste last thing yanked, not deleted
+nnoremap ,p "0p
+nnoremap ,P "0P
+
+" Move between Vimdows 
+nnoremap <up> <C-w><up>
+nnoremap <down> <C-w><down>
+nnoremap <left> <C-w><left>
+nnoremap <right> <C-w><right>
 
 " Add empty line in normal mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nnoremap <S-Enter> O<Esc>
+noremap <CR> o<Esc>
 
-nmap <Leader><F12> :Glow<CR>
-nmap <F10> :Goyo<CR>
+" Toggle Glow Preview
+nnoremap <Leader><F12> :Glow<CR>
 
+" Toggle Zen Mode 
+nnoremap <F10> :Goyo<CR>
+
+" Toggle Markdown Preview in Browser
 nnoremap <Leader>mp :MarkdownPreviewToggle<CR>
 
+"""""""""""""""""
+"  Autocommand  "
+"""""""""""""""""
 autocmd FileType markdown set conceallevel=0
 

@@ -15,10 +15,11 @@ Plug 'itchyny/lightline.vim'
 " Visual mode
 Plug 'junegunn/goyo.vim'
 
-" Vimwiki & Taskworrior
+" UltiSnips
+Plug 'SirVer/ultisnips'
+
+" Vimwiki & Taskworrior & Calendar
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-Plug 'michal-h21/vimwiki-sync'
-Plug 'michal-h21/vim-zettel'
 Plug 'tools-life/taskwiki'
 Plug 'mattn/calendar-vim'
 
@@ -29,9 +30,6 @@ Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
 " Tmux syntax highlight
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
-
-" Color name highlighter
-Plug 'ap/vim-css-color'
 
 " TPope essentials
 Plug 'tpope/vim-commentary'
