@@ -39,17 +39,20 @@ let g:calendar_diary = '~/Documents/vimwiki/work.wiki/diary'
 let g:instant_markdown_slow = 1
 
 " FZF
-nmap <C-P> :Files<cr>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-g> :GFiles<CR>
 
-" UltiSnips
+" ULTISNIPS
 let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 """""""""""""""""
 "  Keymappings  "
 """""""""""""""""
 " Basic mappings
-nnoremap <Leader>ev :vs $MYVIMRC<cr>
-nnoremap <Leader>sv :so $MYVIMRC<cr>
+nnoremap <Leader>ev :vs $MYVIMRC<CR>
+nnoremap <Leader>sv :so $MYVIMRC<CR>
 
 " Remap jk,kj to Esc
 inoremap jk <Esc>
