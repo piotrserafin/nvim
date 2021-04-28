@@ -7,6 +7,8 @@
 """""""""""""""""""""""""
 "  Basic Configuration  "
 """""""""""""""""""""""""
+set path+=**
+
 " Leader
 let g:mapleader=" "
 
@@ -58,8 +60,9 @@ set undodir=~/.local/share/nvim/undo
 set undofile
 
 set history=1000
+
+set wildmode=longest,list,full
 set wildmenu
-set wildmode=longest:list,full
 
 set hidden
 set noerrorbells

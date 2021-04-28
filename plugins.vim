@@ -12,8 +12,9 @@ Plug 'morhetz/gruvbox'
 " Statusbar
 Plug 'itchyny/lightline.vim'
 
-" Visual mode
+" Focus Mode
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " UltiSnips
 Plug 'SirVer/ultisnips'
@@ -35,9 +36,19 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 
-" FZF stuff
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+
+" Telescope 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 call plug#end()
 
