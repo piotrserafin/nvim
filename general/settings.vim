@@ -38,9 +38,11 @@ set ruler           	  "show the line and column number of the cursor position
 set colorcolumn=120       "comma separated list of screen columns
 set cursorline
 set nofoldenable          "When off, all folds are open
+set scrolloff=8
+set signcolumn=yes
 
 " True Colors
-set termguicolors         "Enables 24-bit RGB color in the TUI 
+set termguicolors         "Enables 24-bit RGB color in the TUI
 
 " Theme
 colorscheme gruvbox
@@ -50,7 +52,7 @@ set background=dark
 set showmatch
 set nohlsearch
 set incsearch             "show dynamic matching pattern
-set ignorecase            "ignore case when searching ... unless smartcase - see below 
+set ignorecase            "ignore case when searching ... unless smartcase - see below
 set smartcase             "when use uppercase then it will match on case
 
 " Edit
@@ -65,6 +67,5 @@ set wildmode=longest,list,full
 set wildmenu
 
 set hidden
-set noerrorbells
-"set autochdir             "it will change to the directory containing the file which was opened or selected
-set clipboard+=unnamedplus "copy pase between nvim and everything else
+set clipboard+=unnamedplus  "copy pase between nvim and everything else
+set guicursor=              "disuable cursor styling (box)

@@ -20,13 +20,13 @@ let personal = {}
 let personal.path = '~/Documents/vimwiki/personal.wiki/'
 let personal.syntax = 'markdown'
 let personal.ext = '.md'
-let personal.auto_diary_index = 1 
+let personal.auto_diary_index = 1
 
 let work = {}
 let work.path = '~/Documents/vimwiki/work.wiki/'
 let work.syntax = 'markdown'
 let work.ext = '.md'
-let work.auto_diary_index = 1 
+let work.auto_diary_index = 1
 
 let g:vimwiki_list = [personal, work]
 let g:vimwiki_markdown_link_ext = 1
@@ -46,14 +46,11 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" COMPLETETION
-let g:completion_enable_snippet = 'UltiSnips'
-
 " TREESITTER
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 " LSP
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 " LIMELIGHT + GOYO
@@ -66,10 +63,8 @@ let g:limelight_default_coefficient = 0.8
 " Basic mappings
 nnoremap <Leader>sv :so $MYVIMRC<CR>
 
-" Remap jk,kj,jj to Esc
-inoremap <silent> jk <Esc>
-inoremap <silent> kj <Esc>
-inoremap <silent> jj <Esc>
+" Remap  to Esc
+inoremap <silent> ii <Esc>
 
 " Remap to avoid hitting shift when entering command mode
 nnoremap ; :
@@ -79,16 +74,13 @@ vnoremap ; :
 nnoremap ,p "0p
 nnoremap ,P "0P
 
-" Move between Vimdows 
+" Move between Vimdows
 nnoremap <up> <C-w><up>
 nnoremap <down> <C-w><down>
 nnoremap <left> <C-w><left>
 nnoremap <right> <C-w><right>
 
-" Toggle Glow Preview
-nnoremap <Leader><F12> :Glow<CR>
-
-" Toggle Zen Mode 
+" Toggle Zen Mode
 nnoremap <leader>G :Goyo<CR>
 
 " Toggle Markdown Preview in Browser
@@ -102,6 +94,10 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>vrc :lua require('ps.telescope').search_dotfiles()<CR>
+
+" Line movement
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 """""""""""""""
 "  Functions  "
@@ -126,4 +122,9 @@ endfunction
 autocmd FileType markdown set conceallevel=0
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave() 
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+augroup PS
+    autocmd!
+    autocmd BufWritePre * %s/\s\+$//e
+augroup END

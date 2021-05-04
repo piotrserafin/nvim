@@ -3,7 +3,6 @@
 --  |   __|__   |  https://piotrserafin.dev
 --  |__|  |_____|  https://github.com/piotrserafin
 --
-
 local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {

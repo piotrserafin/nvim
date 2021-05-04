@@ -55,22 +55,35 @@ local on_attach = function(client, bufnr)
     ]], false)
   end
 
-  require('completion').on_attach()
-
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
+
 -- Bash Language Server
-nvim_lsp.bashls.setup{ on_attach=on_attach }
+nvim_lsp.bashls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
 
 -- Clangd Language Server
 nvim_lsp.clangd.setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     root_dir = function() return vim.loop.cwd() end
 }
 
 -- Sumneko Lua Language Server
 nvim_lsp.sumneko_lua.setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
     settings = {
         Lua = {
@@ -97,3 +110,5 @@ nvim_lsp.sumneko_lua.setup {
         },
     },
 }
+
+require('symbols-outline').setup()
