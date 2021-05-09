@@ -31,9 +31,11 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
 
-" TPope essentials
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+
+" TPope essentials
+Plug 'tpope/vim-surround'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -50,8 +52,15 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
+" Debugging
+" Plug 'puremourning/vimspector'
+" Plug 'nvim-telescope/telescope-vimspector.nvim'
+
 " Colorizer
 Plug 'norcalli/nvim-colorizer.lua'
+
+" Maximizer
+Plug 'szw/vim-maximizer'
 
 call plug#end()
 

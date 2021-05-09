@@ -4,7 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require("ps.colorizer")
-require("ps.telescope")
 require("ps.lsp")
 require("ps.compe")
+require("ps.telescope")
+require("ps.colorizer")

@@ -21,10 +21,10 @@ require'compe'.setup {
   source = {
     -- Built-in
     buffer = true;
-    calc = true;
     path = true;
     spell = true;
     tags = true;
+    emoji = true;
 
     -- Neovim
     nvim_lsp = true;
