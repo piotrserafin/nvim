@@ -45,7 +45,8 @@ let g:mkdp_browser = 'qutebrowser'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["ultisnips"]
+let g:UltiSnipsSnippetDirectories=["snips"]
+
 " TREESITTER
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
