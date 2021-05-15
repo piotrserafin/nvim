@@ -1,9 +1,7 @@
-snippet psh "Piotr Serafin's Header" b
 "   _____ _____
 "  |  _  |   __|  Piotr Serafin
 "  |   __|__   |  https://piotrserafin.dev
 "  |__|  |_____|  https://github.com/piotrserafin
 "
-$0
-endsnippet
 
+let g:limelight_default_coefficient = 0.8
