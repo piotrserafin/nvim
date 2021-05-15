@@ -95,6 +95,7 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>vrc :lua require('ps.telescope').search_dotfiles()<CR>
+nnoremap <leader>vw :lua require('ps.telescope').search_vimwiki()<CR>
 
 " Line movement
 vnoremap J :m '>+1<CR>gv=gv
