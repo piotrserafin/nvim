@@ -4,18 +4,18 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local utils = {}
+local M = {}
 
 local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
 
-function utils.opt(scope, key, value)
+function M.opt(scope, key, value)
     scopes[key][value] = value
     if scope ~= 'o' then
         scopes['o'][key] = value
     end
 end
 
-function utils.map(mode, lhs, rhs, opts)
+function M.map(mode, lhs, rhs, opts)
     local options = {noremap = true}
     if opts then
         options = vim.tbl_extend('force', options, opts)
@@ -23,4 +23,4 @@ function utils.map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-return utils
+return M
