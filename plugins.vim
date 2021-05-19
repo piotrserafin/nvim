@@ -61,5 +61,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Maximizer
 Plug 'szw/vim-maximizer'
 
+" Devicons
+Plug 'kyazdani42/nvim-web-devicons'
+
+" Nvim-tree
+Plug 'kyazdani42/nvim-tree.lua'
+
 call plug#end()
 
