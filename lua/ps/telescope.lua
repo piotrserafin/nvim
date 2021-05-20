@@ -31,20 +31,22 @@ require('telescope').setup {
 
 require('telescope').load_extension('fzy_native')
 
-local M = {}
 
-M.search_dotfiles = function()
+local function search_dotfiles()
     require("telescope.builtin").find_files({
         prompt_title = "< VimRC >",
         cwd = "$HOME/.config/nvim/",
     })
 end
 
-M.search_vimwiki = function()
+local function search_vimwiki()
     require("telescope.builtin").find_files({
         prompt_title = "< VimWiki >",
         cwd = "$HOME/Documents/vimwiki",
     })
 end
 
-return M
+return {
+    search_dotfiles = search_dotfiles,
+    search_vimwiki = search_vimwiki
+}
