@@ -2,8 +2,6 @@
 
 ```
 ├── README.md
-├── general
-│   └── settings.vim
 ├── init.vim
 ├── lua
 │   ├── ps
@@ -21,10 +19,12 @@
 │   ├── lsp.vim
 │   ├── mkdp.vim
 │   ├── netrw.vim
+│   ├── nvimtree.vim
 │   ├── telescope.vim
 │   ├── ultisnips.vim
 │   └── vimwiki.vim
 ├── plugins.vim
+├── settings.vim
 └── snips
     ├── all.snippets
     ├── lua.snippets

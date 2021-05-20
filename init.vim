@@ -8,7 +8,7 @@
 "  Imports  "
 """""""""""""
 source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/settings.vim
 
 lua require("ps")
 
