@@ -67,5 +67,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Nvim-tree
 Plug 'kyazdani42/nvim-tree.lua'
 
+" Floaterm
+Plug 'voldikss/vim-floaterm'
+
 call plug#end()
 
