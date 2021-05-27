@@ -6,8 +6,10 @@
 
 """""""""""""
 "  Imports  "
+"
 """""""""""""
-source $HOME/.config/nvim/plugins.vim
+lua require("plugins").init()
+
 source $HOME/.config/nvim/settings.vim
 
 lua require("ps")
@@ -43,6 +45,7 @@ vnoremap K :m '<-2<CR>gv=gv
 "  Autocommand  "
 """""""""""""""""
 autocmd FileType markdown set conceallevel=0
+autocmd BufWritePost plugins.lua PackerCompile
 
 augroup PS
     autocmd!
