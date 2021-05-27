@@ -42,7 +42,7 @@ end
 local function search_vimwiki()
     require("telescope.builtin").find_files({
         prompt_title = "< VimWiki >",
-        cwd = "$HOME/Documents/vimwiki",
+        cwd = "$HOME/Documents/vimwiki/",
     })
 end
 
