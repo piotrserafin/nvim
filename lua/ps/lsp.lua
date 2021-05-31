@@ -95,14 +95,17 @@ nvim_lsp.sumneko_lua.setup {
             },
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
+                globals = {'vim', 'hs'},
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
                 library = {
                     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
                     [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+                    ['/Applications/Hammerspoon.app/Contents/Resources/extensions/hs'] = true,
                 },
+                maxPreload = 2000,
+                preloadFileSize = 50000,
             },
             telemetry = {
                 enable = false,
