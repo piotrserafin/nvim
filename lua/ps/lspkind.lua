@@ -4,9 +4,4 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require("ps.lsp")
-require("ps.lspkind")
-require("ps.compe")
-require("ps.telescope")
-require("ps.colorizer")
-require("ps.treesitter")
+require('lspkind').init()

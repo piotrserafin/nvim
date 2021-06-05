@@ -42,6 +42,7 @@ local function init_packer()
 
         -- Markdown Preview
         use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
+        use { 'npxbr/glow.nvim', run = ':GlowInstall' }
 
         -- Tmux syntax highlight
         use { 'tmux-plugins/vim-tmux' }
@@ -56,6 +57,7 @@ local function init_packer()
         use { 'neovim/nvim-lspconfig' }
         use { 'hrsh7th/nvim-compe' }
         use { 'simrat39/symbols-outline.nvim' }
+        use { 'onsails/lspkind-nvim' }
 
         -- Telescope
         use { 'nvim-lua/popup.nvim' }
@@ -85,6 +87,12 @@ local function init_packer()
 
         -- Floaterm
         use { 'voldikss/vim-floaterm' }
+
+        -- Diagrams
+        use { 'gyim/vim-boxdraw' }
+
+        -- Games
+        use { 'ThePrimeagen/vim-be-good' }
 
     end)
 end

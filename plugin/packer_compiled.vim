@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/calendar-vim"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/glow.nvim"
+  },
   ["goyo.vim"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/goyo.vim"
@@ -90,6 +94,10 @@ _G.packer_plugins = {
   ["limelight.vim"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/limelight.vim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
@@ -154,6 +162,14 @@ _G.packer_plugins = {
   ultisnips = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/ultisnips"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-be-good"
+  },
+  ["vim-boxdraw"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-boxdraw"
   },
   ["vim-commentary"] = {
     loaded = true,
