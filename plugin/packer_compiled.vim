@@ -62,8 +62,9 @@ time("try_loadstring definition", true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
-    print('Error running ' .. component .. ' for ' .. name)
-    error(result)
+    vim.schedule(function()
+      vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
+    end)
   end
   return result
 end
@@ -98,6 +99,10 @@ _G.packer_plugins = {
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,

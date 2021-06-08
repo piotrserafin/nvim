@@ -7,7 +7,9 @@
 local sumneko_root_path = '/Users/piotr_serafin/dev/tools/lua-language-server'
 local sumneko_binary = sumneko_root_path .. "/bin/macOS/lua-language-server"
 
+local saga = require('lspsaga')
 local nvim_lsp = require('lspconfig')
+
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -15,23 +17,29 @@ local on_attach = function(client, bufnr)
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { noremap=true, silent=true }
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  buf_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  buf_set_keymap('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  local opts = { noremap = true, silent = true }
+  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+
+  buf_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>', opts)
+  buf_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>', opts)
+  buf_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>', opts)
+  buf_set_keymap('n', '<leader>D' , '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+  buf_set_keymap('n', '<leader>q' , '<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>', opts)
+
+  -- Lspsaga
+  buf_set_keymap('n', '<leader>gd', '<cmd>Lspsaga preview_definition<cr>', opts)
+  buf_set_keymap('n', '<leader>gh', '<cmd>Lspsaga lsp_finder<cr>', opts)
+  buf_set_keymap('n', '<leader>ca', '<cmd>Lspsaga code_action<cr>', opts)
+  buf_set_keymap('v', '<leader>ca', '<cmd>Lspsaga range_code_action<cr>', opts)
+  buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<cr>', opts)
+  buf_set_keymap('n', '<leader>e' , '<cmd>Lspsaga show_line_diagnostics<cr>', opts)
+  buf_set_keymap('n', '[d'        , '<cmd>Lspsaga diagnostic_jump_prev<cr>', opts)
+  buf_set_keymap('n', ']d'        , '<cmd>Lspsaga diagnostic_jump_next<cr>', opts)
+  buf_set_keymap('n', '<C-k>'     , '<cmd>Lspsaga signature_help<cr>', opts)
+  buf_set_keymap('n', 'K'         , '<cmd>Lspsaga hover_doc<cr>', opts)
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
@@ -66,6 +74,9 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     'additionalTextEdits',
   }
 }
+
+-- LSPSaga
+saga.init_lsp_saga()
 
 -- Bash Language Server
 nvim_lsp.bashls.setup {
