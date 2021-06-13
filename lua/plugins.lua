@@ -65,14 +65,15 @@ local function init_packer()
         use { 'nvim-lua/plenary.nvim' }
         use { 'nvim-telescope/telescope.nvim' }
         use { 'nvim-telescope/telescope-fzy-native.nvim' }
+        use { 'nvim-telescope/telescope-dap.nvim' }
 
         -- Treesitter
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         use { 'nvim-treesitter/playground' }
 
-        -- Debugging
-        -- use { 'puremourning/vimspector' }
-        -- use { 'nvim-telescope/telescope-vimspector.nvim' }
+        -- Debugging (nvim-dap)
+        use { 'mfussenegger/nvim-dap' }
+        use { 'theHamsta/nvim-dap-virtual-text' }
 
         -- Colorizer
         use { 'norcalli/nvim-colorizer.lua' }
