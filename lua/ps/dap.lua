@@ -6,6 +6,11 @@
 
 local dap = require('dap')
 
+dap.defaults.fallback.external_terminal = {
+    command = '/usr/local/bin/alacritty';
+    args = {'-e'};
+}
+
 dap.adapters.lldb = {
     type = 'executable',
     command = '/usr/local/Cellar/llvm/12.0.0_1/bin/lldb-vscode',
