@@ -25,3 +25,5 @@ let g:vimwiki_dir_link = 'index'
 
 " CALENDAR + VIMWIKI
 let g:calendar_diary = '~/Documents/vimwiki/work.wiki/diary'
+
+au BufNewFile ~/Documents/vimwiki/work.wiki/diary/*.md :silent 0r !~/.config/nvim/bin/generate-vimwiki-diary-template '%'

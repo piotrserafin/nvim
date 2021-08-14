@@ -1,0 +1,24 @@
+#!/usr/bin/python
+#   _____ _____
+#  |  _  |   __|  Piotr Serafin
+#  |   __|__   |  https://piotrserafin.dev
+#  |__|  |_____|  https://github.com/piotrserafin
+#
+
+import sys
+import datetime
+
+template = """# {date}
+
+# EPAM
+
+# LIBG
+
+## Todo
+
+## Notes"""
+
+date = (datetime.date.today() if len(sys.argv) < 2
+        # Expecting filename in YYYY-MM-DD.foo format
+        else sys.argv[1].rsplit(".", 1)[0].rsplit("/", 1)[1])
+print(template.format(date=date))

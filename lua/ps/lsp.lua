@@ -91,6 +91,12 @@ nvim_lsp.clangd.setup {
     root_dir = function() return vim.loop.cwd() end
 }
 
+-- TSServer
+nvim_lsp.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
 -- Sumneko Lua Language Server
 nvim_lsp.sumneko_lua.setup {
     on_attach = on_attach,
