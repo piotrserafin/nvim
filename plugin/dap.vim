@@ -5,9 +5,9 @@
 "
 
 nnoremap <leader>dh :lua require'dap'.toggle_breakpoint()<cr>
-nnoremap <S-k> :lua require'dap'.step_out()<cr>
-nnoremap <S-l> :lua require'dap'.step_into()<cr>
-nnoremap <S-j> :lua require'dap'.step_over()<cr>
+" nnoremap <S-k> :lua require'dap'.step_out()<cr>
+" nnoremap <S-l> :lua require'dap'.step_into()<cr>
+" nnoremap <S-j> :lua require'dap'.step_over()<cr>
 nnoremap <leader>ds :lua require'dap'.stop()<cr>
 nnoremap <leader>dn :lua require'dap'.continue()<cr>
 nnoremap <leader>dk :lua require'dap'.up()<cr>

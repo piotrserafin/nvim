@@ -90,6 +90,8 @@ local function init_packer()
         -- Floaterm
         use { 'voldikss/vim-floaterm' }
 
+        use { 'NTBBloodbath/rest.nvim' }
+
         -- Diagrams
         use { 'gyim/vim-boxdraw' }
 
