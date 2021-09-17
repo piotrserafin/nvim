@@ -29,8 +29,6 @@ local function init_packer()
         use { 'itchyny/lightline.vim' }
 
         -- Focus Mode
-        use { 'junegunn/goyo.vim' }
-        use { 'junegunn/limelight.vim' }
 
         -- UltiSnips
         use { 'SirVer/ultisnips' }
@@ -42,7 +40,6 @@ local function init_packer()
 
         -- Markdown Preview
         use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
-        use { 'npxbr/glow.nvim', run = ':GlowInstall' }
 
         -- Tmux syntax highlight
         use { 'tmux-plugins/vim-tmux' }
@@ -56,9 +53,11 @@ local function init_packer()
         -- LSP
         use { 'neovim/nvim-lspconfig' }
         use { 'glepnir/lspsaga.nvim' }
-        use { 'hrsh7th/nvim-compe' }
-        use { 'simrat39/symbols-outline.nvim' }
         use { 'onsails/lspkind-nvim' }
+        use { 'simrat39/symbols-outline.nvim' }
+
+        -- Completetion
+        use { 'hrsh7th/nvim-compe' }
 
         -- Telescope
         use { 'nvim-lua/popup.nvim' }
@@ -87,16 +86,10 @@ local function init_packer()
         -- Nvim-tree
         use { 'kyazdani42/nvim-tree.lua' }
 
-        -- Floaterm
-        use { 'voldikss/vim-floaterm' }
+        -- Term
 
+        -- REST Client
         use { 'NTBBloodbath/rest.nvim' }
-
-        -- Diagrams
-        use { 'gyim/vim-boxdraw' }
-
-        -- Games
-        use { 'ThePrimeagen/vim-be-good' }
 
     end)
 end
@@ -106,6 +99,4 @@ local function init()
     init_packer()
 end
 
-return {
-    init = init
-}
+init()

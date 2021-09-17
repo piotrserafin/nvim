@@ -1,25 +1,30 @@
-"   _____ _____
-"  |  _  |   __|  Piotr Serafin
-"  |   __|__   |  https://piotrserafin.dev
-"  |__|  |_____|  https://github.com/piotrserafin
-"
+--   _____ _____
+--  |  _  |   __|  Piotr Serafin
+--  |   __|__   |  https://piotrserafin.dev
+--  |__|  |_____|  https://github.com/piotrserafin
+--
 
-"""""""""""""""""""""""""
-"  Basic Configuration  "
-"""""""""""""""""""""""""
+
+local cmd = vim.cmd
+local o = vim.o
+local wo = vim.wo
+local bo = vim.bo
+local opt = vim.opt
+local indent = 4
+
+--------------------------
+--  Basic Configuration  -
+--------------------------
+
+-- Basic
+cmd "syntax enable"     -- enable syntax highlight
+
+vim.cmd([[
 set path+=**
 
-" Leader
-let g:mapleader=" "
-
-" Basic
-syntax enable             "enable syntax highlight
-
-set nocompatible          "won't be compatible with Vi
 set noshowmode            "no message on status line to show current mode
 set showcmd               "show (partial) command in status line
 set mouse=a               "enable the use of mouse clicks for all modes
-set encoding=utf-8        "encoding to be used for printing
 
 " Identation
 filetype indent on        "switch on file type detection, with automatic indenting and settings
@@ -70,3 +75,4 @@ set wildmenu
 set hidden
 set clipboard+=unnamedplus  "copy pase between nvim and everything else
 set guicursor=              "disuable cursor styling (box)
+]])

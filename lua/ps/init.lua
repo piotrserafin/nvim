@@ -5,10 +5,14 @@
 --
 
 require("ps.lsp")
-require("ps.lspkind")
 require("ps.compe")
 require("ps.telescope")
 require("ps.colorizer")
 require("ps.treesitter")
 require("ps.rest")
 require("ps.dap")
+require("ps.nvimtree")
+require("ps.mkdp")
+require("ps.vimwiki")
+require("ps.netrw")
+require("ps.ultisnips")

@@ -8,6 +8,7 @@ local sumneko_root_path = '/Users/piotr_serafin/dev/tools/lua-language-server'
 local sumneko_binary = sumneko_root_path .. "/bin/macOS/lua-language-server"
 
 local saga = require('lspsaga')
+local kind = require('lspkind')
 local nvim_lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
@@ -75,6 +76,9 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
+-- LSPKind
+kind.init()
+
 -- LSPSaga
 saga.init_lsp_saga()
 
@@ -132,3 +136,8 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 require('symbols-outline').setup()
+
+vim.cmd([[
+set completeopt=menuone,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+]])
