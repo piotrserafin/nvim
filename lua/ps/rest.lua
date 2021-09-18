@@ -4,7 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require("rest-nvim").setup({
+require('rest-nvim').setup({
     result_split_horizontal = false,
     skip_ssl_verification = false
 })

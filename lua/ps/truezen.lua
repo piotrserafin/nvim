@@ -4,7 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require("true-zen").setup({
+require('true-zen').setup({
 	ui = {
 		left = {
 			number = true,
@@ -17,7 +17,7 @@ require("true-zen").setup({
 	},
 })
 
-local map = require("utils").map
+local map = require('utils').map
 
 map('n', '<C-F12>', [[<Cmd>TZAtaraxis<cr>]])
 map('n', '<S-F12>', [[<Cmd>TZMinimalist<cr>]])

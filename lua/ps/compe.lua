@@ -4,7 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require'compe'.setup {
+require('compe').setup({
   enabled = true;
   autocomplete = true;
   debug = false;
@@ -33,7 +33,7 @@ require'compe'.setup {
     -- External plugin
     ultisnips = true;
   };
-}
+})
 
 vim.cmd([[
   inoremap <silent><expr> <C-Space> compe#complete()

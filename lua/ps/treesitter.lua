@@ -4,7 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
 parser_configs.http = {
   install_info = {
     url = "https://github.com/NTBBloodbath/tree-sitter-http",
@@ -13,7 +13,7 @@ parser_configs.http = {
   },
 }
 
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup({
     ensure_installed = {
         'bash',
         'c',
@@ -37,4 +37,4 @@ require'nvim-treesitter.configs'.setup {
     playground = {
         enable = true
     }
-}
+})

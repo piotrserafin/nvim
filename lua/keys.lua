@@ -9,7 +9,7 @@ vim.g.mapleader = ' '
 ------------------
 --  Keymappings  -
 ------------------
-local map = require("utils").map
+local map = require('utils').map
 
 -- Basic mappings
 map('n', '<leader>sv', ':so $MYVIMRC<cr>')

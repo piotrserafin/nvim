@@ -5,7 +5,7 @@
 --
 
 local actions = require('telescope.actions')
-require('telescope').setup {
+require('telescope').setup({
     defaults = {
         file_sorter = require('telescope.sorters').get_fzy_sorter,
         prompt_prefix = ' >',
@@ -27,20 +27,20 @@ require('telescope').setup {
             override_file_sorter = true,
         }
     }
-}
+})
 
 require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('dap')
 
 local function search_dotfiles()
-    require("telescope.builtin").find_files({
+    require('telescope.builtin').find_files({
         prompt_title = "< VimRC >",
         cwd = "$HOME/.config/nvim/",
     })
 end
 
 local function search_vimwiki()
-    require("telescope.builtin").find_files({
+    require('telescope.builtin').find_files({
         prompt_title = "< VimWiki >",
         cwd = "$HOME/Documents/vimwiki/",
     })

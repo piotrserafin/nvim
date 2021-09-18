@@ -4,6 +4,6 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require'colorizer'.setup()
+require('colorizer').setup()
 
 
