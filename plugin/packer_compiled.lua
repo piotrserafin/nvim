@@ -69,13 +69,17 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["TrueZen.nvim"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/TrueZen.nvim"
+  },
   ["calendar-vim"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/calendar-vim"
   },
-  gruvbox = {
+  ["gruvbox-material"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
   ["lightline.vim"] = {
     loaded = true,
@@ -180,10 +184,6 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-fugitive"
-  },
-  ["vim-maximizer"] = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-maximizer"
   },
   ["vim-surround"] = {
     loaded = true,

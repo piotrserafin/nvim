@@ -6,7 +6,8 @@
 
 local saga = require('lspsaga')
 local kind = require('lspkind')
-local nvim_lsp = require('lspconfig')
+local lspconfig = require('lspconfig')
+local lspinstall = require('lspinstall')
 local symbols_outline = require('symbols-outline')
 
 local on_attach = function(client, bufnr)
@@ -110,10 +111,10 @@ end
 
 -- lsp-install
 local function setup_servers()
-    require'lspinstall'.setup()
+    lspinstall.setup()
 
     -- get all installed servers
-    local servers = require'lspinstall'.installed_servers()
+    local servers = lspinstall.installed_servers()
     -- ... and add manually installed servers
     -- table.insert(servers, "clangd")
 
@@ -129,14 +130,14 @@ local function setup_servers()
           config.root_dir = function() return vim.loop.cwd() end
         end
 
-        require'lspconfig'[server].setup(config)
+        lspconfig[server].setup(config)
     end
 end
 
 setup_servers()
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require'lspinstall'.post_install_hook = function ()
+lspinstall.post_install_hook = function ()
   setup_servers() -- reload installed servers
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end

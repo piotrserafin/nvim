@@ -23,12 +23,13 @@ local function init_packer()
         use { 'wbthomason/packer.nvim' }
 
         -- Theme --
-        use { 'morhetz/gruvbox' }
+        use { 'sainnhe/gruvbox-material' }
 
         -- Stausbar
         use { 'itchyny/lightline.vim' }
 
         -- Focus Mode
+        use { "Pocco81/TrueZen.nvim" }
 
         -- UltiSnips
         use { 'SirVer/ultisnips' }
@@ -57,7 +58,7 @@ local function init_packer()
         use { 'onsails/lspkind-nvim' }
         use { 'simrat39/symbols-outline.nvim' }
 
-        -- Completetion
+        -- Completetion (obsolete, switch to nvim-cmp)
         use { 'hrsh7th/nvim-compe' }
 
         -- Telescope
@@ -77,9 +78,6 @@ local function init_packer()
 
         -- Colorizer
         use { 'norcalli/nvim-colorizer.lua' }
-
-        -- Maximizer
-        use { 'szw/vim-maximizer' }
 
         -- Devicons
         use { 'kyazdani42/nvim-web-devicons' }

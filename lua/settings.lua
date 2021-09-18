@@ -4,7 +4,6 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-
 local cmd = vim.cmd
 local o = vim.o
 local wo = vim.wo
@@ -47,12 +46,15 @@ set scrolloff=8
 set signcolumn=yes
 set shortmess+=c          "don't give ins-completion-menu messages.
 
-" True Colors
-set termguicolors         "Enables 24-bit RGB color in the TUI
-
 " Theme
-colorscheme gruvbox
+if has('termguicolors')
+  set termguicolors
+endif
 set background=dark
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_palette = 'material'
+colorscheme gruvbox-material
+let g:lightline = {'colorscheme' : 'gruvbox_material'}
 
 " Search
 set showmatch
