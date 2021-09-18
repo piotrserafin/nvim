@@ -4,12 +4,10 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local sumneko_root_path = '/Users/piotr_serafin/dev/tools/lua-language-server'
-local sumneko_binary = sumneko_root_path .. "/bin/macOS/lua-language-server"
-
 local saga = require('lspsaga')
 local kind = require('lspkind')
 local nvim_lsp = require('lspconfig')
+local symbols_outline = require('symbols-outline')
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -63,79 +61,89 @@ local on_attach = function(client, bufnr)
       augroup END
     ]], false)
   end
-
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    'documentation',
-    'detail',
-    'additionalTextEdits',
-  }
-}
-
--- LSPKind
-kind.init()
-
--- LSPSaga
-saga.init_lsp_saga()
-
--- Bash Language Server
-nvim_lsp.bashls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
--- Clangd Language Server
-nvim_lsp.clangd.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    root_dir = function() return vim.loop.cwd() end
-}
-
--- TSServer
-nvim_lsp.tsserver.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
--- Sumneko Lua Language Server
-nvim_lsp.sumneko_lua.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
-    settings = {
-        Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
-                -- Setup your lua path
-                path = vim.split(package.path, ';'),
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim', 'hs'},
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-                    ['/Applications/Hammerspoon.app/Contents/Resources/extensions/hs'] = true,
-                },
-                maxPreload = 2000,
-                preloadFileSize = 50000,
-            },
-            telemetry = {
-                enable = false,
-            },
+local lua_settings = {
+    Lua = {
+        runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT',
+            -- Setup your lua path
+            path = vim.split(package.path, ';'),
         },
-    },
+        diagnostics = {
+            -- Get the language server to recognize the `vim` global
+            globals = {'vim'},
+        },
+        workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = {
+                [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
+            },
+            maxPreload = 2000,
+            preloadFileSize = 50000,
+        },
+        telemetry = {
+            enable = false,
+        }
+    }
 }
 
-require('symbols-outline').setup()
+local function make_config()
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    capabilities.textDocument.completion.completionItem.resolveSupport = {
+      properties = {
+        'documentation',
+        'detail',
+        'additionalTextEdits',
+      }
+    }
+    return {
+        -- enable snippet support
+        capabilities = capabilities,
+        -- map buffer local keybindings when the language server attaches
+        on_attach = on_attach,
+    }
+end
+
+-- lsp-install
+local function setup_servers()
+    require'lspinstall'.setup()
+
+    -- get all installed servers
+    local servers = require'lspinstall'.installed_servers()
+    -- ... and add manually installed servers
+    -- table.insert(servers, "clangd")
+
+    for _, server in pairs(servers) do
+        local config = make_config()
+
+        -- language specific config
+        if server == "lua" then
+          config.settings = lua_settings
+        end
+        if server == "clangd" then
+          config.filetypes = {"c", "cpp"}; -- we don't want objective-c and objective-cpp!
+          config.root_dir = function() return vim.loop.cwd() end
+        end
+
+        require'lspconfig'[server].setup(config)
+    end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require'lspinstall'.post_install_hook = function ()
+  setup_servers() -- reload installed servers
+  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+end
+
+kind.init()
+saga.init_lsp_saga()
+symbols_outline.setup()
 
 vim.cmd([[
 set completeopt=menuone,noselect
