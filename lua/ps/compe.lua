@@ -35,10 +35,11 @@ require('compe').setup({
   };
 })
 
-vim.cmd([[
-  inoremap <silent><expr> <C-Space> compe#complete()
-  inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-  inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-  inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-  inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-]])
+local map = require('utils').map
+local opts = { noremap = true, silent = true, expr = true }
+
+map('i', '<C-Space>', "compe#complete()", opts)
+map('i', '<CR>'     , "compe#confirm('<CR>')", opts)
+map('i', '<C-e>'    , "compe#close('<C-e>')", opts)
+map('i', '<C-f>'    , "compe#scroll({ 'delta': +4 })", opts)
+map('i', '<C-d>'    , "compe#scroll({ 'delta': -4 })", opts)

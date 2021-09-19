@@ -7,7 +7,7 @@
 -- MARKDOWN PREVIEW
 vim.g.mkdp_refresh_slow = 1
 
+local map = require('utils').map
+
 -- Toggle Markdown Preview in Browser
-vim.cmd([[
-nnoremap <Leader>mp :MarkdownPreviewToggle<CR>
-]])
+map('n', '<Leader>mp', ':MarkdownPreviewToggle<CR>')

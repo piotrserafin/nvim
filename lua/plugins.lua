@@ -86,6 +86,7 @@ local function init_packer()
         use { 'kyazdani42/nvim-tree.lua' }
 
         -- Term
+        use { "akinsho/toggleterm.nvim" }
 
         -- REST Client
         use { 'NTBBloodbath/rest.nvim' }

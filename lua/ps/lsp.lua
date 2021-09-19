@@ -18,35 +18,35 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   local opts = { noremap = true, silent = true }
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
 
-  buf_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>', opts)
-  buf_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>', opts)
-  buf_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>', opts)
-  buf_set_keymap('n', '<leader>D' , '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-  buf_set_keymap('n', '<leader>q' , '<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>', opts)
+  buf_set_keymap('n', '<Leader>wa', '<Cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<Leader>wr', '<Cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<Leader>wl', '<Cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  buf_set_keymap('n', '<Leader>D' , '<Cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<Leader>q' , '<Cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
   -- Lspsaga
-  buf_set_keymap('n', '<leader>gd', '<cmd>Lspsaga preview_definition<cr>', opts)
-  buf_set_keymap('n', '<leader>gh', '<cmd>Lspsaga lsp_finder<cr>', opts)
-  buf_set_keymap('n', '<leader>ca', '<cmd>Lspsaga code_action<cr>', opts)
-  buf_set_keymap('v', '<leader>ca', '<cmd>Lspsaga range_code_action<cr>', opts)
-  buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<cr>', opts)
-  buf_set_keymap('n', '<leader>e' , '<cmd>Lspsaga show_line_diagnostics<cr>', opts)
-  buf_set_keymap('n', '[d'        , '<cmd>Lspsaga diagnostic_jump_prev<cr>', opts)
-  buf_set_keymap('n', ']d'        , '<cmd>Lspsaga diagnostic_jump_next<cr>', opts)
-  buf_set_keymap('n', '<C-k>'     , '<cmd>Lspsaga signature_help<cr>', opts)
-  buf_set_keymap('n', 'K'         , '<cmd>Lspsaga hover_doc<cr>', opts)
+  buf_set_keymap('n', '<Leader>gd', '<Cmd>Lspsaga preview_definition<CR>', opts)
+  buf_set_keymap('n', '<Leader>gh', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+  buf_set_keymap('n', '<Leader>ca', '<Cmd>Lspsaga code_action<CR>', opts)
+  buf_set_keymap('v', '<Leader>ca', '<Cmd>Lspsaga range_code_action<CR>', opts)
+  buf_set_keymap('n', '<Leader>rn', '<Cmd>Lspsaga rename<CR>', opts)
+  buf_set_keymap('n', '<Leader>e' , '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
+  buf_set_keymap('n', '[d'        , '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
+  buf_set_keymap('n', ']d'        , '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+  buf_set_keymap('n', '<C-k>'     , '<Cmd>Lspsaga signature_help<CR>', opts)
+  buf_set_keymap('n', 'K'         , '<Cmd>Lspsaga hover_doc<CR>', opts)
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
-    buf_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+    buf_set_keymap("n", "<Leader>f", "<Cmd>lua vim.lsp.buf.formatting()<CR>", opts)
   end
   if client.resolved_capabilities.document_range_formatting then
-    buf_set_keymap("v", "<leader>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
+    buf_set_keymap("v", "<Leader>f", "<Cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
   end
 
   -- Set autocommands conditional on server_capabilities
@@ -147,6 +147,5 @@ saga.init_lsp_saga()
 symbols_outline.setup()
 
 vim.cmd([[
-set completeopt=menuone,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 ]])

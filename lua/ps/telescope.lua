@@ -1,4 +1,4 @@
---   _____ _____
+
 --  |  _  |   __|  Piotr Serafin
 --  |   __|__   |  https://piotrserafin.dev
 --  |__|  |_____|  https://github.com/piotrserafin
@@ -46,22 +46,23 @@ local function search_vimwiki()
     })
 end
 
-vim.cmd([[
-nnoremap <C-p>      :lua require('telescope.builtin').git_files()<cr>
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<cr>
-nnoremap <leader>ff :lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg :lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb :lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh :lua require('telescope.builtin').help_tags()<cr>
-nnoremap <leader>fd :lua require('ps.telescope').search_dotfiles()<cr>
-nnoremap <leader>fv :lua require('ps.telescope').search_vimwiki()<cr>
+local map = require('utils').map
 
-" telescope-dap
-nnoremap <leader>df :lua require('telescope').extensions.dap.frames()<cr>
-nnoremap <leader>dc :lua require('telescope').extensions.dap.configurations()<cr>
-nnoremap <leader>db :lua require('telescope').extensions.dap.list_breakpoints()<cr>
-nnoremap <leader>dv :lua require('telescope').extensions.dap.variables()<cr>
-]])
+-- telescope
+map('n', '<C-p>',       ':lua require("telescope.builtin").git_files()<CR>')
+map('n', '<Leader>ps',  ':lua require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ")})<CR>')
+map('n', '<Leader>ff',  ':lua require("telescope.builtin").find_files()<CR>')
+map('n', '<Leader>fg',  ':lua require("telescope.builtin").live_grep()<CR>')
+map('n', '<Leader>fb',  ':lua require("telescope.builtin").buffers()<CR>')
+map('n', '<Leader>fh',  ':lua require("telescope.builtin").help_tags()<CR>')
+map('n', '<Leader>fd',  ':lua require("ps.telescope").search_dotfiles()<CR>')
+map('n', '<Leader>fv',  ':lua require("ps.telescope").search_vimwiki()<CR>')
+
+-- telescope-dap
+map('n', '<Leader>df', ':lua require("telescope").extensions.dap.frames()<CR>')
+map('n', '<Leader>dc', ':lua require("telescope").extensions.dap.configurations()<CR>')
+map('n', '<Leader>db', ':lua require("telescope").extensions.dap.list_breakpoints()<CR>')
+map('n', '<Leader>dv', ':lua require("telescope").extensions.dap.variables()<CR>')
 
 return {
     search_dotfiles = search_dotfiles,

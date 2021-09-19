@@ -6,6 +6,6 @@
 
 vim.g.nvim_tree_width = 40
 
-vim.cmd([[
-nnoremap <C-n> :NvimTreeToggle<CR>
-]])
+local map = require('utils').map
+
+map('n', '<C-n>', ':NvimTreeToggle<CR>')

@@ -5,7 +5,7 @@
 --
 
 -- ULTISNIPS
-vim.g.UltiSnipsExpandTrigger = '<tab>'
-vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
-vim.g.UltiSnipsJumpBackwardTrigger = "<s-tab>"
-vim.g.UltiSnipsSnippetDirectories = {"snips"}
+vim.g.UltiSnipsExpandTrigger = '<Tab>'
+vim.g.UltiSnipsJumpForwardTrigger = '<Tab>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+vim.g.UltiSnipsSnippetDirectories = {'snips'}

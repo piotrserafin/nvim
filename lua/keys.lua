@@ -12,7 +12,7 @@ vim.g.mapleader = ' '
 local map = require('utils').map
 
 -- Basic mappings
-map('n', '<leader>sv', ':so $MYVIMRC<cr>')
+map('n', '<Leader>sv', ':so $MYVIMRC<CR>')
 
 -- Yank till end of line (make Y behave like D,C, etc.)
 map('n', 'Y', 'y$')
@@ -26,5 +26,5 @@ map('n', ',p', '"0p')
 map('n', ',P', '"0P')
 
 -- Line movement
-map('v', 'J', ':m \'>+1<CR>gv=gv')
-map('v', 'K', ':m \'<-2<CR>gv=gv')
+map('v', 'J', ":m '>+1<CR>gv=gv")
+map('v', 'K', ":m '<-2<CR>gv=gv")

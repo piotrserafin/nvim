@@ -9,8 +9,9 @@ require('rest-nvim').setup({
     skip_ssl_verification = false
 })
 
-vim.cmd([[
-nmap <leader>rr <Plug>RestNvim<cr>
-nmap <leader>rp <Plug>RestNvimPreview<cr>
-nmap <leader>rl <Plug>RestNvimLast<cr>
-]])
+local map = require('utils').map
+local opts  = { noremap = false }
+
+map('n', '<Leader>rr', '<Plug>RestNvim<CR>', opts)
+map('n', '<Leader>rp', '<Plug>RestNvimPreview<CR>', opts)
+map('n', '<Leader>rl', '<Plug>RestNvimLast<CR>', opts)
