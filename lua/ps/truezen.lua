@@ -13,7 +13,7 @@ require('true-zen').setup({
 	},
 	integrations = {
 		tmux = true,
-		lightline = true,
+		lualine = true,
 	},
 })
 

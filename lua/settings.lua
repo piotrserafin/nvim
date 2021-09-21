@@ -46,7 +46,6 @@ opt.termguicolors = true
 opt.background    = 'dark'
 g.gruvbox_material_background   = 'medium'
 g.gruvbox_material_palette      = 'material'
-g.lightline = { colorscheme     = 'gruvbox_material' }
 
 cmd "colorscheme gruvbox-material"
 

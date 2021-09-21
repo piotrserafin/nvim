@@ -26,8 +26,7 @@ local function init_packer()
         use { 'sainnhe/gruvbox-material' }
 
         -- Stausbar
-        use { 'itchyny/lightline.vim' }
-
+        use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
         -- Focus Mode
         use { "Pocco81/TrueZen.nvim" }
 
