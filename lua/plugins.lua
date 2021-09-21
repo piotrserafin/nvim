@@ -91,6 +91,9 @@ local function init_packer()
         -- REST Client
         use { 'NTBBloodbath/rest.nvim' }
 
+        -- Firenvim
+        use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
+
     end)
 end
 

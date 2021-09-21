@@ -6,7 +6,6 @@
 
 local cmd = vim.cmd
 local opt = vim.opt
-local fn = vim.fn
 local g = vim.g
 
 local indent = 4
@@ -72,7 +71,6 @@ opt.ignorecase  = true      -- ignore case when searching ... unless smartcase
 -- Edit
 opt.swapfile = false
 opt.undofile = true
-opt.undodir = "~/.local/share/nvim/undo"
 
 opt.list        = true
 opt.listchars   = {
@@ -87,4 +85,4 @@ opt.listchars   = {
 opt.clipboard:append('unnamedplus')
 opt.shortmess:append('c')
 
-opt.completeopt = 'menuone,noselect'
+opt.completeopt = 'menu,menuone,noselect'

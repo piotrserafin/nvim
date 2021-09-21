@@ -30,5 +30,5 @@ vim.g.vimwiki_dir_link = 'index'
 vim.g.calendar_diary = '~/Documents/vimwiki/work.wiki/diary'
 
 vim.cmd([[
-au BufNewFile ~/Documents/vimwiki/work.wiki/diary/*.md :silent 0r !~/.config/nvim/bin/generate-vimwiki-diary-template '%'
+au BufNewFile ~/Documents/vimwiki/work.wiki/diary/*.md :silent 0r !~/.config/nvim/scripts/generate-vimwiki-diary-template '%'
 ]])

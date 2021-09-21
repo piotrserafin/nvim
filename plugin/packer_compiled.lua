@@ -77,6 +77,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/calendar-vim"
   },
+  firenvim = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/firenvim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox-material"

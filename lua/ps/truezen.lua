@@ -19,8 +19,8 @@ require('true-zen').setup({
 
 local map = require('utils').map
 
-map('n', '<C-F12>', "<Cmd>TZAtaraxis<CR>")
-map('n', '<S-F12>', "<Cmd>TZMinimalist<CR>")
-map('n', '<F12>'  , "<Cmd>TZFocus<CR>")
+map('n', "<C-F12>", "<Cmd>TZAtaraxis<CR>")
+map('n', "<S-F12>", "<Cmd>TZMinimalist<CR>")
+map('n', "<F12>"  , "<Cmd>TZFocus<CR>")
 
 

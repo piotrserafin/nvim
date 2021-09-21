@@ -4,8 +4,10 @@
 ├── README.md
 ├── bin
 │   └── generate-vimwiki-diary-template
-├── init.vim
+├── init.lua
 ├── lua
+│   ├── autocommands.lua
+│   ├── keys.lua
 │   ├── plugins.lua
 │   ├── ps
 │   │   ├── colorizer.lua
@@ -13,28 +15,21 @@
 │   │   ├── dap.lua
 │   │   ├── init.lua
 │   │   ├── lsp.lua
-│   │   ├── lspkind.lua
+│   │   ├── mkdp.lua
+│   │   ├── netrw.lua
+│   │   ├── nvimtree.lua
 │   │   ├── rest.lua
 │   │   ├── telescope.lua
-│   │   └── treesitter.lua
+│   │   ├── toggleterm.lua
+│   │   ├── treesitter.lua
+│   │   ├── truezen.lua
+│   │   ├── ultisnips.lua
+│   │   └── vimwiki.lua
+│   ├── settings.lua
 │   └── utils
 │       └── init.lua
 ├── plugin
-│   ├── dap.vim
-│   ├── floaterm.vim
-│   ├── glow.vim
-│   ├── goyo.vim
-│   ├── limelight.vim
-│   ├── lsp.vim
-│   ├── mkdp.vim
-│   ├── netrw.vim
-│   ├── nvimtree.vim
-│   ├── packer_compiled.lua
-│   ├── rest.vim
-│   ├── telescope.vim
-│   ├── ultisnips.vim
-│   └── vimwiki.vim
-├── settings.vim
+│   └── packer_compiled.lua
 ├── snips
 │   ├── all.snippets
 │   ├── lua.snippets
