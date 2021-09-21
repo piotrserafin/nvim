@@ -125,6 +125,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-startup.lua"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-startup.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"

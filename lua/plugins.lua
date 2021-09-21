@@ -93,6 +93,9 @@ local function init_packer()
         -- Firenvim
         use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
 
+        -- Startup
+        use { 'henriquehbr/nvim-startup.lua' }
+
     end)
 end
 
