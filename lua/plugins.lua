@@ -45,9 +45,10 @@ local function init_packer()
         use { 'tmux-plugins/vim-tmux' }
         use { 'christoomey/vim-tmux-navigator' }
 
+        -- Comments
+        use { 'b3nj5m1n/kommentary' }
+
         -- TPope essentials
-        use { 'tpope/vim-commentary' }
-        use { 'tpope/vim-fugitive' }
         use { 'tpope/vim-surround' }
 
         -- LSP
