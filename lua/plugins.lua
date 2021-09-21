@@ -65,7 +65,7 @@ local function init_packer()
         use { 'nvim-lua/popup.nvim' }
         use { 'nvim-lua/plenary.nvim' }
         use { 'nvim-telescope/telescope.nvim' }
-        use { 'nvim-telescope/telescope-fzy-native.nvim' }
+        use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
         use { 'nvim-telescope/telescope-dap.nvim' }
 
         -- Treesitter
@@ -96,6 +96,9 @@ local function init_packer()
 
         -- Startup
         use { 'henriquehbr/nvim-startup.lua' }
+
+        -- JSON
+        use { 'gennaro-tedesco/nvim-jqx' }
 
     end)
 end
