@@ -69,7 +69,8 @@ local function init_packer()
         use { 'nvim-telescope/telescope-dap.nvim' }
 
         -- Treesitter
-        use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+        use { 'nvim-treesitter/nvim-treesitter', branch = '0.5-compat', run = ':TSUpdate' }
+        use { 'nvim-treesitter/nvim-treesitter-textobjects', branch = '0.5-compat' }
         use { 'nvim-treesitter/playground' }
 
         -- Debugging (nvim-dap)
