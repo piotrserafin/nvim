@@ -27,4 +27,5 @@ end
 local map = require('utils').map
 local opts = { noremap = true, silent = true }
 
-map('n', '<Leader>lg', '<Cmd>lua _lazygit_toggle()<CR>', opts)
+map('n', '<Leader>tg', '<cmd>lua _lazygit_toggle()<cr>', opts)
+map('n', '<Leader>tt', '<cmd>ToggleTerm<cr>', opts)

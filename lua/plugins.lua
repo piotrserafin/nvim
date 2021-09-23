@@ -39,10 +39,6 @@ local function init_packer()
         -- Markdown Preview
         use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
 
-        -- Tmux syntax highlight
-        use { 'tmux-plugins/vim-tmux' }
-        use { 'christoomey/vim-tmux-navigator' }
-
         -- Comments
         use { 'b3nj5m1n/kommentary' }
 

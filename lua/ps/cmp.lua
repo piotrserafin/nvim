@@ -72,9 +72,26 @@ cmp.setup({
           "s",
         }),
     },
+    documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
     sources = {
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'ultisnips' },
+        { name = 'buffer' },
+    },
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.kind = require('lspkind').presets.default[vim_item.kind] .. " " .. vim_item.kind
+
+            vim_item.menu = ({
+                nvim_lsp = "[LSP]",
+                nvim_lua = "[Lua]",
+                ultisnips = "[UltiSnips]",
+                buffer = "[Buffer]",
+            })[entry.source.name]
+            return vim_item
+        end,
     }
 })

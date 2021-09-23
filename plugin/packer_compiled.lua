@@ -221,14 +221,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
-  ["vim-tmux"] = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-tmux"
-  },
-  ["vim-tmux-navigator"] = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
-  },
   vimwiki = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vimwiki"
