@@ -5,7 +5,7 @@
 --
 
 require('ps.lsp')
-require('ps.compe')
+require('ps.cmp')
 require('ps.telescope')
 require('ps.colorizer')
 require('ps.treesitter')

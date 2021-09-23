@@ -27,11 +27,9 @@ local function init_packer()
 
         -- Stausbar
         use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+
         -- Focus Mode
         use { "Pocco81/TrueZen.nvim" }
-
-        -- UltiSnips
-        use { 'SirVer/ultisnips' }
 
         -- Vimwiki & Taskworrior & Calendar
         use { 'vimwiki/vimwiki',  branch = 'dev' }
@@ -58,8 +56,15 @@ local function init_packer()
         use { 'onsails/lspkind-nvim' }
         use { 'simrat39/symbols-outline.nvim' }
 
-        -- Completetion (obsolete, switch to nvim-cmp)
-        use { 'hrsh7th/nvim-compe' }
+        -- Completetion
+        use { 'hrsh7th/cmp-nvim-lsp' }
+        use { 'hrsh7th/cmp-nvim-lua' }
+        use { 'hrsh7th/cmp-buffer' }
+        use { 'hrsh7th/nvim-cmp' }
+
+        -- Snipets
+        use { 'SirVer/ultisnips' }
+        use { 'quangnguyen30192/cmp-nvim-ultisnips' }
 
         -- Telescope
         use { 'nvim-lua/popup.nvim' }

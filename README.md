@@ -2,23 +2,23 @@
 
 ```
 ├── README.md
-├── bin
-│   └── generate-vimwiki-diary-template
 ├── init.lua
 ├── lua
 │   ├── autocommands.lua
 │   ├── keys.lua
 │   ├── plugins.lua
 │   ├── ps
+│   │   ├── cmp.lua
 │   │   ├── colorizer.lua
-│   │   ├── compe.lua
 │   │   ├── dap.lua
 │   │   ├── init.lua
 │   │   ├── lsp.lua
+│   │   ├── lualine.lua
 │   │   ├── mkdp.lua
 │   │   ├── netrw.lua
 │   │   ├── nvimtree.lua
 │   │   ├── rest.lua
+│   │   ├── startup.lua
 │   │   ├── telescope.lua
 │   │   ├── toggleterm.lua
 │   │   ├── treesitter.lua
@@ -30,6 +30,8 @@
 │       └── init.lua
 ├── plugin
 │   └── packer_compiled.lua
+├── scripts
+│   └── generate-vimwiki-diary-template
 ├── snips
 │   ├── all.snippets
 │   ├── lua.snippets

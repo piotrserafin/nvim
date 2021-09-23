@@ -29,7 +29,12 @@ require('nvim-treesitter.configs').setup({
         'javascript',
         'typescript',
         'css',
+        'cmake',
+        'vim',
         'http'
+    },
+    ident = {
+        enable = true
     },
     textobjects = {
         select = {

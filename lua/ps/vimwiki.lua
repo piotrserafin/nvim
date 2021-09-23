@@ -23,7 +23,7 @@ vim.g.vimwiki_list = {
 
 vim.g.vimwiki_markdown_link_ext = 1
 vim.g.vimwiki_global_ext = 0
-vim.g.vimwiki_folding = ''
+vim.g.vimwiki_folding = 'custom'
 vim.g.vimwiki_dir_link = 'index'
 
 -- CALENDAR + VIMWIKI
