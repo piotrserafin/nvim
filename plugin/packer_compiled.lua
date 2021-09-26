@@ -93,10 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips"
   },
-  firenvim = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/firenvim"
-  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox-material"
@@ -116,6 +112,10 @@ _G.packer_plugins = {
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
+  luarefvim = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/luarefvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,

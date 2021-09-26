@@ -64,6 +64,10 @@ local on_attach = function(client, bufnr)
   end
 end
 
+local runtime_path = vim.split(package.path, ';')
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
+
 local lua_settings = {
     Lua = {
         runtime = {
@@ -78,10 +82,7 @@ local lua_settings = {
         },
         workspace = {
             -- Make the server aware of Neovim runtime files
-            library = {
-                [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
-            },
+            library = vim.api.nvim_get_runtime_file("", true),
             maxPreload = 2000,
             preloadFileSize = 50000,
         },

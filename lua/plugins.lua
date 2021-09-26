@@ -93,14 +93,14 @@ local function init_packer()
         -- REST Client
         use { 'NTBBloodbath/rest.nvim' }
 
-        -- Firenvim
-        use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
-
         -- Startup
         use { 'henriquehbr/nvim-startup.lua' }
 
         -- JSON
         use { 'gennaro-tedesco/nvim-jqx' }
+
+        -- Lua Reference Docs
+        use { 'wsdjeg/luarefvim' }
 
     end)
 end

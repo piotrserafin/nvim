@@ -11,13 +11,15 @@ vim.g.vimwiki_list = {
         path = '~/Documents/vimwiki/personal.wiki/',
         syntax = 'markdown',
         ext = '.md',
-        auto_diary_index = 1
+        auto_diary_index = 1,
+        auto_toc = 1
     },
     {
         path = '~/Documents/vimwiki/work.wiki/',
         syntax = 'markdown',
         ext = '.md',
-        auto_diary_index = 1
+        auto_diary_index = 1,
+        auto_toc = 1
     }
 }
 
