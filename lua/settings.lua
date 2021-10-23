@@ -35,9 +35,9 @@ opt.textwidth       = 120       -- maximum width of text that is being inserted
 opt.wrap            = false     -- long lines nowrap
 opt.ruler           = true      -- show the line and column number of the cursor position
 opt.colorcolumn     = '80,120'  -- comma separated list of screen columns
-opt.cursorline      = true
+opt.cursorline      = true      -- Highlight the screen line of the cursor with CursorLine
 opt.foldenable      = false     -- when off, all folds are open
-opt.scrolloff       = 8
+opt.scrolloff       = 8         -- Minimal number of screen lines to keep above and below the cursor
 opt.signcolumn      = 'yes'
 opt.guicursor       = ''
 

@@ -56,11 +56,10 @@ local function init_packer()
         use { 'hrsh7th/cmp-nvim-lsp' }
         use { 'hrsh7th/cmp-nvim-lua' }
         use { 'hrsh7th/cmp-buffer' }
+        use { 'hrsh7th/cmp-path' }
         use { 'hrsh7th/nvim-cmp' }
 
         -- Snipets
-        use { 'SirVer/ultisnips' }
-        use { 'quangnguyen30192/cmp-nvim-ultisnips' }
 
         -- Telescope
         use { 'nvim-lua/popup.nvim' }
@@ -101,6 +100,9 @@ local function init_packer()
 
         -- Lua Reference Docs
         use { 'wsdjeg/luarefvim' }
+
+        -- Google Keep Integration
+        use {'stevearc/gkeep.nvim', run = ':UpdateRemotePlugins'}
 
     end)
 end

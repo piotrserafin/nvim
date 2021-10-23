@@ -23,7 +23,6 @@
 │   │   ├── toggleterm.lua
 │   │   ├── treesitter.lua
 │   │   ├── truezen.lua
-│   │   ├── ultisnips.lua
 │   │   └── vimwiki.lua
 │   ├── settings.lua
 │   └── utils

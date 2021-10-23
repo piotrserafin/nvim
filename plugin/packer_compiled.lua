@@ -89,9 +89,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
   },
-  ["cmp-nvim-ultisnips"] = {
+  ["cmp-path"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
+  ["gkeep.nvim"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gkeep.nvim"
   },
   ["gruvbox-material"] = {
     loaded = true,
@@ -212,10 +216,6 @@ _G.packer_plugins = {
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/toggleterm.nvim"
-  },
-  ultisnips = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/ultisnips"
   },
   ["vim-surround"] = {
     loaded = true,

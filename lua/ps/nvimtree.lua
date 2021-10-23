@@ -4,7 +4,12 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-vim.g.nvim_tree_width = 40
+require('nvim-tree').setup({
+    view = {
+        width = 40
+    }
+})
+
 
 local map = require('utils').map
 
