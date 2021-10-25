@@ -7,7 +7,8 @@
 local saga = require('lspsaga')
 local kind = require('lspkind')
 local lspconfig = require('lspconfig')
-local lspinstall = require('lspinstall')
+local lsp_installer = require('nvim-lsp-installer')
+local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local symbols_outline = require('symbols-outline')
 
 local on_attach = function(client, bufnr)
@@ -104,38 +105,29 @@ local function make_config()
     }
 end
 
--- lsp-install
-local function setup_servers()
-    lspinstall.setup()
+lsp_installer.on_server_ready(function(server)
+    local default_config = make_config()
+    local server_config = {
+        ["sumneko_lua"] = function()
+            default_config.settings = lua_settings
+            return default_config
+        end,
+        ["clangd"] = function()
+            default_config.filetypes = {
+                "c",
+                "cpp"
+            }
 
-    -- get all installed servers
-    local servers = lspinstall.installed_servers()
-    -- ... and add manually installed servers
-    -- table.insert(servers, "clangd")
+            default_config.root_dir = function()
+                return vim.loop.cwd()
+            end
 
-    for _, server in pairs(servers) do
-        local config = make_config()
-
-        -- language specific config
-        if server == "lua" then
-            config.settings = lua_settings
+            return default_config
         end
-        if server == "clangd" then
-            config.filetypes = {"c", "cpp"}; -- we don't want objective-c and objective-cpp!
-            config.root_dir = function() return vim.loop.cwd() end
-        end
-
-        lspconfig[server].setup(config)
-    end
-end
-
-setup_servers()
-
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-lspinstall.post_install_hook = function ()
-    setup_servers() -- reload installed servers
-    vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+    }
+    server:setup(server_config[server.name] and server_config[server.name]() or default_config)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
 
 kind.init()
 saga.init_lsp_saga()

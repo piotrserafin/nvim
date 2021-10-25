@@ -47,7 +47,7 @@ local function init_packer()
 
         -- LSP
         use { 'neovim/nvim-lspconfig' }
-        use { 'kabouzeid/nvim-lspinstall' }
+        use { 'williamboman/nvim-lsp-installer' }
         use { 'glepnir/lspsaga.nvim' }
         use { 'onsails/lspkind-nvim' }
         use { 'simrat39/symbols-outline.nvim' }

@@ -21,7 +21,7 @@ cmp.setup({
             behavior = cmp.ConfirmBehavior.Insert,
             select = true
         }),
-        ['<CR>'] = cmp.mapping.complete(),
+        ['<C-u>'] = cmp.mapping.complete(),
     },
     documentation = {
         border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
