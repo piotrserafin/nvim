@@ -53,6 +53,7 @@ local function init_packer()
         use { 'simrat39/symbols-outline.nvim' }
 
         -- Completetion
+        use { 'saadparwaiz1/cmp_luasnip' }
         use { 'hrsh7th/cmp-nvim-lsp' }
         use { 'hrsh7th/cmp-nvim-lua' }
         use { 'hrsh7th/cmp-buffer' }
@@ -61,7 +62,6 @@ local function init_packer()
 
         -- Snipets
         use { 'L3MON4D3/LuaSnip' }
-        use { 'saadparwaiz1/cmp_luasnip' }
 
         -- Telescope
         use { 'nvim-lua/popup.nvim' }

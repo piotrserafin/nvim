@@ -21,7 +21,7 @@ cmp.setup({
             behavior = cmp.ConfirmBehavior.Insert,
             select = true
         }),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<CR>'] = cmp.mapping.complete(),
     },
     documentation = {
         border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
@@ -39,14 +39,14 @@ cmp.setup({
             menu = {
                 nvim_lsp = "[lsp]",
                 nvim_lua = "[api]",
-                buffer = "[buff]",
                 path = "[path]",
-                luasnip = "[snip]"
+                luasnip = "[snip]",
+                buffer = "[buff]",
             }
         }
     },
     experimental = {
         native_menu = false,
-        ghost_text = true
+        ghost_text = true,
     }
 })
