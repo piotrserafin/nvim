@@ -29,7 +29,7 @@ local function init_packer()
         use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
 
         -- Focus Mode
-        use { "Pocco81/TrueZen.nvim" }
+        use { 'Pocco81/TrueZen.nvim' }
 
         -- Vimwiki & Taskworrior & Calendar
         use { 'vimwiki/vimwiki',  branch = 'dev' }
@@ -86,13 +86,13 @@ local function init_packer()
         use { 'kyazdani42/nvim-web-devicons' }
 
         -- Nvim-tree
-        use { 'kyazdani42/nvim-tree.lua' }
+        use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'} }
 
         -- Term
         use { "akinsho/toggleterm.nvim" }
 
         -- REST Client
-        use { 'NTBBloodbath/rest.nvim' }
+        use { 'NTBBloodbath/rest.nvim', requires = { "nvim-lua/plenary.nvim" } }
 
         -- Startup
         use { 'henriquehbr/nvim-startup.lua' }

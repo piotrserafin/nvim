@@ -32,9 +32,12 @@ require('telescope').setup({
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('dap')
 
+-- Currently doesn't work with fzf (https://github.com/stevearc/gkeep.nvim/issues/2)
+-- require('telescope').load_extension('gkeep')
+
 local function search_dotfiles()
     require('telescope.builtin').find_files({
-        prompt_title = "< VimRC >",
+        prompt_title = "< Neovim >",
         cwd = "$HOME/.config/nvim/",
     })
 end
@@ -46,23 +49,21 @@ local function search_vimwiki()
     })
 end
 
-local map = require('utils').map
-
 -- telescope
-map('n', '<C-p>',       ':lua require("telescope.builtin").git_files()<CR>')
-map('n', '<Leader>ps',  ':lua require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ")})<CR>')
-map('n', '<Leader>ff',  ':lua require("telescope.builtin").find_files()<CR>')
-map('n', '<Leader>fg',  ':lua require("telescope.builtin").live_grep()<CR>')
-map('n', '<Leader>fb',  ':lua require("telescope.builtin").buffers()<CR>')
-map('n', '<Leader>fh',  ':lua require("telescope.builtin").help_tags()<CR>')
-map('n', '<Leader>fd',  ':lua require("ps.telescope").search_dotfiles()<CR>')
-map('n', '<Leader>fv',  ':lua require("ps.telescope").search_vimwiki()<CR>')
+vim.api.nvim_set_keymap('n', '<C-p>',       ':lua require("telescope.builtin").git_files()<CR>' , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ff',  ':lua require("telescope.builtin").find_files()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fg',  ':lua require("telescope.builtin").live_grep()<CR>' , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fb',  ':lua require("telescope.builtin").buffers()<CR>'   , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fh',  ':lua require("telescope.builtin").help_tags()<CR>' , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fd',  ':lua require("ps.telescope").search_dotfiles()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fv',  ':lua require("ps.telescope").search_vimwiki()<CR>' , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ps',  ':lua require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ")})<CR>', { noremap = true, silent = true })
 
 -- telescope-dap
-map('n', '<Leader>df', ':lua require("telescope").extensions.dap.frames()<CR>')
-map('n', '<Leader>dc', ':lua require("telescope").extensions.dap.configurations()<CR>')
-map('n', '<Leader>db', ':lua require("telescope").extensions.dap.list_breakpoints()<CR>')
-map('n', '<Leader>dv', ':lua require("telescope").extensions.dap.variables()<CR>')
+vim.api.nvim_set_keymap('n', '<Leader>df', ':lua require("telescope").extensions.dap.frames()<CR>'          , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>dc', ':lua require("telescope").extensions.dap.configurations()<CR>'  , { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>db', ':lua require("telescope").extensions.dap.list_breakpoints()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>dv', ':lua require("telescope").extensions.dap.variables()<CR>'       , { noremap = true, silent = true })
 
 return {
     search_dotfiles = search_dotfiles,

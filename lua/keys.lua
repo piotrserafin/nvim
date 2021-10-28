@@ -5,26 +5,24 @@
 --
 
 vim.g.mapleader = ' '
-
+vim.g.maplocalleader = ' '
 ------------------
 --  Keymappings  -
 ------------------
-local map = require('utils').map
-
 -- Basic mappings
-map('n', '<Leader>sv', ':so $MYVIMRC<CR>')
+vim.api.nvim_set_keymap('n', '<Leader>sv', ':so $MYVIMRC<CR>', { noremap = true })
 
 -- Yank till end of line (make Y behave like D,C, etc.)
-map('n', 'Y', 'y$')
+vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = true })
 
 -- Remap to avoid hitting shift when entering command mode
-map('n', ';', ':')
-map('v', ';', ':')
+vim.api.nvim_set_keymap('n', ';', ':', { noremap = true })
+vim.api.nvim_set_keymap('v', ';', ':', { noremap = true })
 
 -- Paste last thing yanked, not deleted
-map('n', ',p', '"0p')
-map('n', ',P', '"0P')
+vim.api.nvim_set_keymap('n', ',p', '"0p', { noremap = true })
+vim.api.nvim_set_keymap('n', ',P', '"0P', { noremap = true })
 
 -- Line movement
-map('v', 'J', ":m '>+1<CR>gv=gv")
-map('v', 'K', ":m '<-2<CR>gv=gv")
+vim.api.nvim_set_keymap('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })

@@ -24,8 +24,6 @@ function _lazygit_toggle()
     lazygit:toggle()
 end
 
-local map = require('utils').map
-local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap('n', '<Leader>tg', '<cmd>lua _lazygit_toggle()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>tt', '<cmd>ToggleTerm<cr>',            { noremap = true, silent = true })
 
-map('n', '<Leader>tg', '<cmd>lua _lazygit_toggle()<cr>', opts)
-map('n', '<Leader>tt', '<cmd>ToggleTerm<cr>', opts)

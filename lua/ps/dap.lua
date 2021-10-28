@@ -5,7 +5,6 @@
 --
 
 local dap = require('dap')
-local map = require('utils').map
 
 dap.defaults.fallback.external_terminal = {
     command = '/usr/local/bin/alacritty';
@@ -33,19 +32,22 @@ dap.configurations.c = {
     }
 }
 
-map('n', '<F9>'      , ":lua require'dap'.toggle_breakpoint()<CR>")
-map('n', '<S-F11>'   , ":lua require'dap'.step_out()<CR>")
-map('n', '<F11>'     , ":lua require'dap'.step_into()<CR>")
-map('n', '<F10>'     , ":lua require'dap'.step_over()<CR>")
-map('n', '<Leader>ds', ":lua require'dap'.stop()<CR>")
-map('n', '<Leader>dn', ":lua require'dap'.continue()<CR>")
-map('n', '<Leader>dk', ":lua require'dap'.up()<CR>")
-map('n', '<Leader>dj', ":lua require'dap'.down()<CR>")
-map('n', '<Leader>d_', ":lua require'dap'.run_last()<CR>")
-map('n', '<Leader>dr', ":lua require'dap'.repl.open({}, 'vsplit')<CR><C-w>")
-map('n', '<Leader>di', ":lua require'dap.ui.widgets'.hover()<CR>")
-map('n', '<Leader>di', ":lua require'dap.ui.variables'.visual_hover()<CR>")
-map('n', '<Leader>d?', ":lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>")
-map('n', '<Leader>de', ":lua require'dap'.set_exception_breakpoints({\"all\"})<CR>")
-
 vim.g.dap_virtual_text = true
+
+local opts = { noremap = true, silent = true }
+
+vim.api.nvim_set_keymap('n', '<F9>'      , ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<S-F11>'   , ":lua require'dap'.step_out()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<F11>'     , ":lua require'dap'.step_into()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<F10>'     , ":lua require'dap'.step_over()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>ds', ":lua require'dap'.stop()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>dn', ":lua require'dap'.continue()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>dk', ":lua require'dap'.up()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>dj', ":lua require'dap'.down()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>d_', ":lua require'dap'.run_last()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>dr', ":lua require'dap'.repl.open({}, 'vsplit')<CR><C-w>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>di', ":lua require'dap.ui.widgets'.hover()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>di', ":lua require'dap.ui.variables'.visual_hover()<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>de', ":lua require'dap'.set_exception_breakpoints({\"all\"})<CR>", opts)
+vim.api.nvim_set_keymap('n', '<Leader>d?', ":lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>", opts)
+
