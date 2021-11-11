@@ -71,167 +71,208 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/LuaSnip"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["TrueZen.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/TrueZen.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/TrueZen.nvim",
+    url = "https://github.com/Pocco81/TrueZen.nvim"
   },
   ["calendar-vim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/calendar-vim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/calendar-vim",
+    url = "https://github.com/mattn/calendar-vim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-path"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["gkeep.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gkeep.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gkeep.nvim",
+    url = "https://github.com/stevearc/gkeep.nvim"
   },
   ["gruvbox-material"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   kommentary = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/kommentary",
+    url = "https://github.com/b3nj5m1n/kommentary"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
   },
   luarefvim = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/luarefvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/luarefvim",
+    url = "https://github.com/wsdjeg/luarefvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-dap"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-dap-virtual-text"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
   ["nvim-jqx"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-jqx"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-jqx",
+    url = "https://github.com/gennaro-tedesco/nvim-jqx"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-startup.lua"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-startup.lua"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-startup.lua",
+    url = "https://github.com/henriquehbr/nvim-startup.lua"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/playground"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["rest.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/rest.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/rest.nvim",
+    url = "https://github.com/NTBBloodbath/rest.nvim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   taskwiki = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/taskwiki"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/taskwiki",
+    url = "https://github.com/tools-life/taskwiki"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/toggleterm.nvim"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   vimwiki = {
     loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vimwiki"
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
