@@ -5,6 +5,7 @@
 --
 
 local dap = require('dap')
+local dap_virtual_text = require('nvim-dap-virtual-text')
 
 dap.defaults.fallback.external_terminal = {
     command = '/usr/local/bin/alacritty';
@@ -32,7 +33,7 @@ dap.configurations.c = {
     }
 }
 
-vim.g.dap_virtual_text = true
+dap_virtual_text.setup()
 
 local opts = { noremap = true, silent = true }
 
