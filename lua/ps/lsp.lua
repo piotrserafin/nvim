@@ -6,9 +6,7 @@
 
 local saga = require('lspsaga')
 local kind = require('lspkind')
-local lspconfig = require('lspconfig')
 local lsp_installer = require('nvim-lsp-installer')
-local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local symbols_outline = require('symbols-outline')
 
 local on_attach = function(client, bufnr)
@@ -75,16 +73,17 @@ local lua_settings = {
             -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
             version = 'LuaJIT',
             -- Setup your lua path
-            path = vim.split(package.path, ';'),
+            path = runtime_path
         },
         diagnostics = {
             -- Get the language server to recognize the `vim` global
             globals = {'vim'},
+            enable = true
         },
         workspace = {
             -- Make the server aware of Neovim runtime files
             library = vim.api.nvim_get_runtime_file("", true),
-            maxPreload = 2000,
+            maxPreload = 10000,
             preloadFileSize = 50000,
         },
         telemetry = {
@@ -110,6 +109,7 @@ lsp_installer.on_server_ready(function(server)
     local server_config = {
         ["sumneko_lua"] = function()
             default_config.settings = lua_settings
+
             return default_config
         end,
         ["clangd"] = function()
