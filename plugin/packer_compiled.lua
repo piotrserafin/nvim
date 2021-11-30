@@ -169,11 +169,6 @@ _G.packer_plugins = {
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
-  ["nvim-jqx"] = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-jqx",
-    url = "https://github.com/gennaro-tedesco/nvim-jqx"
-  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",

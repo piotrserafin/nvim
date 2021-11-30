@@ -26,7 +26,7 @@ local function init_packer()
         use { 'sainnhe/gruvbox-material' }
 
         -- Stausbar
-        use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+        use { 'hoob3rt/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
         -- Focus Mode
         use { 'Pocco81/TrueZen.nvim' }
@@ -86,25 +86,22 @@ local function init_packer()
         use { 'kyazdani42/nvim-web-devicons' }
 
         -- Nvim-tree
-        use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'} }
+        use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 
         -- Term
         use { "akinsho/toggleterm.nvim" }
 
         -- REST Client
-        use { 'NTBBloodbath/rest.nvim', requires = { "nvim-lua/plenary.nvim" } }
+        use { 'NTBBloodbath/rest.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
         -- Startup
         use { 'henriquehbr/nvim-startup.lua' }
-
-        -- JSON
-        use { 'gennaro-tedesco/nvim-jqx' }
 
         -- Lua Reference Docs
         use { 'wsdjeg/luarefvim' }
 
         -- Google Keep Integration
-        use {'stevearc/gkeep.nvim', run = ':UpdateRemotePlugins'}
+        use { 'stevearc/gkeep.nvim', run = ':UpdateRemotePlugins' }
 
     end)
 end
