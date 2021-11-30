@@ -40,7 +40,7 @@ local function init_packer()
         use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
 
         -- Comments
-        use { 'b3nj5m1n/kommentary' }
+        use { 'numToStr/Comment.nvim' }
 
         -- TPope essentials
         use { 'tpope/vim-surround' }

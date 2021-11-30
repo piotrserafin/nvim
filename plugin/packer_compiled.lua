@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -118,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
-  },
-  kommentary = {
-    loaded = true,
-    path = "/Users/piotr_serafin/.local/share/nvim/site/pack/packer/start/kommentary",
-    url = "https://github.com/b3nj5m1n/kommentary"
   },
   ["lspkind-nvim"] = {
     loaded = true,
