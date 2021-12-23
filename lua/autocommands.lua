@@ -9,7 +9,7 @@
 -------------------
 vim.cmd([[
 autocmd FileType markdown set conceallevel=0
-autocmd BufWritePost plugins.lua PackerCompile
+autocmd FileType vimwiki set conceallevel=0
 
 augroup PS
     autocmd!
