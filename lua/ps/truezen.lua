@@ -4,7 +4,12 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require('true-zen').setup({
+local status_ok, truezen = pcall(require, "true-zen")
+if not status_ok then
+    return
+end
+
+truezen.setup({
 	ui = {
 		left = {
 			number = true,

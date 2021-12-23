@@ -4,7 +4,12 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require('rest-nvim').setup({
+local status_ok, rest = pcall(require, "rest-nvim")
+if not status_ok then
+    return
+end
+
+rest.setup({
     result_split_horizontal = false,
     skip_ssl_verification = false,
     jump_to_request = true,

@@ -4,7 +4,12 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require('nvim-tree').setup({
+local status_ok, tree = pcall(require, "nvim-tree")
+if not status_ok then
+    return
+end
+
+tree.setup({
     view = {
         width = 40
     }
