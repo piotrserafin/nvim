@@ -77,7 +77,6 @@ return packer.startup(function(use)
     -- LSP
     use { 'neovim/nvim-lspconfig' }
     use { 'williamboman/nvim-lsp-installer' }
-    use { 'tami5/lspsaga.nvim' }
     use { 'onsails/lspkind-nvim' }
     use { 'simrat39/symbols-outline.nvim' }
 
