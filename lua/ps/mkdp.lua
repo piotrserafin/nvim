@@ -8,4 +8,4 @@
 vim.g.mkdp_refresh_slow = 1
 
 -- Toggle Markdown Preview in Browser
-vim.api.nvim_set_keymap('n', '<Leader>mp', ':MarkdownPreviewToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>mp", ":MarkdownPreviewToggle<CR>", { noremap = true, silent = true })

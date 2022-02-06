@@ -11,7 +11,7 @@ end
 
 lualine.setup({
     options = {
-        theme = 'gruvbox-material'
+        theme = "gruvbox-material",
     },
-    extensions = { 'nvim-tree' }
+    extensions = { "nvim-tree" },
 })

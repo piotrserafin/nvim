@@ -15,7 +15,6 @@ rest.setup({
     jump_to_request = true,
 })
 
-vim.api.nvim_set_keymap('n', '<Leader>rr', '<Plug>RestNvim<CR>',        { noremap = false })
-vim.api.nvim_set_keymap('n', '<Leader>rp', '<Plug>RestNvimPreview<CR>', { noremap = false })
-vim.api.nvim_set_keymap('n', '<Leader>rl', '<Plug>RestNvimLast<CR>',    { noremap = false })
-
+vim.api.nvim_set_keymap("n", "<Leader>rr", "<Plug>RestNvim<CR>", { noremap = false })
+vim.api.nvim_set_keymap("n", "<Leader>rp", "<Plug>RestNvimPreview<CR>", { noremap = false })
+vim.api.nvim_set_keymap("n", "<Leader>rl", "<Plug>RestNvimLast<CR>", { noremap = false })

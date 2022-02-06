@@ -4,29 +4,29 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require('nvim-treesitter.configs').setup({
+require("nvim-treesitter.configs").setup({
     ensure_installed = {
-        'bash',
-        'c',
-        'cpp',
-        'rust',
-        'python',
-        'lua',
-        'json',
-        'dockerfile',
-        'nix',
-        'yaml',
-        'html',
-        'javascript',
-        'typescript',
-        'css',
-        'cmake',
-        'vim',
-        'http',
-        'pioasm'
+        "bash",
+        "c",
+        "cpp",
+        "rust",
+        "python",
+        "lua",
+        "json",
+        "dockerfile",
+        "nix",
+        "yaml",
+        "html",
+        "javascript",
+        "typescript",
+        "css",
+        "cmake",
+        "vim",
+        "http",
+        "pioasm",
     },
     ident = {
-        enable = true
+        enable = true,
     },
     textobjects = {
         select = {
@@ -74,9 +74,9 @@ require('nvim-treesitter.configs').setup({
         },
     },
     highlight = {
-        enable = true
+        enable = true,
     },
     playground = {
-        enable = true
-    }
+        enable = true,
+    },
 })

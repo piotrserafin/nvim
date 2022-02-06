@@ -12,4 +12,3 @@ require("keys")
 require("autocommands")
 require("plugins")
 require("ps")
-

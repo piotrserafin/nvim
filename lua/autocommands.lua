@@ -16,4 +16,3 @@ augroup PS
     autocmd BufWritePre * %s/\s\+$//e
 augroup END
 ]])
-

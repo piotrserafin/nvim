@@ -4,4 +4,4 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
--- require('nvim-startup').setup()
+-- require("nvim-startup").setup()
