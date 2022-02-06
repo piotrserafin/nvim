@@ -79,6 +79,7 @@ return packer.startup(function(use)
     use { 'williamboman/nvim-lsp-installer' }
     use { 'onsails/lspkind-nvim' }
     use { 'simrat39/symbols-outline.nvim' }
+    use { "jose-elias-alvarez/null-ls.nvim" }
 
     -- Completetion
     use { 'saadparwaiz1/cmp_luasnip' }
