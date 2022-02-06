@@ -4,12 +4,9 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local status_ok, _ = pcall(require, "lspconfig")
+local status_ok, symbols_outline = pcall(require, "symbols-outline")
 if not status_ok then
   return
 end
 
-require("ps.lsp.handlers").setup()
-require("ps.lsp.lsp_installer")
-require("ps.lsp.lspkind")
-require("ps.lsp.symbolsoutline")
+symbols_outline.setup()
