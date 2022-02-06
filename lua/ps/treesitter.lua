@@ -22,7 +22,8 @@ require('nvim-treesitter.configs').setup({
         'css',
         'cmake',
         'vim',
-        'http'
+        'http',
+        'pioasm'
     },
     ident = {
         enable = true
