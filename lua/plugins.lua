@@ -107,6 +107,9 @@ return packer.startup(function(use)
     use({ "mfussenegger/nvim-dap" })
     use({ "theHamsta/nvim-dap-virtual-text" })
 
+    -- Git Integration
+    use({ "lewis6991/gitsigns.nvim" })
+
     -- Colorizer
     use({ "norcalli/nvim-colorizer.lua" })
 
