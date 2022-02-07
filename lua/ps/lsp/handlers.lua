@@ -68,6 +68,7 @@ end
 local function lsp_client_config(client)
     if client.name == "tsserver" then
         client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
     end
 end
 

@@ -4,14 +4,21 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+    return
+end
+
 local actions = require("telescope.actions")
-require("telescope").setup({
+local previewers = require("telescope.previewers")
+
+telescope.setup({
     defaults = {
         prompt_prefix = " >",
 
-        file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-        grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-        qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+        file_previewer = previewers.vim_buffer_cat.new,
+        grep_previewer = previewers.vim_buffer_vimgrep.new,
+        qflist_previewer = previewers.vim_buffer_qflist.new,
 
         mappings = {
             i = {
@@ -29,9 +36,9 @@ require("telescope").setup({
     },
 })
 
-require("telescope").load_extension("fzf")
-require("telescope").load_extension("dap")
-require("telescope").load_extension("gkeep")
+telescope.load_extension("fzf")
+telescope.load_extension("dap")
+telescope.load_extension("gkeep")
 
 local function search_dotfiles()
     require("telescope.builtin").find_files({
