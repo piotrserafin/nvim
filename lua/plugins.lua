@@ -23,14 +23,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     vim.cmd([[ packadd packer.nvim ]])
 end
 
--- Autcommand for calling PackerSync after every change in this file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
-
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
     return
@@ -79,6 +71,7 @@ return packer.startup(function(use)
     use({ "onsails/lspkind-nvim" })
     use({ "simrat39/symbols-outline.nvim" })
     use({ "jose-elias-alvarez/null-ls.nvim" })
+    use({ "j-hui/fidget.nvim" })
 
     -- Completetion
     use({ "saadparwaiz1/cmp_luasnip" })
@@ -127,9 +120,6 @@ return packer.startup(function(use)
 
     -- Startup
     use({ "henriquehbr/nvim-startup.lua" })
-
-    -- Lua Reference Docs
-    use({ "wsdjeg/luarefvim" })
 
     -- Google Keep Integration
     use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
