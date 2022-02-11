@@ -92,8 +92,8 @@ return packer.startup(function(use)
     use({ "nvim-telescope/telescope-dap.nvim" })
 
     -- Treesitter
-    use({ "nvim-treesitter/nvim-treesitter", branch = "0.5-compat", run = ":TSUpdate" })
-    use({ "nvim-treesitter/nvim-treesitter-textobjects", branch = "0.5-compat" })
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use({ "nvim-treesitter/nvim-treesitter-textobjects" })
     use({ "nvim-treesitter/playground" })
 
     -- Debugging (nvim-dap)
@@ -123,6 +123,8 @@ return packer.startup(function(use)
 
     -- Google Keep Integration
     use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
+
+    use({ "rcarriga/nvim-notify" })
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
