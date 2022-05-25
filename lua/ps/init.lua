@@ -4,6 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
+require("ps.utils")
 require("ps.lsp")
 require("ps.cmp")
 require("ps.telescope")

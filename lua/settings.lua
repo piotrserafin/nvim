@@ -116,9 +116,3 @@ vim.g.loaded_python_provider = 0
 
 -- Disable perl provider
 vim.g.loaded_perl_provider = 0
-
--- Disable ruby provider
--- vim.g.loaded_ruby_provider = 0
-
--- Disable node provider
-vim.g.loaded_node_provider = 0
