@@ -15,3 +15,7 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua.with({ extra_args = { "--indent-type", "Spaces" } }),
     },
 })
+
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("n", "<leader>nf", ":Format<cr>", opts)
+

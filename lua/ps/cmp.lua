@@ -4,7 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local cmp_status_ok, cmp = pcall(require,"cmp")
+local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
     return
 end
@@ -30,8 +30,10 @@ cmp.setup({
         }),
         ["<C-u>"] = cmp.mapping.complete(),
     },
-    documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    window = {
+        documentation = {
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        },
     },
     sources = {
         { name = "nvim_lsp" },
@@ -53,7 +55,6 @@ cmp.setup({
         }),
     },
     experimental = {
-        native_menu = false,
-        ghost_text = true,
+        ghost_text = false,
     },
 })

@@ -7,6 +7,8 @@
 --------------
 --  Imports  -
 --------------
+require("impatient")
+
 require("settings")
 require("keys")
 require("autocommands")

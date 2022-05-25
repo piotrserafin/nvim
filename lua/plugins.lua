@@ -39,8 +39,11 @@ packer.init({
 
 -- Plugins list
 return packer.startup(function(use)
-    -- Packer --
+    -- Packer
     use({ "wbthomason/packer.nvim" })
+
+    -- Impatient
+    use({ "lewis6991/impatient.nvim" })
 
     -- Theme --
     use({ "sainnhe/gruvbox-material" })
@@ -124,7 +127,10 @@ return packer.startup(function(use)
     -- Google Keep Integration
     use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
 
+    -- Notification Utility
     use({ "rcarriga/nvim-notify" })
+
+    use({ "jbyuki/venn.nvim" })
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
