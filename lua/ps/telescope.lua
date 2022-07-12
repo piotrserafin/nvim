@@ -38,7 +38,10 @@ telescope.setup({
 
 telescope.load_extension("fzf")
 telescope.load_extension("dap")
-telescope.load_extension("gkeep")
+
+if require("ps.utils").is_darwin() then
+    telescope.load_extension("gkeep")
+end
 
 local function search_dotfiles()
     require("telescope.builtin").find_files({
