@@ -54,13 +54,18 @@ return packer.startup(function(use)
     -- Focus Mode
     use({ "Pocco81/TrueZen.nvim" })
 
-    -- Vimwiki & Taskworrior & Calendar
-    use({ "vimwiki/vimwiki", branch = "dev" })
-    use({ "tools-life/taskwiki" })
-    use({ "mattn/calendar-vim" })
+    if require("ps.utils").is_darwin() then
+        -- Vimwiki & Taskworrior & Calendar
+        use({ "vimwiki/vimwiki", branch = "dev" })
+        use({ "tools-life/taskwiki" })
+        use({ "mattn/calendar-vim" })
 
-    -- Markdown Preview
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
+        -- Markdown Preview
+        use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
+
+        -- Google Keep Integration
+        use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
+    end
 
     -- Comments
     use({ "numToStr/Comment.nvim" })
@@ -123,9 +128,6 @@ return packer.startup(function(use)
 
     -- Startup
     use({ "henriquehbr/nvim-startup.lua" })
-
-    -- Google Keep Integration
-    use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
 
     -- Notification Utility
     use({ "rcarriga/nvim-notify" })
