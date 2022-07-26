@@ -7,12 +7,18 @@
 -------------------
 --  Autocommands  -
 -------------------
-vim.cmd([[
-autocmd FileType markdown set conceallevel=0
-autocmd FileType vimwiki set conceallevel=0
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = vim.api.nvim_create_augroup("PS", { clear = true }),
+    pattern = "*",
+    command = "%s/\\s\\+$//e"
+})
 
-augroup PS
-    autocmd!
-    autocmd BufWritePre * %s/\s\+$//e
-augroup END
-]])
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    command = "set conceallevel=0"
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "vimwiki",
+    command = "set conceallevel=0"
+})
