@@ -61,6 +61,7 @@ opt.history = 1000
 opt.path:append(".,**")
 opt.wildmode = "longest,list,full"
 opt.wildmenu = true
+opt.wildoptions = "pum"
 opt.showmatch = true
 opt.hlsearch = false
 opt.incsearch = true -- show dynamic matching pattern
@@ -81,7 +82,18 @@ opt.listchars = {
     trail = "·",
 }
 
-opt.clipboard:append("unnamedplus")
+opt.formatoptions = opt.formatoptions
+    - "a" -- disable autoformatting
+    - "t" -- no autoformat
+    + "c" -- auto-wrap comments using textwidth
+    + "q" -- format comments with "gq"
+    - "o" -- o/O do no continue comments
+    + "r" -- do continue when pressing enter in Insert mode
+    + "n" -- Indent past the formatlistpat, not underneath it.
+    + "j" -- Auto-remove comments if possible.
+    - "2" -- I'm not in gradeschool anymore
+
+opt.clipboard = "unnamedplus"
 opt.shortmess:append("c")
 
 opt.completeopt = "menu,menuone,noselect"
