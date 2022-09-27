@@ -20,6 +20,7 @@ require("ps.lualine")
 require("ps.startup")
 require("ps.gitsigns")
 require("ps.luasnip")
+require("ps.venn")
 
 if require("ps.utils").is_darwin() then
     require("ps.mkdp")

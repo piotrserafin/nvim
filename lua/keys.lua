@@ -39,5 +39,3 @@ keymap("n", ",P", '"0P', { noremap = true })
 -- Line movement
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
-
-keymap("v", "<Leader>vt", ":VBox<CR>", opts)

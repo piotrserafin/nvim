@@ -132,6 +132,7 @@ return packer.startup(function(use)
     -- Notification Utility
     use({ "rcarriga/nvim-notify" })
 
+    -- Diagrams
     use({ "jbyuki/venn.nvim" })
 
     if PACKER_BOOTSTRAP then
