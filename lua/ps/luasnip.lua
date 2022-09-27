@@ -28,7 +28,15 @@ local t = ls.text_node
 
 ls.snippets = {
     all = {
-        s("dupa", t("To jest dupa")),
+        s("psh", {
+            t({
+                "   _____ _____",
+                "  |  _  |   __|  Piotr Serafin",
+                "  |   __|__   |  https://piotrserafin.dev",
+                "  |__|  |_____|  https://github.com/piotrserafin",
+                "",
+            }),
+        }),
     },
 
     lua = {
