@@ -26,28 +26,26 @@ ls.config.set_config({
 local s = ls.s
 local t = ls.text_node
 
-ls.snippets = {
-    all = {
-        s("psh", {
-            t({
-                "   _____ _____",
-                "  |  _  |   __|  Piotr Serafin",
-                "  |   __|__   |  https://piotrserafin.dev",
-                "  |__|  |_____|  https://github.com/piotrserafin",
-                "",
-            }),
+ls.add_snippets("all", {
+    s("psh", {
+        t({
+            "   _____ _____",
+            "  |  _  |   __|  Piotr Serafin",
+            "  |   __|__   |  https://piotrserafin.dev",
+            "  |__|  |_____|  https://github.com/piotrserafin",
+            "",
         }),
-    },
+    }),
+})
 
-    lua = {
-        s("psh", {
-            t({
-                "--   _____ _____",
-                "--  |  _  |   __|  Piotr Serafin",
-                "--  |   __|__   |  https://piotrserafin.dev",
-                "--  |__|  |_____|  https://github.com/piotrserafin",
-                "--",
-            }),
+ls.add_snippets("lua", {
+    s("psh", {
+        t({
+            "--   _____ _____",
+            "--  |  _  |   __|  Piotr Serafin",
+            "--  |   __|__   |  https://piotrserafin.dev",
+            "--  |__|  |_____|  https://github.com/piotrserafin",
+            "--",
         }),
-    },
-}
+    }),
+})
