@@ -9,43 +9,18 @@ if not status_ok then
     return
 end
 
-local types = require("luasnip.util.types")
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets"})
 
 ls.config.set_config({
     history = true,
     updateevents = "TextChanged,TextChangedI",
+    enable_autosnippets = true,
     ext_opts = {
-        [types.choiceNode] = {
+        [require("luasnip.util.types").choiceNode] = {
             active = {
-                virt_text = { { "<-", "Error" } },
+                virt_text = { { "<-", "GruvboxOrange" } },
             },
         },
     },
 })
 
-local s = ls.s
-local t = ls.text_node
-
-ls.add_snippets("all", {
-    s("psh", {
-        t({
-            "   _____ _____",
-            "  |  _  |   __|  Piotr Serafin",
-            "  |   __|__   |  https://piotrserafin.dev",
-            "  |__|  |_____|  https://github.com/piotrserafin",
-            "",
-        }),
-    }),
-})
-
-ls.add_snippets("lua", {
-    s("psh", {
-        t({
-            "--   _____ _____",
-            "--  |  _  |   __|  Piotr Serafin",
-            "--  |   __|__   |  https://piotrserafin.dev",
-            "--  |__|  |_____|  https://github.com/piotrserafin",
-            "--",
-        }),
-    }),
-})

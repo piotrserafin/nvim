@@ -21,6 +21,10 @@ cmp.setup({
         end,
     },
     mapping = {
+        ["<C-p>"] = cmp.mapping.select_prev_item(),
+        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ["<A-o>"] = cmp.mapping.select_prev_item(),
+        ["<A-i>"] = cmp.mapping.select_next_item(),
         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.close(),
@@ -28,7 +32,7 @@ cmp.setup({
             behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         }),
-        ["<C-u>"] = cmp.mapping.complete(),
+        ["<C-u>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     },
     window = {
         documentation = {
@@ -36,20 +40,20 @@ cmp.setup({
         },
     },
     sources = {
+        { name = "luasnip" },
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "path" },
-        { name = "luasnip" },
-        { name = "buffer", keyword_length = 5 },
+        { name = "buffer", keyword_length = 5, max_item_count = 10 },
     },
     formatting = {
         format = lspkind.cmp_format({
             with_text = true,
             menu = {
+                luasnip = "[snip]",
                 nvim_lsp = "[lsp]",
                 nvim_lua = "[api]",
                 path = "[path]",
-                luasnip = "[snip]",
                 buffer = "[buff]",
             },
         }),
