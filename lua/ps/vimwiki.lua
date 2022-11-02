@@ -29,7 +29,3 @@ vim.g.vimwiki_dir_link = "index"
 
 -- CALENDAR + VIMWIKI
 vim.g.calendar_diary = "~/OneDrive - EPAM/vimwiki/work.wiki/diary"
-
-vim.cmd([[
-au BufNewFile ~/OneDrive_EPAM/vimwiki/work.wiki/diary/*.md :silent 0r !~/.config/nvim/scripts/generate-vimwiki-diary-template '%'
-]])
