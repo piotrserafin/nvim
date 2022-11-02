@@ -4,4 +4,9 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
--- require("nvim-startup").setup()
+local status_ok, surround = pcall(require, "surround")
+if not status_ok then
+    return
+end
+
+surround.setup()

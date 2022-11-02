@@ -57,8 +57,8 @@ return packer.startup(function(use)
     if require("ps.utils").is_darwin() then
         -- Vimwiki & Taskworrior & Calendar
         use({ "vimwiki/vimwiki", branch = "dev" })
-        use({ "tools-life/taskwiki" })
-        use({ "mattn/calendar-vim" })
+        use({ "renerocksai/calendar-vim" })
+        use({ "renerocksai/telekasten.nvim" })
 
         -- Markdown Preview
         use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
@@ -67,11 +67,9 @@ return packer.startup(function(use)
         use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
     end
 
-    -- Comments
+    -- Essentials
     use({ "numToStr/Comment.nvim" })
-
-    -- TPope essentials
-    use({ "tpope/vim-surround" })
+    use({ "kylechui/nvim-surround" })
 
     -- LSP
     use({ "neovim/nvim-lspconfig" })
@@ -125,9 +123,6 @@ return packer.startup(function(use)
 
     -- REST Client
     use({ "NTBBloodbath/rest.nvim", requires = { "nvim-lua/plenary.nvim" } })
-
-    -- Startup
-    use({ "henriquehbr/nvim-startup.lua" })
 
     -- Notification Utility
     use({ "rcarriga/nvim-notify" })
