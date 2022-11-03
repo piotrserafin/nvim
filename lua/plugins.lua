@@ -75,7 +75,6 @@ return packer.startup(function(use)
     use({ "neovim/nvim-lspconfig" })
     use({ "williamboman/nvim-lsp-installer" })
     use({ "onsails/lspkind-nvim" })
-    use({ "simrat39/symbols-outline.nvim" })
     use({ "jose-elias-alvarez/null-ls.nvim" })
     use({ "j-hui/fidget.nvim" })
 
@@ -105,12 +104,6 @@ return packer.startup(function(use)
     -- Debugging (nvim-dap)
     use({ "mfussenegger/nvim-dap" })
     use({ "theHamsta/nvim-dap-virtual-text" })
-
-    -- Git Integration
-    use({ "lewis6991/gitsigns.nvim" })
-
-    -- Colorizer
-    use({ "norcalli/nvim-colorizer.lua" })
 
     -- Devicons
     use({ "kyazdani42/nvim-web-devicons" })

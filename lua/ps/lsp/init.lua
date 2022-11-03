@@ -12,6 +12,5 @@ end
 require("ps.lsp.handlers").setup()
 require("ps.lsp.lsp_installer")
 require("ps.lsp.lspkind")
-require("ps.lsp.symbols_outline")
 require("ps.lsp.null_ls")
 require("ps.lsp.fidget")
