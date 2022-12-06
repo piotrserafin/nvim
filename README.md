@@ -9,34 +9,42 @@
 │   ├── plugins.lua
 │   ├── ps
 │   │   ├── cmp.lua
-│   │   ├── colorizer.lua
+│   │   ├── comment.lua
 │   │   ├── dap.lua
+│   │   ├── gkeep.lua
 │   │   ├── init.lua
-│   │   ├── lsp.lua
+│   │   ├── lsp
+│   │   │   ├── fidget.lua
+│   │   │   ├── handlers.lua
+│   │   │   ├── init.lua
+│   │   │   ├── lsp_installer.lua
+│   │   │   ├── lspkind.lua
+│   │   │   ├── null_ls.lua
+│   │   │   └── settings
+│   │   │       └── sumneko_lua.lua
 │   │   ├── lualine.lua
+│   │   ├── luasnip.lua
 │   │   ├── mkdp.lua
-│   │   ├── netrw.lua
+│   │   ├── notify.lua
 │   │   ├── nvimtree.lua
 │   │   ├── rest.lua
-│   │   ├── startup.lua
+│   │   ├── surround.lua
+│   │   ├── telekasten.lua
 │   │   ├── telescope.lua
 │   │   ├── toggleterm.lua
 │   │   ├── treesitter.lua
 │   │   ├── truezen.lua
+│   │   ├── utils.lua
+│   │   ├── venn.lua
 │   │   └── vimwiki.lua
-│   ├── settings.lua
-│   └── utils
-│       └── init.lua
+│   └── settings.lua
 ├── plugin
 │   └── packer_compiled.lua
-├── scripts
-│   └── generate-vimwiki-diary-template
-├── snips
-│   ├── all.snippets
-│   ├── lua.snippets
-│   ├── markdown.snippets
-│   └── vim.snippets
-└── spell
-    ├── en.utf-8.add
-    └── en.utf-8.add.spl
+├── snippets
+│   ├── all.lua
+│   └── lua.lua
+├── spell
+│   ├── en.utf-8.add
+│   └── en.utf-8.add.spl
+└── stylua.toml
 ```

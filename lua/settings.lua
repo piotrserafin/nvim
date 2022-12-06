@@ -38,6 +38,7 @@ opt.colorcolumn = "80,120" -- comma separated list of screen columns
 opt.cursorline = true -- Highlight the screen line of the cursor with CursorLine
 opt.foldenable = false -- when off, all folds are open
 opt.scrolloff = 8 -- Minimal number of screen lines to keep above and below the cursor
+opt.sidescrolloff = 8 -- Minimal number of screen lines to keep above and below the cursor
 opt.signcolumn = "yes"
 opt.guicursor = ""
 
@@ -60,8 +61,8 @@ opt.history = 1000
 -- Search
 opt.path:append(".,**")
 opt.wildmode = "longest,list,full"
-opt.wildmenu = true
 opt.wildoptions = "pum"
+opt.wildmenu = true
 opt.showmatch = true
 opt.hlsearch = false
 opt.incsearch = true -- show dynamic matching pattern
@@ -93,10 +94,11 @@ opt.formatoptions = opt.formatoptions
     + "j" -- Auto-remove comments if possible.
     - "2" -- I'm not in gradeschool anymore
 
+opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
 opt.shortmess:append("c")
 
-opt.completeopt = "menu,menuone,noselect"
+opt.completeopt = { 'menu' , 'menuone', 'noselect' }
 
 -- Disable builtin vim plugins
 local disabled_built_ins = {
