@@ -20,11 +20,12 @@ cmp.setup({
             require("luasnip").lsp_expand(args.body)
         end,
     },
+    view = {
+        entries = "custom"
+    },
     mapping = {
         ["<C-p>"] = cmp.mapping.select_prev_item(),
         ["<C-n>"] = cmp.mapping.select_next_item(),
-        ["<A-o>"] = cmp.mapping.select_prev_item(),
-        ["<A-i>"] = cmp.mapping.select_next_item(),
         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.close(),
@@ -35,9 +36,8 @@ cmp.setup({
         ["<C-u>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     },
     window = {
-        documentation = {
-            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        },
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     sources = {
         { name = "luasnip" },
@@ -48,7 +48,7 @@ cmp.setup({
     },
     formatting = {
         format = lspkind.cmp_format({
-            with_text = true,
+            mode = 'symbol_text',
             menu = {
                 luasnip = "[snip]",
                 nvim_lsp = "[lsp]",
