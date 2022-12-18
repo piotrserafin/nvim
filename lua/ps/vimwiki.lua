@@ -7,14 +7,14 @@
 -- VIMWIKI
 vim.g.vimwiki_list = {
     {
-        path = "~/Documents/vimwiki/personal.wiki",
+        path = "~/vimwiki/personal.wiki",
         syntax = "markdown",
         ext = ".md",
         auto_diary_index = 1,
         auto_toc = 1,
     },
     {
-        path = "~/OneDrive - EPAM/vimwiki/work.wiki",
+        path = "~/vimwiki/work.wiki",
         syntax = "markdown",
         ext = ".md",
         auto_diary_index = 1,
@@ -28,4 +28,4 @@ vim.g.vimwiki_folding = "custom"
 vim.g.vimwiki_dir_link = "index"
 
 -- CALENDAR + VIMWIKI
-vim.g.calendar_diary = "~/OneDrive - EPAM/vimwiki/work.wiki/diary"
+vim.g.calendar_diary = "~/vimwiki/work.wiki/diary"
