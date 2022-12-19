@@ -18,10 +18,6 @@ require("ps.toggleterm")
 require("ps.lualine")
 require("ps.luasnip")
 require("ps.venn")
-
-if require("ps.utils").is_darwin() then
-    require("ps.mkdp")
-    require("ps.vimwiki")
-    require("ps.telekasten")
-    require("ps.gkeep")
-end
+require("ps.vimwiki")
+require("ps.telekasten")
+require("ps.gkeep")

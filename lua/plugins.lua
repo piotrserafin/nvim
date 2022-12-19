@@ -54,18 +54,15 @@ return packer.startup(function(use)
     -- Focus Mode
     use({ "Pocco81/TrueZen.nvim" })
 
-    if require("ps.utils").is_darwin() then
-        -- Vimwiki & Taskworrior & Calendar
-        use({ "vimwiki/vimwiki", branch = "dev" })
-        use({ "renerocksai/calendar-vim" })
-        use({ "renerocksai/telekasten.nvim" })
+    -- Vimwiki
+    use({ "vimwiki/vimwiki", branch = "dev" })
 
-        -- Markdown Preview
-        use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
+    -- Telekasten Notes
+    use({ "renerocksai/calendar-vim" })
+    use({ "renerocksai/telekasten.nvim" })
 
-        -- Google Keep Integration
-        use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
-    end
+    -- Google Keep Integration
+    use({ "stevearc/gkeep.nvim", run = ":UpdateRemotePlugins" })
 
     -- Essentials
     use({ "numToStr/Comment.nvim" })
