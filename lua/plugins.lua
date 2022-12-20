@@ -70,7 +70,8 @@ return packer.startup(function(use)
 
     -- LSP
     use({ "neovim/nvim-lspconfig" })
-    use({ "williamboman/nvim-lsp-installer" })
+    use({ "williamboman/mason.nvim" })
+    use({ "williamboman/mason-lspconfig.nvim" })
     use({ "onsails/lspkind-nvim" })
     use({ "jose-elias-alvarez/null-ls.nvim" })
     use({ "j-hui/fidget.nvim" })
