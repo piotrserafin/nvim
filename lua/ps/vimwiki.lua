@@ -29,3 +29,7 @@ vim.g.vimwiki_dir_link = "index"
 
 -- CALENDAR + VIMWIKI
 vim.g.calendar_diary = "~/vimwiki/work.wiki/diary"
+
+-- TASKWIKI
+vim.g.taskwiki_taskrc_location = "~/.config/task/taskrc"
+vim.g.taskwiki_data_location = "~/sync/warrior/task"

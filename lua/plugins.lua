@@ -56,6 +56,10 @@ return packer.startup(function(use)
 
     -- Vimwiki
     use({ "vimwiki/vimwiki", branch = "dev" })
+    use({ "tools-life/taskwiki" })
+
+    -- Markdown Preview
+    use({ "ellisonleao/glow.nvim" })
 
     -- Telekasten Notes
     use({ "renerocksai/calendar-vim" })
@@ -74,6 +78,7 @@ return packer.startup(function(use)
     use({ "williamboman/mason-lspconfig.nvim" })
     use({ "onsails/lspkind-nvim" })
     use({ "jose-elias-alvarez/null-ls.nvim" })
+    use({ "jay-babu/mason-null-ls.nvim" })
     use({ "j-hui/fidget.nvim" })
 
     -- Completetion

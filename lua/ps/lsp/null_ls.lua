@@ -13,9 +13,16 @@ null_ls.setup({
     debug = false,
     sources = {
         null_ls.builtins.formatting.stylua.with({ extra_args = { "--indent-type", "Spaces" } }),
+        null_ls.builtins.formatting.beautysh,
+        null_ls.builtins.formatting.prettier
     },
+})
+
+require("mason-null-ls").setup({
+    ensure_installed = nil,
+    automatic_installation = true,
+    automatic_setup = false,
 })
 
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "<leader>nf", ":Format<cr>", opts)
-

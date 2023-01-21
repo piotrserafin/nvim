@@ -13,7 +13,9 @@ local s = ls.s
 local t = ls.text_node
 
 return {
-    s("psh", t({
+    s(
+        "psh",
+        t({
             "   _____ _____",
             "  |  _  |   __|  Piotr Serafin",
             "  |   __|__   |  https://piotrserafin.dev",
@@ -21,4 +23,5 @@ return {
             "",
         })
     ),
+    s("!#", t({ "#!/usr/bin/env bash" })),
 }
