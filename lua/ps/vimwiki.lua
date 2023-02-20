@@ -7,14 +7,14 @@
 -- VIMWIKI
 vim.g.vimwiki_list = {
     {
-        path = "~/vimwiki/personal.wiki",
+        path = "~/org/vimwiki/personal.wiki",
         syntax = "markdown",
         ext = ".md",
         auto_diary_index = 1,
         auto_toc = 1,
     },
     {
-        path = "~/vimwiki/work.wiki",
+        path = "~/org/vimwiki/work.wiki",
         syntax = "markdown",
         ext = ".md",
         auto_diary_index = 1,
@@ -28,8 +28,8 @@ vim.g.vimwiki_folding = "custom"
 vim.g.vimwiki_dir_link = "index"
 
 -- CALENDAR + VIMWIKI
-vim.g.calendar_diary = "~/vimwiki/work.wiki/diary"
+vim.g.calendar_diary = "~/org/vimwiki/work.wiki/diary"
 
 -- TASKWIKI
 vim.g.taskwiki_taskrc_location = "~/.config/task/taskrc"
-vim.g.taskwiki_data_location = "~/sync/warrior/task"
+vim.g.taskwiki_data_location = "~/org/task"

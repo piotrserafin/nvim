@@ -9,7 +9,7 @@ if not status_ok then
     return
 end
 
-local home = vim.fn.expand("~/zettelkasten")
+local home = vim.fn.expand("~/org/zettelkasten")
 
 telekasten.setup({
     home = home,
