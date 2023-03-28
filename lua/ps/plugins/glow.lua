@@ -4,9 +4,11 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local status_ok, surround = pcall(require, "surround")
-if not status_ok then
-    return
-end
-
-surround.setup()
+return {
+    "ellisonleao/glow.nvim",
+    lazy = true,
+    cmd = "Glow",
+    opts = {
+        width = 140,
+    }
+}

@@ -1,45 +1,33 @@
 # My Neovim Config
 
 ```
-├── README.md
 ├── init.lua
+├── lazy-lock.json
 ├── lua
-│   ├── autocommands.lua
-│   ├── keys.lua
-│   ├── plugins.lua
-│   ├── ps
-│   │   ├── cmp.lua
-│   │   ├── comment.lua
-│   │   ├── dap.lua
-│   │   ├── gkeep.lua
-│   │   ├── init.lua
-│   │   ├── lsp
-│   │   │   ├── fidget.lua
-│   │   │   ├── handlers.lua
-│   │   │   ├── init.lua
-│   │   │   ├── lsp_installer.lua
-│   │   │   ├── lspkind.lua
-│   │   │   ├── null_ls.lua
-│   │   │   └── settings
-│   │   │       └── sumneko_lua.lua
-│   │   ├── lualine.lua
-│   │   ├── luasnip.lua
-│   │   ├── mkdp.lua
-│   │   ├── notify.lua
-│   │   ├── nvimtree.lua
-│   │   ├── rest.lua
-│   │   ├── surround.lua
-│   │   ├── telekasten.lua
-│   │   ├── telescope.lua
-│   │   ├── toggleterm.lua
-│   │   ├── treesitter.lua
-│   │   ├── truezen.lua
-│   │   ├── utils.lua
-│   │   ├── venn.lua
-│   │   └── vimwiki.lua
-│   └── settings.lua
-├── plugin
-│   └── packer_compiled.lua
+│   └── ps
+│       ├── autocommands.lua
+│       ├── init.lua
+│       ├── keys.lua
+│       ├── plugins
+│       │   ├── cmp.lua
+│       │   ├── colorscheme.lua
+│       │   ├── gkeep.lua
+│       │   ├── glow.lua
+│       │   ├── init.lua
+│       │   ├── lualine.lua
+│       │   ├── luasnip.lua
+│       │   ├── mkdp.lua
+│       │   ├── nvimtree.lua
+│       │   ├── rest.lua
+│       │   ├── telescope.lua
+│       │   ├── toggleterm.lua
+│       │   ├── treesitter.lua
+│       │   ├── truezen.lua
+│       │   ├── venn.lua
+│       │   └── wiki.lua
+│       ├── settings.lua
+│       └── utils.lua
+├── README.md
 ├── snippets
 │   ├── all.lua
 │   └── lua.lua

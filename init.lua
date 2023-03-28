@@ -4,13 +4,4 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
---------------
---  Imports  -
---------------
-require("impatient")
-
-require("settings")
-require("keys")
-require("autocommands")
-require("plugins")
 require("ps")

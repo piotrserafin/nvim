@@ -42,14 +42,6 @@ opt.sidescrolloff = 8 -- Minimal number of screen lines to keep above and below 
 opt.signcolumn = "yes"
 opt.guicursor = ""
 
--- Theme
-opt.termguicolors = true
-opt.background = "dark"
-g.gruvbox_material_background = "medium"
-g.gruvbox_material_palette = "material"
-
-cmd("colorscheme gruvbox-material")
-
 -- Behaviour
 opt.belloff = "all"
 opt.hidden = true
@@ -96,9 +88,10 @@ opt.formatoptions = opt.formatoptions
 
 opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
-opt.shortmess:append("c")
+opt.shortmess:append "c" -- don't show redundant messages from ins-completion-menu
+opt.shortmess:append "I" -- don't show the default intro message
 
-opt.completeopt = { 'menu' , 'menuone', 'noselect' }
+opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 -- Disable builtin vim plugins
 local disabled_built_ins = {

@@ -22,5 +22,10 @@ function _G.Toggle_venn()
         vim.b.venn_enabled = nil
     end
 end
--- toggle keymappings for venn using <leader>v
-vim.api.nvim_set_keymap('n', '<leader>vnn', ":lua Toggle_venn()<CR>", { noremap = true})
+
+return {
+    "jbyuki/venn.nvim",
+    keys = {
+        { "<Leader>vnn", ":lua Toggle_venn()<CR>", desc = "Toggle Venn Diagram" }
+    }
+}
