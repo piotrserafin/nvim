@@ -16,7 +16,6 @@ return {
         "onsails/lspkind-nvim",
     },
     opts = function()
-
         local cmp = require("cmp")
         local kind = require("lspkind")
 
@@ -30,7 +29,7 @@ return {
                 end,
             },
             view = {
-                entries = "custom"
+                entries = "custom",
             },
             mapping = cmp.mapping.preset.insert({
                 ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -53,7 +52,7 @@ return {
             }),
             formatting = {
                 format = kind.cmp_format({
-                    mode = 'symbol_text',
+                    mode = "symbol_text",
                     menu = {
                         luasnip = "[snip]",
                         nvim_lsp = "[lsp]",

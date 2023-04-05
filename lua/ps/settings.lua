@@ -88,10 +88,10 @@ opt.formatoptions = opt.formatoptions
 
 opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
-opt.shortmess:append "c" -- don't show redundant messages from ins-completion-menu
-opt.shortmess:append "I" -- don't show the default intro message
+opt.shortmess:append("c") -- don't show redundant messages from ins-completion-menu
+opt.shortmess:append("I") -- don't show the default intro message
 
-opt.completeopt = { 'menu', 'menuone', 'noselect' }
+opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Disable builtin vim plugins
 local disabled_built_ins = {

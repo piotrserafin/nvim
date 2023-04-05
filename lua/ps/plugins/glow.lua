@@ -10,5 +10,5 @@ return {
     cmd = "Glow",
     opts = {
         width = 140,
-    }
+    },
 }

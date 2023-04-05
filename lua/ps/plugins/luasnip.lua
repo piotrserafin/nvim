@@ -20,6 +20,6 @@ return {
             },
         })
 
-        require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets"})
-    end
+        require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })
+    end,
 }

@@ -15,5 +15,5 @@ return {
             tmux = true,
             lualine = true,
         },
-    }
+    },
 }

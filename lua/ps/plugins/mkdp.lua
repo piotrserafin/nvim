@@ -9,9 +9,9 @@ return {
     build = "cd app && yarn install",
     ft = { "markdown", "vimwiki" },
     keys = {
-        { "<Leader>mp", "<Cmd>MarkdownPreviewToggle<CR>", desc = "Toogle Markdown Preview" }
+        { "<Leader>mp", "<Cmd>MarkdownPreviewToggle<CR>", desc = "Toogle Markdown Preview" },
     },
     init = function()
         vim.g.mkdp_refresh_slow = 1
-    end
+    end,
 }

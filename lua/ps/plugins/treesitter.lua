@@ -11,7 +11,7 @@ return {
     end,
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
-        "nvim-treesitter/playground"
+        "nvim-treesitter/playground",
     },
     opts = {
         ensure_installed = {
@@ -84,10 +84,9 @@ return {
         },
         playground = {
             enable = true,
-        }
+        },
     },
     config = function(_, opts)
         require("nvim-treesitter.configs").setup(opts)
-    end
+    end,
 }
-

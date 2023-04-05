@@ -7,12 +7,12 @@
 return {
     "hoob3rt/lualine.nvim",
     dependencies = {
-        "kyazdani42/nvim-web-devicons"
+        "kyazdani42/nvim-web-devicons",
     },
     opts = {
         options = {
             theme = "gruvbox-material",
         },
         extensions = { "nvim-tree" },
-    }
+    },
 }

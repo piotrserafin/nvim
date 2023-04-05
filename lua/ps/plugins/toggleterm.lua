@@ -7,7 +7,7 @@
 return {
     "akinsho/toggleterm.nvim",
     keys = {
-        { "<Leader>tt", "<Cmd>ToggleTerm<CR>", desc = "Toogle Term" }
+        { "<Leader>tt", "<Cmd>ToggleTerm<CR>", desc = "Toogle Term" },
     },
     opts = {
         open_mapping = [[<c-\>]],
@@ -16,5 +16,5 @@ return {
             border = "single",
             winblend = 3,
         },
-    }
+    },
 }

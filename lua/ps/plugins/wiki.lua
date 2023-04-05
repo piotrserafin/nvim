@@ -33,16 +33,16 @@ return {
             vim.g.vimwiki_folding = "custom"
             vim.g.vimwiki_dir_link = "index"
             vim.g.vimwiki_markdown_link_ext = 1
-        end
+        end,
     },
     -- Taskwiki
     {
-         "tools-life/taskwiki",
+        "tools-life/taskwiki",
         ft = "vimwiki",
         lazy = false,
         init = function()
             vim.g.taskwiki_taskrc_location = "~/.config/task/taskrc"
             vim.g.taskwiki_data_location = "~/org/task"
-        end
-    }
+        end,
+    },
 }
