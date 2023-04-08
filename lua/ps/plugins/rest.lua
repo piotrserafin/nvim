@@ -6,6 +6,7 @@
 
 return {
     "NTBBloodbath/rest.nvim",
+    ft = "http",
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
@@ -16,6 +17,7 @@ return {
     },
     opts = {
         result_split_horizontal = false,
+        result_split_in_place = true,
         skip_ssl_verification = false,
         jump_to_request = true,
     },
