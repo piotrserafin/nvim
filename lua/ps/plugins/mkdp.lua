@@ -7,11 +7,16 @@
 return {
     "iamcco/markdown-preview.nvim",
     build = "cd app && yarn install",
-    ft = { "markdown", "vimwiki" },
+    ft = { "markdown", "vimwiki", "puml" },
     keys = {
         { "<Leader>mp", "<Cmd>MarkdownPreviewToggle<CR>", desc = "Toogle Markdown Preview" },
     },
     init = function()
         vim.g.mkdp_refresh_slow = 1
+        vim.g.mkdp_preview_options = {
+            uml = {
+                server = "http://192.168.0.110:8084",
+            },
+        }
     end,
 }
