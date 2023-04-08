@@ -18,5 +18,8 @@ return {
         view = {
             width = 60,
         },
+        filters = {
+            custom = { "^.git$" },
+        },
     },
 }
