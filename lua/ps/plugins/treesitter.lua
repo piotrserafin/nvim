@@ -15,6 +15,7 @@ return {
     },
     opts = {
         ensure_installed = {
+            "vimdoc",
             "bash",
             "c",
             "cpp",
@@ -30,6 +31,9 @@ return {
             "vim",
             "http",
             "json",
+            "jq",
+            "markdown",
+            "latex",
         },
         ident = {
             enable = true,

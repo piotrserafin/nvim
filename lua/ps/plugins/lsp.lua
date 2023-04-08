@@ -30,8 +30,8 @@ return {
 
             lsp.ensure_installed({
                 "lua_ls",
-                "bashls",
                 "rust_analyzer",
+                "bashls",
             })
 
             lsp.on_attach(function(client, bufnr)
@@ -96,6 +96,11 @@ return {
     -- Rust
     {
         "simrat39/rust-tools.nvim",
+        config = true,
+    },
+    -- Neodev
+    {
+        "folke/neodev.nvim",
         config = true,
     },
     -- Null-ls
