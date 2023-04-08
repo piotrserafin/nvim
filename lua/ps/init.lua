@@ -22,4 +22,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugins list
-require("lazy").setup("ps.plugins", {})
+require("lazy").setup("ps.plugins", {
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                "gzip",
+                "matchit",
+                "matchparen",
+                "netrwPlugin",
+                "tarPlugin",
+                "tohtml",
+                "zipPlugin",
+                "netrw",
+            },
+        },
+    },
+})
