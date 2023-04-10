@@ -11,7 +11,6 @@ return {
     end,
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
-        "nvim-treesitter/playground",
     },
     opts = {
         ensure_installed = {
@@ -34,6 +33,7 @@ return {
             "jq",
             "markdown",
             "latex",
+            "query",
         },
         ident = {
             enable = true,
@@ -84,9 +84,6 @@ return {
             },
         },
         highlight = {
-            enable = true,
-        },
-        playground = {
             enable = true,
         },
     },

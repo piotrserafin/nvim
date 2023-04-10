@@ -93,13 +93,16 @@ opt.shortmess:append("I") -- don't show the default intro message
 
 opt.completeopt = { "menu", "menuone", "noselect" }
 
+-- Fix markdown
+-- g.markdown_recommended_style = 0
+
 -- Disable Python2 support
-vim.g.loaded_python_provider = 0
+g.loaded_python_provider = 0
 
 -- Disable perl provider
-vim.g.loaded_perl_provider = 0
+g.loaded_perl_provider = 0
 
 -- Disable Ruby
-vim.g.loaded_ruby_provider = 0
+g.loaded_ruby_provider = 0
 
-vim.g.python3_host_prog = "/usr/bin/python3"
+g.python3_host_prog = "/usr/bin/python3"
