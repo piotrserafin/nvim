@@ -29,8 +29,8 @@ return {
                 },
             }
 
-            vim.g.vimwiki_global_ext = 0
-            vim.g.vimwiki_folding = "custom"
+            vim.g.vimwiki_global_ext = 0 -- Do not treat md files outside of vimwiki path as wiki
+            vim.g.vimwiki_folding = "custom" -- Folding managed externally
             vim.g.vimwiki_dir_link = "index"
             vim.g.vimwiki_markdown_link_ext = 1
         end,

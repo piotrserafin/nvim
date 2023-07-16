@@ -34,7 +34,7 @@ return {
                 "bashls",
             })
 
-            lsp.on_attach(function(client, bufnr)
+            lsp.on_attach(function(_, bufnr)
                 local nmap = function(keys, func, desc)
                     if desc then
                         desc = "LSP: " .. desc
@@ -65,24 +65,24 @@ return {
 
             lsp.nvim_workspace()
 
-            lsp.format_mapping("<F3>", {
-                format_opts = {
-                    async = false,
-                    timeout_ms = 10000,
-                },
-                servers = {
-                    ["null-ls"] = { "lua", "rust" },
-                },
-            })
-
-            lsp.format_on_save({
-                format_opts = {
-                    timeout_ms = 10000,
-                },
-                servers = {
-                    ["null-ls"] = { "lua", "rust" },
-                },
-            })
+            -- lsp.format_mapping("<F3>", {
+            --     format_opts = {
+            --         async = false,
+            --         timeout_ms = 10000,
+            --     },
+            --     servers = {
+            --         ["null-ls"] = { "lua", "rust" },
+            --     },
+            -- })
+            --
+            -- lsp.format_on_save({
+            --     format_opts = {
+            --         timeout_ms = 10000,
+            --     },
+            --     servers = {
+            --         ["null-ls"] = { "lua", "rust" },
+            --     },
+            -- })
 
             lsp.setup()
 
@@ -103,39 +103,10 @@ return {
         "folke/neodev.nvim",
         config = true,
     },
-    -- Null-ls
-    {
-        "jay-babu/mason-null-ls.nvim",
-        event = { "BufReadPre", "BufNewFile" },
-        dependencies = {
-            "williamboman/mason.nvim",
-            "jose-elias-alvarez/null-ls.nvim",
-        },
-        config = function()
-            local null_ls = require("null-ls")
-
-            require("mason-null-ls").setup({
-                ensure_installed = {
-                    "stylua",
-                    "beautysh",
-                    "rustfmt",
-                },
-                automatic_installation = true,
-                automatic_setup = false,
-            })
-
-            null_ls.setup({
-                sources = {
-                    null_ls.builtins.formatting.stylua.with({ extra_args = { "--indent-type", "Spaces" } }),
-                    null_ls.builtins.formatting.beautysh,
-                    null_ls.builtins.formatting.rustfmt,
-                },
-            })
-        end,
-    },
     -- Fidget
     {
         "j-hui/fidget.nvim",
+        branch = "legacy",
         config = true,
     },
 }

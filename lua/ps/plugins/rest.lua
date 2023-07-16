@@ -20,5 +20,11 @@ return {
         result_split_in_place = true,
         skip_ssl_verification = false,
         jump_to_request = true,
+        result = {
+            show_url = true,
+            show_curl_command = true,
+            show_http_info = true,
+            show_headers = true,
+        },
     },
 }
