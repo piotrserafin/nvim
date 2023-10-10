@@ -1,32 +1,32 @@
-# My Neovim Config
-
-```
+.
 ├── init.lua
 ├── lazy-lock.json
 ├── lua
 │   └── ps
-│       ├── autocommands.lua
-│       ├── init.lua
-│       ├── keys.lua
-│       ├── plugins
-│       │   ├── cmp.lua
-│       │   ├── colorscheme.lua
-│       │   ├── gkeep.lua
-│       │   ├── glow.lua
+│       ├── core
+│       │   ├── autocommands.lua
 │       │   ├── init.lua
-│       │   ├── lualine.lua
-│       │   ├── luasnip.lua
-│       │   ├── mkdp.lua
-│       │   ├── nvimtree.lua
-│       │   ├── rest.lua
-│       │   ├── telescope.lua
-│       │   ├── toggleterm.lua
-│       │   ├── treesitter.lua
-│       │   ├── truezen.lua
-│       │   ├── venn.lua
-│       │   └── wiki.lua
-│       ├── settings.lua
-│       └── utils.lua
+│       │   ├── keys.lua
+│       │   └── options.lua
+│       ├── lazy.lua
+│       └── plugins
+│           ├── cmp.lua
+│           ├── colorscheme.lua
+│           ├── db.lua
+│           ├── gkeep.lua
+│           ├── init.lua
+│           ├── lsp
+│           │   └── init.lua
+│           ├── lualine.lua
+│           ├── luasnip.lua
+│           ├── mkdp.lua
+│           ├── nvimtree.lua
+│           ├── rest.lua
+│           ├── telescope.lua
+│           ├── treesitter.lua
+│           ├── venn.lua
+│           ├── wiki.lua
+│           └── zenmode.lua
 ├── README.md
 ├── snippets
 │   ├── all.lua
@@ -35,4 +35,5 @@
 │   ├── en.utf-8.add
 │   └── en.utf-8.add.spl
 └── stylua.toml
-```
+
+7 directories, 29 files

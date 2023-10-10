@@ -4,10 +4,6 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require("ps.settings")
-require("ps.keys")
-require("ps.autocommands")
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -22,7 +18,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugins list
-require("lazy").setup("ps.plugins", {
+require("lazy").setup({{import = "ps.plugins"}, {import = "ps.plugins.lsp"}}, {
     performance = {
         rtp = {
             disabled_plugins = {

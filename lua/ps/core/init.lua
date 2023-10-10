@@ -3,6 +3,6 @@
 --  |   __|__   |  https://piotrserafin.dev
 --  |__|  |_____|  https://github.com/piotrserafin
 --
-
-require("ps.core")
-require("ps.lazy")
+require("ps.core.options")
+require("ps.core.autocommands")
+require("ps.core.keys")
