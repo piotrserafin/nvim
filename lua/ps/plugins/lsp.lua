@@ -106,7 +106,7 @@ return {
     -- Fidget
     {
         "j-hui/fidget.nvim",
-        branch = "legacy",
+        tag = "legacy",
         config = true,
     },
 }
