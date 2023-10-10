@@ -25,6 +25,9 @@ return {
             tmux = {
                 enabled = true,
             },
+            alacritty = {
+                enabled = true,
+            }
         },
     },
 }
