@@ -101,7 +101,7 @@ return {
     -- Neodev
     {
         "folke/neodev.nvim",
-        config = true,
+        opts = {}
     },
     -- Fidget
     {

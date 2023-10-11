@@ -7,6 +7,5 @@
 return {
     -- Essentials
     { "rcarriga/nvim-notify", config = true },
-    { "numToStr/Comment.nvim", config = true },
     { "folke/which-key.nvim", config = true },
 }
