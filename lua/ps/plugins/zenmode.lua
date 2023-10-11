@@ -9,7 +9,7 @@ return {
         "folke/twilight.nvim",
     },
     keys = {
-        { "<Leader>zm", "<Cmd>ZenMode<CR>", desc = "Toggle Zen Mode" },
+        { "<Leader>zm", "<Cmd>ZenMode<CR>", desc = "[Z]en [M]ode Toggle" },
     },
     opts = {
         window = {

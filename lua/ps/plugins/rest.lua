@@ -11,9 +11,9 @@ return {
         "nvim-lua/plenary.nvim",
     },
     keys = {
-        { "<Leader>rr", "<Plug>RestNvim<CR>", desc = "RestNvim Request" },
-        { "<Leader>rp", "<Plug>RestNvimPreview<CR>", desc = "RestNvim Preview" },
-        { "<Leader>rl", "<Plug>RestNvimLast<CR>", desc = "RestNvim Last" },
+        { "<Leader>rr", "<Plug>RestNvim<CR>", desc = "[R]estNvim [R]equest" },
+        { "<Leader>rp", "<Plug>RestNvimPreview<CR>", desc = "[R]estNvim [P]review" },
+        { "<Leader>rl", "<Plug>RestNvimLast<CR>", desc = "[R]estNvim [L]ast" },
     },
     opts = {
         result_split_horizontal = false,

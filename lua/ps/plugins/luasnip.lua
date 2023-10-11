@@ -6,11 +6,13 @@
 
 return {
     "L3MON4D3/LuaSnip",
+    version = "v2.*",
+    run = "make install_jsregexp",
     init = function()
         require("luasnip").config.set_config({
             history = true,
             updateevents = "TextChanged,TextChangedI",
-            enable_autosnippets = true,
+            enable_autosnippets = false,
             ext_opts = {
                 [require("luasnip.util.types").choiceNode] = {
                     active = {

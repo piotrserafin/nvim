@@ -33,14 +33,14 @@ return {
     },
     cmd = "Telescope",
     keys = {
-        { "<C-p>", "<Cmd>Telescope git_files<CR>", desc = "Find file" },
-        { "<Leader>ff", "<Cmd>Telescope find_files<CR>", desc = "Find file" },
-        { "<Leader>fg", "<Cmd>Telescope live_grep<CR>", desc = "Find line" },
-        { "<Leader>fb", "<Cmd>Telescope buffers<CR>", desc = "Find buffer" },
-        { "<Leader>fs", "<Cmd>Telescope grep_string<CR>", desc = "Find string" },
-        { "<Leader>fP", "<Cmd>Telescope builtin<CR>", desc = "List all pickers" },
-        { "<Leader>fd", "<Cmd>lua Search_nvim_config()<CR>", desc = "Search in nvim config" },
-        { "<Leader>fv", "<Cmd>lua Search_vimwiki()<CR>", desc = "Search in vimwiki" },
+        { "<C-p>", "<Cmd>Telescope git_files<CR>", desc = "Telescope: Find git file" },
+        { "<Leader>ff", "<Cmd>Telescope find_files<CR>", desc = "Telescope: [F]ind [F]ile" },
+        { "<Leader>fg", "<Cmd>Telescope live_grep<CR>", desc = "Telescope: [F]ind [G]rep" },
+        { "<Leader>fb", "<Cmd>Telescope buffers<CR>", desc = "Telescope: [F]ind [B]uffer" },
+        { "<Leader>fs", "<Cmd>Telescope grep_string<CR>", desc = "Telescope: [F]ind [S]tring" },
+        { "<Leader>fp", "<Cmd>Telescope builtin<CR>", desc = "Telescope: [F]ind [P]ickers" },
+        { "<Leader>fc", "<Cmd>lua Search_nvim_config()<CR>", desc = "Telescope: [F]ind Neovim [C]onfig" },
+        { "<Leader>fv", "<Cmd>lua Search_vimwiki()<CR>", desc = "Telescope: [F]ind [V]imwiki" },
     },
     opts = {
         defaults = {

@@ -5,38 +5,27 @@
 --
 
 local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
--- Leader
--- keymap("", "<Space>", "<Nop>", opts)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true, desc = "Switch focus left" })
+keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true, desc = "Switch focus down" })
+keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true, desc = "Switch focus up" })
+keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true, desc = "Switch focus right" })
 
--- Buffers navigation
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true, desc = "Buffer next" })
+keymap("n", "<S-h>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Buffer previous" })
 
--- Basic mappings
-keymap("n", "<Leader>sv", ":so $MYVIMRC<CR>", { noremap = true })
+keymap("n", "<Leader>sv", ":so $MYVIMRC<CR>", { noremap = true, desc = "Reload config" })
 
--- Yank till end of line (make Y behave like D,C, etc.)
-keymap("n", "Y", "y$", opts)
+keymap("n", "Y", "y$", { noremap = true, silent = true, desc = "Yank till end of line" })
 
--- Remap to avoid hitting shift when entering command mode
-keymap("n", ";", ":", { noremap = true })
-keymap("v", ";", ":", { noremap = true })
+keymap("n", ";", ":", { noremap = true, desc = "Command mode" })
+keymap("v", ";", ":", { noremap = true, desc = "Command mode" })
 
--- Paste last thing yanked, not deleted
-keymap("n", ",p", '"0p', { noremap = true })
-keymap("n", ",P", '"0P', { noremap = true })
+keymap("n", ",p", '"0p', { noremap = true, desc = "Paste last thing yanked" })
+keymap("n", ",P", '"0P', { noremap = true, desc = "Paste last thing yanked" })
 
--- Line movement
-keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line down" })
+keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line up" })

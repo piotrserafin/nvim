@@ -9,6 +9,6 @@ return {
     build = ":UpdateRemotePlugins",
     lazy = false,
     keys = {
-        { "<Leader>gk", "<Cmd>GkeepToggle<CR>", desc = "GKeep Toogle" },
+        { "<Leader>gk", "<Cmd>GkeepToggle<CR>", desc = "[G][K]eep Toogle" },
     },
 }
