@@ -11,9 +11,21 @@ end
 
 local s = ls.s
 local t = ls.text_node
+local f = ls.function_node
+
+local date = function()
+    return { os.date "%Y-%m-%d" }
+end
 
 ls.add_snippets(nil, {
     all = {
+        s({
+            trig = "date",
+            namr = "Date",
+            dscr = "Date in the form of YYYY-MM-DD",
+        },{
+            f(date, {}),
+        }),
         s("psh", {
             t({
                 "   _____ _____",
