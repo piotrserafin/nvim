@@ -27,7 +27,7 @@ return {
             },
             alacritty = {
                 enabled = true,
-            }
+            },
         },
     },
 }

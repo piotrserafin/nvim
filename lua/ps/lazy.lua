@@ -18,7 +18,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugins list
-require("lazy").setup({{import = "ps.plugins"}, {import = "ps.plugins.lsp"}}, {
+require("lazy").setup({ { import = "ps.plugins" }, { import = "ps.plugins.lsp" } }, {
     performance = {
         rtp = {
             disabled_plugins = {

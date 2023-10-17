@@ -14,7 +14,7 @@ local t = ls.text_node
 local f = ls.function_node
 
 local date = function()
-    return { os.date "%Y-%m-%d" }
+    return { os.date("%Y-%m-%d") }
 end
 
 ls.add_snippets(nil, {
@@ -23,7 +23,7 @@ ls.add_snippets(nil, {
             trig = "date",
             namr = "Date",
             dscr = "Date in the form of YYYY-MM-DD",
-        },{
+        }, {
             f(date, {}),
         }),
         s("psh", {
@@ -33,8 +33,8 @@ ls.add_snippets(nil, {
                 "  |   __|__   |  https://piotrserafin.dev",
                 "  |__|  |_____|  https://github.com/piotrserafin",
                 "",
-            })
-        })
+            }),
+        }),
     },
     lua = {
         s("psh", {
@@ -44,12 +44,12 @@ ls.add_snippets(nil, {
                 "--  |   __|__   |  https://piotrserafin.dev",
                 "--  |__|  |_____|  https://github.com/piotrserafin",
                 "--",
-            })
-        })
+            }),
+        }),
     },
     sh = {
         s("!#", {
-            t({ "#!/usr/bin/env bash" })
-        })
-    }
+            t({ "#!/usr/bin/env bash" }),
+        }),
+    },
 })
