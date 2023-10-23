@@ -14,14 +14,14 @@ return {
         init = function()
             vim.g.vimwiki_list = {
                 {
-                    path = "~/org/vimwiki/personal.wiki",
+                    path = os.getenv("VIMWIKI_PERSONAL"),
                     syntax = "markdown",
                     ext = ".md",
                     auto_diary_index = 1,
                     auto_toc = 1,
                 },
                 {
-                    path = "~/org/vimwiki/work.wiki",
+                    path = os.getenv("VIMWIKI_WORK"),
                     syntax = "markdown",
                     ext = ".md",
                     auto_diary_index = 1,

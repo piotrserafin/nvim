@@ -12,9 +12,12 @@
 │       └── plugins
 │           ├── cmp.lua
 │           ├── colorscheme.lua
+│           ├── comment.lua
 │           ├── db.lua
+│           ├── format.lua
 │           ├── gkeep.lua
 │           ├── init.lua
+│           ├── lint.lua
 │           ├── lsp
 │           │   └── init.lua
 │           ├── lualine.lua
@@ -29,11 +32,10 @@
 │           └── zenmode.lua
 ├── README.md
 ├── snippets
-│   ├── all.lua
-│   └── lua.lua
+│   └── snippets.lua
 ├── spell
 │   ├── en.utf-8.add
 │   └── en.utf-8.add.spl
 └── stylua.toml
 
-7 directories, 29 files
+7 directories, 31 files

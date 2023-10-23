@@ -15,7 +15,7 @@ return {
         vim.g.mkdp_refresh_slow = 1
         vim.g.mkdp_preview_options = {
             uml = {
-                server = "http://192.168.0.110:8084",
+                server = os.getenv("PLANTUML_URL"),
             },
         }
     end,
