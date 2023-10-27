@@ -10,7 +10,12 @@ return {
         "vimwiki/vimwiki",
         branch = "dev",
         ft = "vimwiki",
-        lazy = false,
+        lazy = true,
+        cmd = { "VimwikiIndex", "VimwikiDiaryIndex" },
+        keys = {
+            { "<Leader>ww", "<Plug>VimwikiIndex<CR>", desc = "Vimwiki Index" },
+            { "<Leader>wi", "<Plug>VimwikiDiaryIndex<CR>", desc = "Vimwiki Diary Index" },
+        },
         init = function()
             vim.g.vimwiki_list = {
                 {
@@ -39,7 +44,7 @@ return {
     {
         "tools-life/taskwiki",
         ft = "vimwiki",
-        lazy = false,
+        lazy = true,
         init = function()
             vim.g.taskwiki_taskrc_location = "~/.config/task/taskrc"
             vim.g.taskwiki_data_location = "~/org/task"
