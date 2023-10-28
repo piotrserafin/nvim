@@ -11,7 +11,7 @@ return {
     },
     opts = {
         options = {
-            theme = "gruvbox-material",
+            theme = "catppuccin",
         },
         extensions = { "nvim-tree" },
     },

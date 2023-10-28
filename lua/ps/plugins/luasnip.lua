@@ -13,13 +13,6 @@ return {
             history = true,
             updateevents = "TextChanged,TextChangedI",
             enable_autosnippets = false,
-            ext_opts = {
-                [require("luasnip.util.types").choiceNode] = {
-                    active = {
-                        virt_text = { { "<-", "GruvboxOrange" } },
-                    },
-                },
-            },
         })
 
         require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })

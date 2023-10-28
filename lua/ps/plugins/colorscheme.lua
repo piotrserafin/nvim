@@ -5,19 +5,42 @@
 --
 
 return {
-    "sainnhe/gruvbox-material",
-    lazy = false,
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     config = function()
         local cmd = vim.cmd
         local opt = vim.opt
         local g = vim.g
 
-        cmd("colorscheme gruvbox-material")
+        require("catppuccin").setup({
+            flavour = "mocha", -- latte, frappe, macchiato, mocha
+            background = { -- :h background
+                light = "latte",
+                dark = "mocha",
+            },
+            integrations = {
+                cmp = true,
+                gitsigns = true,
+                nvimtree = true,
+                treesitter = true,
+                notify = false,
+                mini = {
+                    enabled = false,
+                },
+                telescope = {
+                    enabled = true,
+                },
+                mason = true,
+                vimwiki = true,
+                which_key = true,
+                fidget = true,
+            },
+        })
+
+        cmd("colorscheme catppuccin")
 
         opt.termguicolors = true
         opt.background = "dark"
-        g.gruvbox_material_background = "medium"
-        g.gruvbox_material_palette = "material"
     end,
 }
