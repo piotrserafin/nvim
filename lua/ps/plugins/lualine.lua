@@ -11,7 +11,7 @@ return {
     },
     opts = {
         options = {
-            theme = "catppuccin",
+            theme = "catppuccin-mocha",
         },
         extensions = { "nvim-tree" },
     },

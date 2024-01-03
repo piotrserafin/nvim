@@ -38,7 +38,7 @@ return {
             },
         })
 
-        cmd("colorscheme catppuccin")
+        cmd("colorscheme catppuccin-mocha")
 
         opt.termguicolors = true
         opt.background = "dark"
