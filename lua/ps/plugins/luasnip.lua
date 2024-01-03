@@ -7,7 +7,7 @@
 return {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
-    run = "make install_jsregexp",
+    build = "make install_jsregexp",
     init = function()
         require("luasnip").config.set_config({
             history = true,

@@ -49,6 +49,16 @@ ls.add_snippets(nil, {
     },
     sh = {
         s("!#", {
+            t({ "#!/usr/bin/env sh" }),
+        }),
+    },
+    zsh = {
+        s("!#", {
+            t({ "#!/usr/bin/env zsh" }),
+        }),
+    },
+    bash = {
+        s("!#", {
             t({ "#!/usr/bin/env bash" }),
         }),
     },
