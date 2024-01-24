@@ -9,10 +9,5 @@
 -------------------
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
-    command = "set conceallevel=0",
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "vimwiki",
-    command = "set conceallevel=0",
+    command = "set conceallevel=2",
 })

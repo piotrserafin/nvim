@@ -11,13 +11,6 @@ function _G.Search_nvim_config()
     })
 end
 
-function _G.Search_vimwiki()
-    require("telescope.builtin").find_files({
-        prompt_title = "< VimWiki >",
-        cwd = "$HOME/org/vimwiki/",
-    })
-end
-
 return {
     "nvim-telescope/telescope.nvim",
     dependencies = {
@@ -40,7 +33,6 @@ return {
         { "<Leader>fs", "<Cmd>Telescope grep_string<CR>", desc = "Telescope: [F]ind [S]tring" },
         { "<Leader>fp", "<Cmd>Telescope builtin<CR>", desc = "Telescope: [F]ind [P]ickers" },
         { "<Leader>fc", "<Cmd>lua Search_nvim_config()<CR>", desc = "Telescope: [F]ind Neovim [C]onfig" },
-        { "<Leader>fv", "<Cmd>lua Search_vimwiki()<CR>", desc = "Telescope: [F]ind [V]imwiki" },
     },
     opts = {
         defaults = {

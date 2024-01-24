@@ -32,7 +32,6 @@ return {
                     enabled = true,
                 },
                 mason = true,
-                vimwiki = true,
                 which_key = true,
                 fidget = true,
             },

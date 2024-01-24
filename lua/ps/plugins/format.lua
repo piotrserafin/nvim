@@ -22,7 +22,6 @@ return {
                 json = { "prettier" },
                 yaml = { "prettier" },
                 markdown = { "prettier" },
-                vimwiki = { "prettier" },
                 sh = { "beautysh" },
                 zsh = { "beautysh" },
                 bash = { "beautysh" },
