@@ -6,6 +6,6 @@
 
 return {
     -- Essentials
-    { "rcarriga/nvim-notify", config = true },
-    { "folke/which-key.nvim", config = true },
+    { "rcarriga/nvim-notify" },
+    { "github/copilot.vim" },
 }
