@@ -11,7 +11,7 @@ return {
     end,
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
-        "JoosepAlviste/nvim-ts-context-commentstring"
+        "JoosepAlviste/nvim-ts-context-commentstring",
     },
     opts = {
         ensure_installed = {
@@ -37,7 +37,7 @@ return {
             "vim",
             "vimdoc",
             "yaml",
-            "sql"
+            "sql",
         },
         ident = {
             enable = true,
@@ -91,9 +91,8 @@ return {
             enable = true,
         },
         context_commentstring = {
-            enable = true,
-            enable_autocmd = false
-        }
+            enable_autocmd = false,
+        },
     },
     config = function(_, opts)
         require("nvim-treesitter.configs").setup(opts)
