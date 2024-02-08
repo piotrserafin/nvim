@@ -6,7 +6,7 @@
 
 return {
     "epwalsh/obsidian.nvim",
-    version = "*", -- recommended, use latest release instead of latest commit
+    version = "*",
     lazy = true,
     ft = "markdown",
     dependencies = {
@@ -31,6 +31,15 @@ return {
         "ObsidianLinkNew",
         "ObsidianWorkspace",
     },
+    keys = {
+        { "<leader>oo", "<Cmd>ObsidianOpen<CR>", desc = "[O]bsidian [O]pen" },
+        { "<leader>os", "<Cmd>ObsidianQuickSwitch<CR>", desc = "[O]bsidian [S]witch" },
+        { "<leader>of", "<Cmd>ObsidianFollowLink<CR>", desc = "[O]bsidian [F]ollow" },
+        { "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", desc = "[O]bsidian [B]acklinks" },
+        { "<leader>ot", "<Cmd>ObsidianToday<CR>", desc = "[O]bsidiani [T]oday" },
+        { "<leader>oy", "<Cmd>ObsidianYesterday<CR>", desc = "[O]bsidian [Y]esterday" },
+        { "<leader>olo", "<Cmd>ObsidianLink<CR>", desc = "[O]bsidian [L]ink [O]pen" },
+    },
     opts = {
         workspaces = {
             {
@@ -42,10 +51,14 @@ return {
                 path = os.getenv("OBSIDIAN_PERSONAL"),
             },
         },
+
         completion = {
             nvim_cmp = true,
             min_chars = 2,
         },
+
+        notes_subdir = "00_Inbox",
+
         note_id_func = function(title)
             -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
             -- In this case a note with the title 'My new note' will be given an ID that looks
@@ -62,6 +75,11 @@ return {
             end
             return tostring(os.time()) .. "-" .. suffix
         end,
+
+        templates = {
+            subdir = "99_Templates",
+        },
+
         open_app_foreground = true,
         follow_url_func = function(url)
             vim.fn.jobstart({ "xdg-open", url })
@@ -70,8 +88,6 @@ return {
         finder = "telescope.nvim",
 
         finder_mappings = {
-            -- Create a new note from your query with `:ObsidianSearch` and `:ObsidianQuickSwitch`.
-            -- Currently only telescope supports this.
             new = "<C-x>",
         },
     },
