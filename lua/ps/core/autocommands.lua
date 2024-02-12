@@ -7,7 +7,10 @@
 -------------------
 --  Autocommands  -
 -------------------
+local user_commands = vim.api.nvim_create_augroup("General settings", { clear = true })
+
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
-    command = "set conceallevel=2",
+    pattern = "*.puml",
+    command = "set filetype=puml",
+    group = user_commands,
 })
