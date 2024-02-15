@@ -14,5 +14,11 @@ return {
             theme = "catppuccin-mocha",
         },
         extensions = { "nvim-tree" },
+        -- Commented as this forces rest.nvim to load at startup
+        -- sections = {
+        --     lualine_x = {
+        --         "rest",
+        --     },
+        -- },
     },
 }
