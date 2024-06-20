@@ -18,7 +18,6 @@
 │       └── plugins
 │           ├── cmp.lua
 │           ├── colorscheme.lua
-│           ├── comment.lua
 │           ├── db.lua
 │           ├── format.lua
 │           ├── init.lua
@@ -28,13 +27,11 @@
 │           │   └── init.lua
 │           ├── lualine.lua
 │           ├── luasnip.lua
-│           ├── mkdp.lua
 │           ├── nvimtree.lua
 │           ├── obsidian.lua
-│           ├── rest.lua
+│           ├── oil.lua
 │           ├── telescope.lua
-│           ├── treesitter.lua
-│           └── whichkey.lua
+│           └── treesitter.lua
 ├── README.md
 ├── snippets
 │   └── snippets.lua
