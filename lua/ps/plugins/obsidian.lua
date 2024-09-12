@@ -32,13 +32,7 @@ return {
         "ObsidianWorkspace",
     },
     keys = {
-        { "<leader>oo", "<Cmd>ObsidianOpen<CR>", desc = "[O]bsidian [O]pen" },
-        { "<leader>os", "<Cmd>ObsidianQuickSwitch<CR>", desc = "[O]bsidian [S]witch" },
-        { "<leader>of", "<Cmd>ObsidianFollowLink<CR>", desc = "[O]bsidian [F]ollow" },
-        { "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", desc = "[O]bsidian [B]acklinks" },
-        { "<leader>ot", "<Cmd>ObsidianToday<CR>", desc = "[O]bsidiani [T]oday" },
-        { "<leader>oy", "<Cmd>ObsidianYesterday<CR>", desc = "[O]bsidian [Y]esterday" },
-        { "<leader>olo", "<Cmd>ObsidianLink<CR>", desc = "[O]bsidian [L]ink [O]pen" },
+        { "<Leader>oq", "<Cmd>ObsidianQuickSwitch<CR>", { noremap = true, silent = true, desc = "Open note" } },
     },
     opts = {
         workspaces = {
@@ -55,16 +49,18 @@ return {
         notes_subdir = "00_Inbox",
 
         daily_notes = {
-            subdir = "00_Inbox/daily",
+            folder = "00_Inbox/daily",
             date_format = "%Y-%m-%d",
-            template = nil,
+            default_tags = { "daily" },
+            template = "daily.md",
         },
 
         completion = {
             nvim_cmp = true,
             min_chars = 2,
-            new_notes_location = "notes_subdir",
         },
+
+        new_notes_location = "notes_subdir",
 
         -- Example:
         -- If title given: test note -> test-note
@@ -77,6 +73,8 @@ return {
             end
             return title
         end,
+
+        preferred_link_style = "markdown",
 
         image_name_func = function()
             -- Prefix image names with timestamp.
@@ -100,22 +98,30 @@ return {
         end,
 
         templates = {
-            subdir = "99_Templates",
-            date_format = "%Y-%m-%d-%a",
+            folder = "99_Templates",
+            date_format = "%Y-%m-%d",
             time_format = "%H-%M",
-            tags = "",
         },
 
-        open_app_foreground = true,
         follow_url_func = function(url)
             vim.fn.jobstart({ "xdg-open", url })
         end,
 
-        finder = "telescope.nvim",
+        open_app_foreground = true,
 
-        finder_mappings = {
-            new = "<C-x>",
-            insert_link = "<C-l>",
+        picker = {
+            name = "telescope.nvim",
+            mappings = {
+                new = "<C-x>",
+                insert_link = "<C-l>",
+            },
+        },
+
+        callback = {
+            post_set_workspace = function(client, workspace)
+                client.log.info("Changing directory to %s", workspace.path)
+                vim.cmd.cd(tostring(workspace.path))
+            end,
         },
 
         attachments = {
