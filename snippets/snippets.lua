@@ -28,10 +28,10 @@ ls.add_snippets(nil, {
         }),
         s("psh", {
             t({
-                "   _____ _____",
-                "  |  _  |   __|  Piotr Serafin",
-                "  |   __|__   |  https://piotrserafin.dev",
-                "  |__|  |_____|  https://github.com/piotrserafin",
+                "  _____ _____",
+                " |  _  |   __|  Piotr Serafin",
+                " |   __|__   |  https://piotrserafin.dev",
+                " |__|  |_____|  https://github.com/piotrserafin",
                 "",
             }),
         }),
@@ -39,10 +39,10 @@ ls.add_snippets(nil, {
     lua = {
         s("psh", {
             t({
-                "--   _____ _____",
-                "--  |  _  |   __|  Piotr Serafin",
-                "--  |   __|__   |  https://piotrserafin.dev",
-                "--  |__|  |_____|  https://github.com/piotrserafin",
+                "--  _____ _____",
+                "-- |  _  |   __|  Piotr Serafin",
+                "-- |   __|__   |  https://piotrserafin.dev",
+                "-- |__|  |_____|  https://github.com/piotrserafin",
                 "--",
             }),
         }),
