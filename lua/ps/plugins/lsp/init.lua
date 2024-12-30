@@ -9,7 +9,16 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
-        "folke/neodev.nvim",
+        "saghen/blink.cmp",
+        {
+            "folke/lazydev.nvim",
+            ft = "lua",
+            opts = {
+                library = {
+                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+                },
+            },
+        },
         {
             "j-hui/fidget.nvim",
             opts = {
@@ -50,7 +59,8 @@ return {
         end
 
         local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+        -- capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+        capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
         require("mason").setup({})
 
@@ -65,44 +75,7 @@ return {
                 })
             end,
             -- Next, you can provide targeted overrides for specific servers.
-            ["lua_ls"] = function()
-                local runtime_path = vim.split(package.path, ";")
-                table.insert(runtime_path, "lua/?.lua")
-                table.insert(runtime_path, "lua/?/init.lua")
-
-                local lspconfig = require("lspconfig")
-                lspconfig.lua_ls.setup({
-                    capabilities = capabilities,
-                    on_attach = on_attach,
-                    settings = {
-                        Lua = {
-                            -- Disable telemetry
-                            telemetry = { enable = false },
-                            runtime = {
-                                -- Tell the language server which version of Lua you're using
-                                -- (most likely LuaJIT in the case of Neovim)
-                                version = "LuaJIT",
-                                path = runtime_path,
-                            },
-                            diagnostics = {
-                                -- Get the language server to recognize the `vim` global
-                                globals = { "vim" },
-                            },
-                            workspace = {
-                                checkThirdParty = false,
-                                library = {
-                                    -- Make the server aware of Neovim runtime files
-                                    vim.fn.expand("$VIMRUNTIME/lua"),
-                                    vim.fn.stdpath("config") .. "/lua",
-                                },
-                            },
-                        },
-                    },
-                })
-            end,
         }
-
-        require("neodev").setup({})
 
         local mason_lspconfig = require("mason-lspconfig")
         mason_lspconfig.setup({
@@ -112,6 +85,7 @@ return {
                 "gopls",
                 "rust_analyzer",
             },
+            automatic_installation = false,
             handlers = handlers,
         })
     end,

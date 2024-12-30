@@ -20,7 +20,8 @@ return {
                 dark = "mocha",
             },
             integrations = {
-                cmp = true,
+                -- cmp = true,
+                blink_cmp = true,
                 gitsigns = true,
                 nvimtree = true,
                 treesitter = true,
