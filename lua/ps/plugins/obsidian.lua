@@ -127,5 +127,7 @@ return {
         attachments = {
             img_folder = "97_Assets",
         },
+
+        ui = { enable = false },
     },
 }
