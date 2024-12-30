@@ -82,9 +82,11 @@ opt.formatoptions = opt.formatoptions
     + "q" -- format comments with "gq"
     - "o" -- o/O do no continue comments
     + "r" -- do continue when pressing enter in Insert mode
-    + "n" -- Indent past the formatlistpat, not underneath it.
+    -- + "n" -- Indent past the formatlistpat, not underneath it.
     + "j" -- Auto-remove comments if possible.
     - "2" -- I'm not in gradeschool anymore
+
+opt.formatoptions:remove "o"  -- don't continue comments
 
 opt.conceallevel = 0
 opt.clipboard = "unnamedplus"

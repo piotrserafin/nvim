@@ -6,9 +6,7 @@
 
 return {
     "nvim-treesitter/nvim-treesitter",
-    build = function()
-        pcall(require("nvim-treesitter.install").update({ with_sync = true }))
-    end,
+    build = ":TSUpdate",
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
         "JoosepAlviste/nvim-ts-context-commentstring",
@@ -19,7 +17,6 @@ return {
             "c",
             "cmake",
             "cpp",
-            "dockerfile",
             "html",
             "http",
             "javascript",
@@ -27,6 +24,8 @@ return {
             "json",
             "latex",
             "lua",
+            "xml",
+            "graphql",
             "make",
             "markdown",
             "markdown_inline",
