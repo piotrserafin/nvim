@@ -51,11 +51,6 @@ return {
             nmap("<Leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
             nmap("K", vim.lsp.buf.hover, "Hover Documentation")
             nmap("gs", vim.lsp.buf.signature_help, "Signature Documentation")
-            nmap("<Leader>wa", vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
-            nmap("<Leader>wr", vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
-            nmap("<Leader>wl", function()
-                print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-            end, "[W]orkspace [L]ist Folders")
         end
 
         local capabilities = vim.lsp.protocol.make_client_capabilities()

@@ -4,13 +4,13 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 return {
     "3rd/image.nvim",
     opts = {
-        backend = "kitty",
+        backend = "ueberzug",
         integrations = {
             markdown = {
                 enabled = true,
                 clear_in_insert_mode = false,
                 download_remote_images = true,
-                only_render_image_at_cursor = false,
+                only_render_image_at_cursor = true,
                 filetypes = { "markdown" }, -- markdown extensions (ie. quarto) can go here
                 resolve_image_path = function(document_path, image_path, fallback)
                     -- document_path is the path to the file that contains the image
@@ -26,6 +26,7 @@ return {
                 filetypes = { "norg" },
             },
         },
-        kitty_method = "normal",
+        editor_only_render_when_focused = true, -- auto show/hide images when the editor gains/looses focus
+        tmux_show_only_in_active_window = true, -- auto show/hide images in the correct Tmux window (needs visual-activity off)
     },
 }

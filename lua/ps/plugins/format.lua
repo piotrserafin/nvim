@@ -18,7 +18,6 @@ return {
                 javascript = { "prettier" },
                 typescript = { "prettier" },
                 css = { "prettier" },
-                html = { "tidy" },
                 json = { "prettier" },
                 yaml = { "prettier" },
                 markdown = { "prettier" },
