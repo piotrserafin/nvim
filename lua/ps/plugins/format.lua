@@ -17,7 +17,6 @@ return {
                 lua = { "stylua" },
                 javascript = { "prettier" },
                 typescript = { "prettier" },
-                css = { "prettier" },
                 json = { "prettier" },
                 yaml = { "prettier" },
                 markdown = { "prettier" },

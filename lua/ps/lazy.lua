@@ -33,4 +33,7 @@ require("lazy").setup({ { import = "ps.plugins" }, { import = "ps.plugins.lsp" }
             },
         },
     },
+    rocks = {
+        hererocks = true
+    }
 })

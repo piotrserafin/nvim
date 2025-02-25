@@ -40,10 +40,6 @@ return {
                 name = "work",
                 path = os.getenv("OBSIDIAN_WORK"),
             },
-            {
-                name = "personal",
-                path = os.getenv("OBSIDIAN_PERSONAL"),
-            },
         },
 
         notes_subdir = "00_Inbox",

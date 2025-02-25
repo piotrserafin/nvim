@@ -53,11 +53,6 @@ return {
                     module = "render-markdown.integ.blink",
                     fallbacks = { "lsp" },
                 },
-                -- dadbod = {
-                --     name = "dadbod",
-                --     module = "vim_dadbod_completion.blink",
-                --     score_offset = 85,
-                -- },
             },
         },
     },
