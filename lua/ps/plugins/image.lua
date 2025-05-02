@@ -3,8 +3,10 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 
 return {
     "3rd/image.nvim",
+    build = false,
     opts = {
-        backend = "ueberzug",
+        backend = "kitty",
+        processor = "magick_cli",
         integrations = {
             markdown = {
                 enabled = true,
@@ -24,6 +26,10 @@ return {
             neorg = {
                 enabled = false,
                 filetypes = { "norg" },
+            },
+            typst = {
+                enabled = false,
+                filetypes = { "typst" },
             },
         },
         editor_only_render_when_focused = true, -- auto show/hide images when the editor gains/looses focus

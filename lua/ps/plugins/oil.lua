@@ -1,5 +1,7 @@
 return {
     "stevearc/oil.nvim",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
         default_file_explorer = true,
         delete_to_trash = true,
@@ -16,7 +18,6 @@ return {
         },
     },
     -- Optional dependencies
-    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function(_, opts)
         require("oil").setup(opts)
         vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })

@@ -5,7 +5,7 @@
 --
 
 return {
-    "epwalsh/obsidian.nvim",
+    "obsidian-nvim/obsidian.nvim",
     version = "*",
     lazy = true,
     ft = "markdown",
@@ -15,21 +15,6 @@ return {
     event = {
         "BufReadPre " .. vim.fn.expand("~") .. "/org/vaults/**.md",
         "BufNewFile " .. vim.fn.expand("~") .. "/org/vaults/**.md",
-    },
-    cmd = {
-        "ObsidianOpen",
-        "ObsidianNew",
-        "ObsidianQuickSwitch",
-        "ObsidianFollowLink",
-        "ObsidianBacklinks",
-        "ObsidianToday",
-        "ObsidianYesterday",
-        "OrsidianTomorrow",
-        "ObsidianTemplate",
-        "ObsidianSearch",
-        "ObsidianLink",
-        "ObsidianLinkNew",
-        "ObsidianWorkspace",
     },
     keys = {
         { "<Leader>oq", "<Cmd>ObsidianQuickSwitch<CR>", { noremap = true, silent = true, desc = "Open note" } },
@@ -53,6 +38,7 @@ return {
 
         completion = {
             nvim_cmp = false,
+            blink = true,
             min_chars = 2,
         },
 
@@ -100,7 +86,7 @@ return {
         },
 
         follow_url_func = function(url)
-            vim.fn.jobstart({ "xdg-open", url })
+            vim.fn.jobstart({ "open", url })
         end,
 
         open_app_foreground = true,
