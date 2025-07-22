@@ -13,6 +13,7 @@ return {
         options = {
             theme = "catppuccin-mocha",
         },
-        extensions = { "nvim-tree" },
+        extensions = { "oil" },
     },
 }
+

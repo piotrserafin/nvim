@@ -20,10 +20,7 @@ return {
                 dark = "mocha",
             },
             integrations = {
-                -- cmp = true,
                 blink_cmp = true,
-                gitsigns = true,
-                nvimtree = true,
                 treesitter = true,
                 notify = false,
                 mini = {
@@ -32,8 +29,6 @@ return {
                 telescope = {
                     enabled = true,
                 },
-                mason = true,
-                which_key = true,
                 fidget = true,
             },
         })
@@ -44,3 +39,4 @@ return {
         opt.background = "dark"
     end,
 }
+

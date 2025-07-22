@@ -3,6 +3,8 @@
 --  |   __|__   |  https://piotrserafin.dev
 --  |__|  |_____|  https://github.com/piotrserafin
 --
-require("ps.core.options")
-require("ps.core.autocommands")
-require("ps.core.keys")
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.g.have_nerd_font = true

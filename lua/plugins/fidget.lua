@@ -5,7 +5,13 @@
 --
 
 return {
-    -- Essentials
-    { "rcarriga/nvim-notify" },
-    { "github/copilot.vim" },
+    "j-hui/fidget.nvim",
+    opts = {
+        notification = {
+            window = {
+                winblend = 0,
+            }
+        }
+    }
 }
+

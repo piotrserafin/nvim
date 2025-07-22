@@ -4,8 +4,11 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-require("config.globals")
-require("config.options")
-require("config.keymaps")
-require("config.lazy")
-require("config.lsp")
+return {
+    "nvzone/showkeys",
+    cmd = "ShowkeysToggle",
+    opts = {
+        maxkeys = 5,
+    },
+}
+

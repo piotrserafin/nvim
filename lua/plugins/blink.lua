@@ -12,14 +12,8 @@ return {
     opts = {
         snippets = { preset = "luasnip" },
         sources = {
-            default = { "lazydev", "lsp", "path", "snippets", "buffer", "markdown" },
+            default = { "lsp", "path", "snippets", "buffer", "markdown" },
             providers = {
-                lazydev = {
-                    name = "LazyDev",
-                    enabled = true,
-                    module = "lazydev.integrations.blink",
-                    score_offset = 100,
-                },
                 lsp = {
                     name = "lsp",
                     enabled = true,
@@ -55,5 +49,6 @@ return {
                 },
             },
         },
+        fuzzy = { implementation = "prefer_rust_with_warning" }
     },
 }

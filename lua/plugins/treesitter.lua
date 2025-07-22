@@ -37,6 +37,7 @@ return {
             "vimdoc",
             "yaml",
             "sql",
+            "go"
         },
         ident = {
             enable = true,

@@ -25,6 +25,10 @@ return {
                 name = "work",
                 path = os.getenv("OBSIDIAN_WORK"),
             },
+            {
+                name = "personal",
+                path = os.getenv("OBSIDIAN_PERSONAL"),
+            }
         },
 
         notes_subdir = "00_Inbox",
@@ -38,7 +42,7 @@ return {
 
         completion = {
             nvim_cmp = false,
-            blink = true,
+            blink = false,
             min_chars = 2,
         },
 
@@ -89,10 +93,8 @@ return {
             vim.fn.jobstart({ "open", url })
         end,
 
-        open_app_foreground = true,
-
         picker = {
-            name = "telescope.nvim",
+            name = "fzf-lua",
             mappings = {
                 new = "<C-x>",
                 insert_link = "<C-l>",
@@ -113,3 +115,4 @@ return {
         ui = { enable = false },
     },
 }
+
