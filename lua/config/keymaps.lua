@@ -12,7 +12,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true, desc = "
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true, desc = "Buffer next" })
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Buffer previous" })
 
-vim.keymap.set("n", "Y", "y$", { noremap = true, silent = true, desc = "Yank till end of line" })
 vim.keymap.set("n", ";", ":", { noremap = true, desc = "Command mode" })
 vim.keymap.set("v", ";", ":", { noremap = true, desc = "Command mode" })
 vim.keymap.set("n", ",p", '"0p', { noremap = true, desc = "Paste last thing yanked" })

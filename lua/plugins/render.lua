@@ -12,7 +12,7 @@ return {
     opts = {
         render_modes = { "n", "c", "t" },
         completions = {
-            blink = { enabled = true },
+            blink = { enabled = false },
         },
         latex = {
             enabled = false,

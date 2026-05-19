@@ -56,11 +56,10 @@ return {
 
         vim.keymap.set({ "n", "v" }, "<Leader>cf", function()
             conform.format({
-                lsp_fallback = true,
+                lsp_format = "fallback",
                 async = false,
                 timeout_ms = 1000,
             })
         end, { desc = "Format: [C]ode [F]ormat" })
     end,
 }
-

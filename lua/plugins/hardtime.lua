@@ -10,7 +10,7 @@ return {
     dependencies = { "MunifTanjim/nui.nvim" },
     cmd = "Hardtime",
     keys = {
-        { "<Leader>ht", "<Cmd>Hardtime toggle<CR>", { noremap = true, silent = true, desc = "Toggle [H]ard[T]ime" } },
+        { "<Leader>ht", "<Cmd>Hardtime toggle<CR>", noremap = true, silent = true, desc = "Toggle [H]ard[T]ime" },
     },
     opts = {},
 }

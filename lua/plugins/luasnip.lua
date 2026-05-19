@@ -13,6 +13,6 @@ return {
             updateevents = "TextChanged,TextChangedI",
         })
 
-        require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim-restart/snippets/" })
+        require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
     end,
 }

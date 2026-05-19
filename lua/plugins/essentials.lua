@@ -6,7 +6,11 @@
 
 return {
     -- Essentials
-    { "rcarriga/nvim-notify" },
-    { "github/copilot.vim" },
+    {
+        "rcarriga/nvim-notify",
+        event = "VeryLazy",
+        config = function()
+            vim.notify = require("notify")
+        end,
+    },
 }
-

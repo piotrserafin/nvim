@@ -13,7 +13,7 @@ local s = ls.s
 local t = ls.text_node
 
 return {
-    s({ trig = "lpsh", name = "Lua PSH Header" }, {
+    s("psh", {
         t({
             "--  _____ _____",
             "-- |  _  |   __|  Piotr Serafin",
@@ -21,5 +21,5 @@ return {
             "-- |__|  |_____|  https://github.com/piotrserafin",
             "--",
         }),
-    })
+    }),
 }

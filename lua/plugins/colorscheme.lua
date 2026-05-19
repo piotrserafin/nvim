@@ -9,10 +9,6 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-        local cmd = vim.cmd
-        local opt = vim.opt
-        local g = vim.g
-
         require("catppuccin").setup({
             flavour = "mocha", -- latte, frappe, macchiato, mocha
             background = { -- :h background
@@ -20,23 +16,19 @@ return {
                 dark = "mocha",
             },
             integrations = {
-                blink_cmp = true,
+                fzf = true,
                 treesitter = true,
                 notify = false,
                 mini = {
                     enabled = false,
                 },
-                telescope = {
-                    enabled = true,
-                },
                 fidget = true,
             },
         })
 
-        cmd("colorscheme catppuccin-mocha")
+        vim.cmd("colorscheme catppuccin-mocha")
 
-        opt.termguicolors = true
-        opt.background = "dark"
+        vim.opt.termguicolors = true
+        vim.opt.background = "dark"
     end,
 }
-

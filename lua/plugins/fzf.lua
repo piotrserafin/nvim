@@ -14,8 +14,11 @@ return {
         { "<Leader>fb", "<Cmd>FzfLua buffers<CR>", desc = "Fzf: [F]ind [B]uffer" },
         { "<Leader>fs", "<Cmd>FzfLua grep<CR>", desc = "Fzf: [F]ind [S]tring" },
         { "<Leader>fp", "<Cmd>FzfLua builtin<CR>", desc = "Fzf: [F]ind [P]ickers" },
-        { "<Leader>fc", "<Cmd>FzfLua files prompt = < Neovim > cwd = $HOME/.config/nvim/<CR>",
-        desc = "Telescope: [F]ind Neovim [C]onfig" },
+        {
+            "<Leader>fc",
+            "<Cmd>FzfLua files prompt=Neovim> cwd=$HOME/.config/nvim<CR>",
+            desc = "Fzf: [F]ind Neovim [C]onfig",
+        },
     },
-    opts = {}
+    opts = {},
 }

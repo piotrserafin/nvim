@@ -4,7 +4,6 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
@@ -18,7 +17,6 @@ local indent = 4
 opt.showmode = false -- no message on status line to show current mode
 
 -- Indentation
-cmd("filetype indent on") -- switch on file type detection, with automatic indenting and settings
 opt.expandtab = true -- use spaces when <Tab> is inserted
 opt.tabstop = indent -- number of spaces that <Tab> in file uses
 opt.shiftwidth = indent -- number of spaces to use for (auto)indent step
@@ -86,4 +84,3 @@ g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
 g.python3_host_prog = "/opt/homebrew/bin/python3"
-
