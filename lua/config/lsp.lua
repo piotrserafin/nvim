@@ -22,13 +22,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         if client:supports_method("textDocument/completion") then
             vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
         end
-
-        -- LSP keymaps (buffer-local)
-        local opts = { buffer = ev.buf }
-        vim.keymap.set("n", "grn", vim.lsp.buf.rename, opts)
-        vim.keymap.set("n", "gra", vim.lsp.buf.code_action, opts)
-        vim.keymap.set("n", "grr", vim.lsp.buf.references, opts)
-        vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help, opts)
     end,
 })
 

@@ -26,6 +26,6 @@ return {
     config = function(_, opts)
         require("oil").setup(opts)
         vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
-        vim.keymap.set("n", "<space>-", require("oil").toggle_float)
+        vim.keymap.set("n", "<space>-", require("oil").toggle_float, { desc = "Open parent directory (float)" })
     end,
 }

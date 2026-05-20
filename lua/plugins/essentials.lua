@@ -9,8 +9,13 @@ return {
     {
         "rcarriga/nvim-notify",
         event = "VeryLazy",
-        config = function()
-            vim.notify = require("notify")
+        opts = {},
+        init = function()
+            vim.notify = function(...)
+                -- Lazy-load on first call, then delegate
+                vim.notify = require("notify")
+                return vim.notify(...)
+            end
         end,
     },
 }

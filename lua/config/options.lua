@@ -5,7 +5,6 @@
 --
 
 local opt = vim.opt
-local g = vim.g
 
 local indent = 4
 
@@ -31,7 +30,7 @@ opt.colorcolumn = "120" -- comma separated list of screen columns
 opt.cursorline = true -- Highlight the screen line of the cursor with CursorLine
 opt.foldenable = false -- when off, all folds are open
 opt.scrolloff = 8 -- Minimal number of screen lines to keep above and below the cursor
-opt.sidescrolloff = 8 -- Minimal number of screen lines to keep above and below the cursor
+opt.sidescrolloff = 8 -- Minimal number of screen columns to keep left and right of the cursor
 opt.signcolumn = "yes"
 opt.guicursor = ""
 
@@ -57,30 +56,26 @@ opt.grepformat = "%f:%l:%c:%m" -- filename:line number:column number:error messa
 -- Mouse
 opt.mouse = "a"
 
--- Format (default: formatoptions="tcqj")
-opt.formatoptions = opt.formatoptions
-    - "a" -- disable autoformatting
-    - "t" -- no autoformat
-    + "c" -- auto-wrap comments using textwidth
-    + "q" -- format comments with "gq"
-    + "r" -- do continue when pressing enter in Insert mode
-    - "o" -- o/O do no continue comments
-    + "j" -- Auto-remove comments if possible.
-    - "2" -- I'm not in gradeschool anymore
+-- Background (set before colorscheme)
+opt.background = "dark"
+
+-- Format options (set via autocmd because ftplugins override them)
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function()
+        vim.opt_local.formatoptions = vim.opt_local.formatoptions
+            - "a" -- disable autoformatting
+            - "t" -- no autoformat
+            + "c" -- auto-wrap comments using textwidth
+            + "q" -- format comments with "gq"
+            + "r" -- do continue when pressing enter in Insert mode
+            - "o" -- o/O do no continue comments
+            + "j" -- Auto-remove comments if possible.
+            - "2" -- I'm not in gradeschool anymore
+    end,
+})
 opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
 opt.shortmess:append("c") -- don't show redundant messages from ins-completion-menu
 opt.shortmess:append("I") -- don't show the default intro message
 
-opt.completeopt = { "menu", "menuone", "noselect" }
-
--- Disable Python2 support
-g.loaded_python_provider = 0
-
--- Disable perl provider
-g.loaded_perl_provider = 0
-
--- Disable Ruby
-g.loaded_ruby_provider = 0
-
-g.python3_host_prog = "/opt/homebrew/bin/python3"
+opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }

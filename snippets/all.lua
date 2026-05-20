@@ -4,10 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-local status_ok, ls = pcall(require, "luasnip")
-if not status_ok then
-    return
-end
+local ls = require("luasnip")
 
 local s = ls.s
 local t = ls.text_node

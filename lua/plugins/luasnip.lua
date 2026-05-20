@@ -8,11 +8,11 @@ return {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
     build = "make install_jsregexp",
-    init = function()
+    config = function()
         require("luasnip").config.set_config({
             updateevents = "TextChanged,TextChangedI",
         })
 
-        require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
+        require("luasnip.loaders.from_lua").load({ paths = vim.fn.stdpath("config") .. "/snippets" })
     end,
 }

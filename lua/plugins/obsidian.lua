@@ -8,16 +8,39 @@ return {
     "obsidian-nvim/obsidian.nvim",
     version = "*",
     lazy = true,
-    ft = "markdown",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-    },
     event = {
         "BufReadPre " .. vim.fn.expand("~") .. "/org/vaults/**.md",
         "BufNewFile " .. vim.fn.expand("~") .. "/org/vaults/**.md",
     },
     keys = {
-        { "<Leader>oq", "<Cmd>Obsidian quick_switch<CR>", noremap = true, silent = true, desc = "Open note" },
+        { "<Leader>oq", "<Cmd>Obsidian quick_switch<CR>", silent = true, desc = "Open note" },
+        {
+            "<Leader>ow",
+            function()
+                local Workspace = require("obsidian.workspace")
+                local workspace_names = vim.tbl_map(
+                    function(ws)
+                        return ws.name
+                    end,
+                    vim.tbl_filter(function(ws)
+                        return ws.name ~= ".obsidian.wiki"
+                    end, Obsidian.workspaces)
+                )
+
+                require("fzf-lua").fzf_exec(workspace_names, {
+                    prompt = "Obsidian Workspace> ",
+                    actions = {
+                        ["default"] = function(selected)
+                            if selected and selected[1] then
+                                Workspace.set(selected[1])
+                            end
+                        end,
+                    },
+                })
+            end,
+            silent = true,
+            desc = "Switch Obsidian [W]orkspace",
+        },
     },
     opts = {
         legacy_commands = false,
@@ -102,9 +125,8 @@ return {
             },
         },
 
-        callback = {
-            post_set_workspace = function(client, workspace)
-                client.log.info("Changing directory to %s", workspace.path)
+        callbacks = {
+            post_set_workspace = function(workspace)
                 vim.cmd.cd(tostring(workspace.path))
             end,
         },
