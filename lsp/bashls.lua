@@ -1,4 +1,4 @@
--- Source: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/bashls.lua
+-- Based on: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/bashls.lua (2026-06-12)
 
 return {
     cmd = { "bash-language-server", "start" },

@@ -1,4 +1,4 @@
--- Source: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/gopls.lua
+-- Based on: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/gopls.lua (2026-06-12)
 
 local mod_cache = nil
 local std_lib = nil

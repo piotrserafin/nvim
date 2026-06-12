@@ -1,16 +1,33 @@
--- Source: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/rust_analyzer.lua
+-- Based on: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/rust_analyzer.lua (2026-06-12)
 
 local function reload_workspace(bufnr)
     local clients = vim.lsp.get_clients({ bufnr = bufnr, name = "rust_analyzer" })
     for _, client in ipairs(clients) do
         vim.notify("Reloading Cargo Workspace")
-        client.request("rust-analyzer/reloadWorkspace", nil, function(err)
+        client:request("rust-analyzer/reloadWorkspace", nil, function(err)
             if err then
                 error(tostring(err))
             end
             vim.notify("Cargo workspace reloaded")
         end, 0)
     end
+end
+
+local function user_sysroot_src()
+    return vim.tbl_get(vim.lsp.config["rust_analyzer"], "settings", "rust-analyzer", "cargo", "sysrootSrc")
+end
+
+local function default_sysroot_src()
+    local sysroot = vim.tbl_get(vim.lsp.config["rust_analyzer"], "settings", "rust-analyzer", "cargo", "sysroot")
+    if not sysroot then
+        local rustc = os.getenv("RUSTC") or "rustc"
+        local result = vim.system({ rustc, "--print", "sysroot" }, { text = true }):wait()
+        local stdout = result.stdout
+        if result.code == 0 and stdout then
+            sysroot = vim.trim(stdout)
+        end
+    end
+    return sysroot and vim.fs.joinpath(sysroot, "lib/rustlib/src/rust/library") or nil
 end
 
 local function is_library(fname)
@@ -22,8 +39,10 @@ local function is_library(fname)
     local rustup_home = os.getenv("RUSTUP_HOME") or user_home .. "/.rustup"
     local toolchains = rustup_home .. "/toolchains"
 
-    for _, item in ipairs({ toolchains, registry, git_registry }) do
-        if vim.fs.relpath(item, fname) then
+    local sysroot_src = user_sysroot_src() or default_sysroot_src()
+
+    for _, item in ipairs({ toolchains, registry, git_registry, sysroot_src }) do
+        if item and vim.fs.relpath(item, fname) then
             local clients = vim.lsp.get_clients({ name = "rust_analyzer" })
             return #clients > 0 and clients[#clients].config.root_dir or nil
         end
@@ -84,10 +103,16 @@ return {
     capabilities = {
         experimental = {
             serverStatusNotification = true,
+            commands = {
+                commands = {
+                    "rust-analyzer.showReferences",
+                    "rust-analyzer.runSingle",
+                    "rust-analyzer.debugSingle",
+                },
+            },
         },
     },
     before_init = function(init_params, config)
-        -- See https://github.com/rust-lang/rust-analyzer/blob/eb5da56d839ae0a9e9f50774fa3eb78eb0964550/docs/dev/lsp-extensions.md?plain=1#L26
         if config.settings and config.settings["rust-analyzer"] then
             init_params.initializationOptions = config.settings["rust-analyzer"]
         end

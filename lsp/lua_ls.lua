@@ -1,4 +1,4 @@
--- Source: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lua_ls.lua
+-- Based on: https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lua_ls.lua (2026-06-12)
 
 return {
     -- Command and arguments to start the server.
