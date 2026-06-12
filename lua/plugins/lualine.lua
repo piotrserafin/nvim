@@ -4,15 +4,7 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-return {
-    "nvim-lualine/lualine.nvim",
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
-    opts = {
-        options = {
-            theme = "catppuccin-mocha",
-        },
-        extensions = { "oil" },
-    },
-}
+require("lualine").setup({
+    options = { theme = "catppuccin-mocha" },
+    extensions = { "oil" },
+})

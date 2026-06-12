@@ -37,6 +37,8 @@ opt.guicursor = ""
 -- Edit
 opt.swapfile = false
 opt.undofile = true
+opt.splitright = true
+opt.splitbelow = true
 
 -- Whitespace characters
 opt.list = true
@@ -77,5 +79,3 @@ opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
 opt.shortmess:append("c") -- don't show redundant messages from ins-completion-menu
 opt.shortmess:append("I") -- don't show the default intro message
-
-opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }

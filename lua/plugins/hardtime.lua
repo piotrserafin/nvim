@@ -4,13 +4,8 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-return {
-    "m4xshen/hardtime.nvim",
-    lazy = true,
-    dependencies = { "MunifTanjim/nui.nvim" },
-    cmd = "Hardtime",
-    keys = {
-        { "<Leader>ht", "<Cmd>Hardtime toggle<CR>", silent = true, desc = "Toggle [H]ard[T]ime" },
-    },
-    opts = {},
-}
+require("hardtime").setup({
+    enabled = false,
+})
+
+vim.keymap.set("n", "<Leader>ht", "<Cmd>Hardtime toggle<CR>", { silent = true, desc = "Toggle [H]ard[T]ime" })

@@ -9,6 +9,7 @@ vim.lsp.enable("bashls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("gopls")
 vim.lsp.enable("rust_analyzer")
+vim.lsp.enable("clangd")
 vim.lsp.enable("marksman")
 
 vim.api.nvim_create_autocmd("LspAttach", {

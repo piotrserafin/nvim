@@ -4,10 +4,4 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-return {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    opts = {
-        library = {},
-    },
-}
+require("lazydev").setup({ library = {} })

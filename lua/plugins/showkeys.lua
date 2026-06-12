@@ -4,10 +4,4 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
-return {
-    "nvzone/showkeys",
-    cmd = "ShowkeysToggle",
-    opts = {
-        maxkeys = 5,
-    },
-}
+require("showkeys").setup({ maxkeys = 5 })
