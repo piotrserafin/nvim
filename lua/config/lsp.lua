@@ -19,12 +19,34 @@ vim.api.nvim_create_autocmd("LspAttach", {
             return
         end
 
-        -- Enable builtin completion
         if client:supports_method("textDocument/completion") then
             vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
         end
+
+        if client:supports_method("textDocument/inlayHint") then
+            vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+        end
+
+        if client:supports_method("textDocument/documentHighlight") then
+            local group = vim.api.nvim_create_augroup("lsp-highlight-" .. ev.buf, { clear = true })
+            vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+                buffer = ev.buf,
+                group = group,
+                callback = vim.lsp.buf.document_highlight,
+            })
+            vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+                buffer = ev.buf,
+                group = group,
+                callback = vim.lsp.buf.clear_references,
+            })
+        end
     end,
 })
+
+-- Toggle inlay hints globally
+vim.keymap.set("n", "<leader>th", function()
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "Toggle inlay hints" })
 
 -- Diagnostics
 vim.diagnostic.config({

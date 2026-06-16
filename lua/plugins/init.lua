@@ -7,7 +7,7 @@
 -- Load plugin configurations in order
 require("plugins.catppuccin")
 require("plugins.fidget")
-require("plugins.lualine")
+require("plugins.mini")
 require("plugins.oil")
 require("plugins.fzf")
 require("plugins.treesitter")

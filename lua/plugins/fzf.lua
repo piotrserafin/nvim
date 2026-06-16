@@ -14,9 +14,6 @@ vim.keymap.set("n", "<Leader>fd", "<Cmd>FzfLua diagnostics_workspace<CR>", { des
 vim.keymap.set("n", "<Leader>fr", "<Cmd>FzfLua lsp_references<CR>", { desc = "Fzf: [F]ind [R]eferences" })
 vim.keymap.set("n", "<Leader>fh", "<Cmd>FzfLua help_tags<CR>", { desc = "Fzf: [F]ind [H]elp" })
 vim.keymap.set("n", "<Leader>fp", "<Cmd>FzfLua builtin<CR>", { desc = "Fzf: [F]ind [P]ickers" })
-vim.keymap.set(
-    "n",
-    "<Leader>fc",
-    "<Cmd>FzfLua files prompt=Neovim> cwd=$HOME/.config/nvim<CR>",
-    { desc = "Fzf: [F]ind Neovim [C]onfig" }
-)
+vim.keymap.set("n", "<Leader>fc", function()
+    require("fzf-lua").files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "Fzf: [F]ind Neovim [C]onfig" })

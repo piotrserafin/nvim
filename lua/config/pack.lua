@@ -43,8 +43,7 @@ vim.pack.add({
 
     -- UI
     gh("j-hui/fidget.nvim"),
-    gh("nvim-lualine/lualine.nvim"),
-    gh("nvim-tree/nvim-web-devicons"),
+    gh("echasnovski/mini.nvim"),
     gh("nvzone/showkeys"),
 
     -- Navigation / Files
@@ -53,7 +52,6 @@ vim.pack.add({
 
     -- Treesitter
     { src = gh("nvim-treesitter/nvim-treesitter"), version = "main" },
-    { src = gh("nvim-treesitter/nvim-treesitter-textobjects"), version = "main" },
 
     -- LSP / Dev tools
     gh("folke/lazydev.nvim"),
@@ -67,7 +65,6 @@ vim.pack.add({
     gh("mistweaverco/kulala.nvim"),
     gh("MeanderingProgrammer/render-markdown.nvim"),
     gh("m4xshen/hardtime.nvim"),
-    gh("MunifTanjim/nui.nvim"),
 
     -- Notes
     { src = gh("obsidian-nvim/obsidian.nvim"), version = vim.version.range("3") },

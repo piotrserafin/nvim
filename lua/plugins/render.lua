@@ -6,7 +6,6 @@
 
 require("render-markdown").setup({
     render_modes = { "n", "c", "t" },
-    completions = { blink = { enabled = false } },
     latex = { enabled = false },
     html = { enabled = false },
     yaml = { enabled = false },

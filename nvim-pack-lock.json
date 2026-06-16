@@ -6,7 +6,7 @@
       "version": "2.0.0 - 3.0.0"
     },
     "catppuccin": {
-      "rev": "0303a7208dba448c459767486a38a6ec05c4216b",
+      "rev": "49a926655a2f5579e9c276470fc300baaa49e524",
       "src": "https://github.com/catppuccin/nvim"
     },
     "conform.nvim": {
@@ -26,7 +26,7 @@
       "src": "https://github.com/m4xshen/hardtime.nvim"
     },
     "kulala.nvim": {
-      "rev": "69250f64e60f75c010feac413576acbd9ffa4ec8",
+      "rev": "9945d576751c8a6a8331c46fc9436d62e796ff28",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lazydev.nvim": {
@@ -36,6 +36,10 @@
     "lualine.nvim": {
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "mini.nvim": {
+      "rev": "7ed410c73ebb910754c2938a6dae50c51c3a096a",
+      "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nui.nvim": {
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",

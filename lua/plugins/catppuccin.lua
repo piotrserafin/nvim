@@ -14,7 +14,7 @@ require("catppuccin").setup({
         fzf = true,
         treesitter = true,
         notify = false,
-        mini = { enabled = false },
+        mini = { enabled = true },
         fidget = true,
     },
 })

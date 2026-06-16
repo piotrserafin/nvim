@@ -14,6 +14,7 @@ local indent = 4
 
 -- Basic
 opt.showmode = false -- no message on status line to show current mode
+opt.updatetime = 250
 
 -- Indentation
 opt.expandtab = true -- use spaces when <Tab> is inserted
@@ -28,7 +29,9 @@ opt.textwidth = 120 -- maximum width of text that is being inserted
 opt.wrap = false -- long lines nowrap
 opt.colorcolumn = "120" -- comma separated list of screen columns
 opt.cursorline = true -- Highlight the screen line of the cursor with CursorLine
-opt.foldenable = false -- when off, all folds are open
+opt.foldenable = true
+opt.foldlevel = 99
+opt.foldlevelstart = 99
 opt.scrolloff = 8 -- Minimal number of screen lines to keep above and below the cursor
 opt.sidescrolloff = 8 -- Minimal number of screen columns to keep left and right of the cursor
 opt.signcolumn = "yes"
@@ -77,5 +80,6 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
+opt.completeopt = "menuone,noselect,fuzzy" -- popup even for 1 match, no auto-select, fuzzy matching
 opt.shortmess:append("c") -- don't show redundant messages from ins-completion-menu
 opt.shortmess:append("I") -- don't show the default intro message

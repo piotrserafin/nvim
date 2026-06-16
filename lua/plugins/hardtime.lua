@@ -5,7 +5,7 @@
 --
 
 require("hardtime").setup({
-    enabled = false,
+    enabled = true,
 })
 
 vim.keymap.set("n", "<Leader>ht", "<Cmd>Hardtime toggle<CR>", { silent = true, desc = "Toggle [H]ard[T]ime" })
