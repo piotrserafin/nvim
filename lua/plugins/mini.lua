@@ -4,8 +4,11 @@
 --  |__|  |_____|  https://github.com/piotrserafin
 --
 
--- Icons (natively supported by oil.nvim and fzf-lua)
-require("mini.icons").setup()
+if vim.g.have_nerd_font then
+    require("mini.icons").setup()
+    -- Used for backwards compatibility with plugins that require `nvim-web-devicons` (e.g. telescope.nvim)
+    MiniIcons.mock_nvim_web_devicons()
+end
 
 require("mini.statusline").setup({
     use_icons = vim.g.have_nerd_font,

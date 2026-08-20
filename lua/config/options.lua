@@ -22,6 +22,8 @@ opt.tabstop = indent -- number of spaces that <Tab> in file uses
 opt.shiftwidth = indent -- number of spaces to use for (auto)indent step
 opt.softtabstop = indent -- number of spaces that <Tab> uses while editing
 
+opt.inccommand = "split"
+
 -- Appearance
 opt.number = true -- print the line number in front of each line
 opt.relativenumber = true -- show relative line number in front of each line
@@ -55,8 +57,9 @@ opt.listchars = {
 }
 
 -- Search
-opt.grepprg = "rg --vimgrep --smart-case --no-heading" -- search with rg, it will output in format filename:line:column:match
-opt.grepformat = "%f:%l:%c:%m" -- filename:line number:column number:error message, recognizes above
+-- search with rg: output format is filename:line:column:match
+opt.grepprg = "rg --vimgrep --smart-case --no-heading"
+opt.grepformat = "%f:%l:%c:%m"
 
 -- Mouse
 opt.mouse = "a"
